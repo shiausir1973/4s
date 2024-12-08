@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>〈依第？個字位置拆分成二字串〉</title>		
+		<link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/shiau-check_list.css" />
+        <link rel="stylesheet" href="../../css/shiau-paper.css" />
+        <link rel="stylesheet" href="../../css/shiau-move_bg.css" />
+        <link rel="stylesheet" href="../../css/shiau-scratch-bg_banner.css" />
+	  	<script src="../../js/scratchblocks-v3.6.4-min.js"></script>
+		<script src="../../js/translations-all-v3.6.4.js"></script>
+	
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+                
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../../index.html" class="logo"><img src="../../images/logo/logo_skill.svg" alt=""></a>
+									
+								</header>
+                           
+                                <div class="topic large">
+									<p><img class="full125" src="../../images/topic/topicx01.svg" alt=""><span class="text">依第？個字位置拆分成二字串</span></p>
+                                </div>
+                               
+							<!-- Section -->
+								<section><!-- 簡述提點-->
+                                    <div class="obj">
+                                        <img class="full20a20" src="../../images/topic/topicx03.svg" alt="">
+                                    </div>
+                                    <div class="bg-moveshadow1">
+                                        <div class="paper">
+										<div class="pad5 aa"></div>
+										<ul class="glt">
+                                            <li>此編程是要將一個字串以第？個字為分界，拆分成前、後二個字串。</li>
+											<li>有二種作法，其一是直接使用<a href="../Blocks_Operators/Operators13.html"><code class="b">字串()的第()字</code></a>積木來讀取字，然後立即以<a href="../Blocks_Operators/Operators12.html"><code class="b">字串組合()()</code></a>積木將讀取的字組合。其二是先使用<a href="Skille01.html">「拆分字串」</a>，將字拆分成指定清單中的各項值，然後再依要求分別組合前字串和後字串。</li>
+										</ul>
+										<ul class="hlt">											                                             
+											<li>不論使用哪種方式，都要先做「除外判斷」，所謂「除外判斷」就是先審視題目條件的是否在合理範圍中，如果不在合理範圍中，可能會無法操作，或是有另一種操作方式，這樣才不會出現白作工的情況。以這個編程為例，要先審視「第？個字」這個條件，因為「第？個字」這個條件必須大於1且要小於字串的長度才合理，也就是才能以正常方式分成前、後二字串，否則，如果是1或更小，那前字串就是空的，而後字串就是整個字串；而如果是等於或大於字串的長度時，那麼前字串就是整個字串，而後字串就是空的。</li>
+											<li>以下示例是使用上述的第一種做法。</li>
+										</ul>
+                                        </div>
+                                    </div>
+                                </section>								
+                                <div class="pad010"><img src="../../images/gif/line2.gif" style="width: 100%; height: auto;" alt=""></div>
+                                <section><!-- 拆解與示例作品 -->
+									<div class="pad10 border-d">
+										<div class="row">
+											<div class="col-7 col-12-small">
+												<div class="title">
+                                        			<img class="full55" src="../../images/topic/topicx10.svg" alt="">
+                                    			</div>
+												<div class="bg-moveshadow-w">
+													<div class="paper">
+													<div class="pad10 aa"></div>
+														<p class="in1">示例方式不做<a href="Skille01.html">「拆分字串」</a>，而是直接分成二個份來取字、組合。</p>
+													<div class="pad10 aa"></div>
+													</div>
+												</div>
+											</div>
+											<div class="col-5 col-12-small imp-small">
+												<div class="videobox">
+													<iframe src="https://scratch.mit.edu/projects/577877080/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
+												</div>
+											</div>
+										</div>
+									</div>									
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad10 aa"></div>
+											<p class="indent">以下腳本會使用到下列變數：</p>
+											<ul class="ilt">
+												<li><code class="b">(字串)</code>要拆成二部份的字串</li>
+												<li><code class="b">(i)</code>遍歷字串的變數</li>
+												<li><code class="b">(指定位置)</code>指定從第？個字位置拆分</li>
+												<li><code class="b">(前字串)</code>存放前半部字串的變數</li>
+												<li><code class="b">(後字串)</code>存放後半部字串的變數</li>
+											</ul>
+                                            <pre class="blocks ud">
+											當@greenflag被點擊
+											變數[字串 v]設為(...鍵入要拆成二部份的字串...::grey)
+											變數[指定位置 v]設為(...鍵入指定第？個字位置...::grey)
+											變數[i v]設為(1)//從字串的第一個字開始
+											變數[前字串 v]設為()
+											變數[後字串 v]設為()
+											如果&lt;&lt;&lt;(指定位置)&gt;(1)&gt;且&lt;(指定位置)&lt;(字串(字串)的長度)&gt;不成立&gt;那麼
+											變數[前字串 v]設為(字串)
+											變數[後字串 v]設為()
+											否則
+											重複((指定位置)-(1))次
+											變數[前字串 v]設為(字串組合(前字串)(字串(字串)的第(i)字)
+											變數[i v]改變(1)
+											end
+											重複(((字串(字串)的長度)-(指定位置))+(1))次
+											變數[後字串 v]設為(字串組合(後字串)(字串(字串)的第(i)字)
+											變數[i v]改變(1)
+											end
+											</pre>
+											<div class="pad10 aa"></div>
+										</div>
+                                    </div>
+                                </section>
+                                <div class="scratch pad15"><img src="../../images/gif/mouse.gif" alt=""></div>
+						</div>
+						
+						</div>
+                    
+				<!-- Sidebar -->
+					<div id="sidebar" class="sbgcolor11">
+						<div class="inner">
+
+							
+							<!-- Menu -->
+								<nav id="menu">
+									<header>
+                                        <img class="full50" src="../../images/logo/mlogo_skill.svg" alt="">										
+									</header>
+                                    <h2 class="major bgreen strongX sbgcolorl9">鍵鼠操控</h2>
+									<ul>
+                                        <li class="home"><a href="../../index.html">🏠回首頁</a></li>										
+                                        <li><a href="Skill001.html">鍵盤方向鍵操控移動</a></li>
+										<li><a href="Skill003.html">角色跟隨鼠標</a></li>
+										<li><a href="Skill009.html">砲彈射擊</a></li>
+										<li><a href="Skill010.html">聲音暫停與再次播放</a></li>
+										<li><a href="Skill011.html">逐字說話(打字機效果)</a></li>
+										<li><a href="Skill012.html">角色的互動對話</a></li>
+										<li><a href="Skill013.html">現在的日期</a></li>
+										<li><a href="Skill014.html">時間(電子鐘形式)</a></li>
+										<li><a href="Skill015.html">時間(時鐘形式)</a></li>
+										<li><a href="Skill023.html">拆分字串</a></li>
+                                    </ul>
+								</nav>
+
+							
+
+							<!-- Footer -->
+								<footer id="footer">
+                                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="創用 CC 授權條款" style="border-width:0;  margin-bottom:  -10px;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+									<p class="copyright">&copy; 2023 &copy; | Design By Shiau Sir. From <a href="https://ddes.tc.edu.tw" target="_blank">DDES</a>, Taichung City, Taiwan.</p>
+								</footer>
+
+						</div>
+					
+                </div>
+			</div>
+			<div style="display: none;" id="go-to-top">
+      			<div style="opacity:0;display: block;" class="level-2"></div>
+      				<div class="level-3"></div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../js/jquery.min.js"></script>
+			<script src="../../js/browser.min.js"></script>
+			<script src="../../js/breakpoints.min.js"></script>
+			<script src="../../js/util.js"></script>
+			<script src="../../js/main.js"></script>
+			
+		<script>
+		$(document).ready(function(){
+    	if ( window.screen.width <= 480) {
+			scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,                // 顯示大小
+            // Repeat `style` and `languages` options here.
+			});
+       } else{
+		    scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,                // 顯示大小
+                // Repeat `style` and `languages` options here.
+			});
+	   	}
+		});
+		
+		</script>
+
+	</body>
+</html>

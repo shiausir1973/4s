@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>[方向]</title>		
+		<link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/shiau-check_list.css" />
+        <link rel="stylesheet" href="../../css/shiau-paper.css" />
+        <link rel="stylesheet" href="../../css/shiau-move_bg.css" />
+        <link rel="stylesheet" href="../../css/shiau-scratch-bg_banner.css" />
+	  	<script src="../../js/scratchblocks-v3.6.4-min.js"></script>
+		<script src="../../js/translations-all-v3.6.4.js"></script>	
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+                
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a class="logo"><img src="../../images/logo/logo_idea.svg" alt=""></a>
+									
+								</header>
+                           
+                                <div class="table-wrapper">
+									<table class="sbbgF">
+									    <thead>
+										    <tr>
+												<th class="u">
+                                                    <p><span><img src="../../images/gif/gif013.gif" alt="">方向<span class="inword">（Direction）</span></span></p>
+                                                </th>												
+											</tr>
+										</thead>
+                                    </table>
+                                </div>								
+                                
+                           
+                               <div class="scratch pad05"><img src="../../images/gif/catmouse.gif" alt=""></div>
+							<!-- Section -->
+                                <section class="bg-moveshadow-y">
+								    <div class="paper">                                                                                
+                                        <p class="indent">在<span class="strongX orange">Scratch</span>中，「方向」是以角色的觀點來看的，指的就是角色在舞臺上面朝向的角度。角色在舞臺上除了需要以座標來「定位」外，還需要為角色來「定向」，因為這個方向會關係到角色的移動進行。</p> 
+                                        <p class="indent">「方向」這個值是由〈面朝向角度〉積木來指定。它以「度」 ( ° ) 做為單位，範圍從 -180° 到 180°，角色轉一圈是360°，當超過一圈後就會出現角度重複。方向的默認值為 90°（指向右側）。</p>
+                                        <p class="indent">前面提到「方向」會關係到角色的移動，因為它同時也是表示「角色移動的方向」，當角色要進行移動時，一定是朝著它面朝向角度來移動。也因此，在<span class="strongX orange">Scratch</span>中，當要使用到〈移動〉積木時，一定要先確認角色的面朝向角度，才能確保角色移動前進的方向是正確的。</p>
+                                    </div>
+                                </section>
+                                <div class="pad10"></div>
+                                <section class="bg-moveshadow-p">
+								    <div class="paper">
+                                        <p class="indent">在<span class="strongX orange">Scratch</span>中，以面向舞臺之正上方（y軸正方向）角度爲「0°」，代表「向上」。每增加一度就是使角色順時針旋轉一度。因此，方向 90°意味著角色在面朝上之後再順時針旋轉 90度（四分之一圈），所以會指向右側；方向 180°意味著角色在面朝上之後再順時針旋轉 180度（二分之一圈），所以會指向舞台正下方。如果用負值來表示旋轉角度，就意味著角色是逆時針旋轉。因此，方向 -90°意味著角色在面朝上之後再逆時針旋轉 90度（四分之一圈），所以會指向左側；方向 -180°意味著角色在面朝上之後再逆時針旋轉 180度（二分之一圈），所以會指向舞台正下方。</p>
+                                    </div>
+                                </section>
+                                <div class="pad10"></div>
+                                <section class="bg-moveshadow-o">
+								    <div class="paper">
+                                        <div class="row">
+                                        <div class="col-7 col-12-small">
+                                            <p class="indent">然而在數學上，我們通常只使用順時針轉的方式來表示轉一圈，也就是從0°～360°表示一圈，這會與<span class="strongX orange">Scratch</span>中所表示的角度有些不同，比如270°就等於<span class="strongX orange">Scratch</span>中的-90°，一個是以順時針的方向來計算，一個是以逆時針的方向來計算，它們是沒有衝突的。在<span class="strongX orange">Scratch</span>中，你同樣可以使用數學上的表示角度，都是被接受的。其關係如圖：(紅色數字是<span class="strongX orange">Scratch</span>中的表示)</p>
+                                        </div>
+                                        <div class="col-5 col-12-small">
+                                            <div class="photo">
+                                                <img class="full90" src="../../images/pic/blocks/Motion08b.png" alt="" />
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <p class="indent">當旋轉角度大於 360°時，超過的部分就再從頭算起，如此依序循環......。</p>
+                                    </div>
+                                </section>
+                                <div class="pad10"></div>
+                                <section class="bg-moveshadow-r">
+								    <div class="paper">
+                                        <p class="indent">在<span class="strongX orange">Scratch</span>中，除了用〈面朝向角度〉積木來指定角色的面朝向之外，還有一個〈面朝指定對象〉積木也可以用來表示角色的面朝方向，只是這個積木並沒有明確的角度，要注意的是〈面朝指定對象〉所表示的角度並不等於該指定對象的面朝向角度，它僅是以二角色相對的位置的方向來論。</p>
+                                        <p class="indent">另外，在編程中可以用來改變角色面朝方向的積木有〈左轉〉積木、〈右轉〉積木、〈碰到邊緣反彈〉積木以及〈迴轉〉積木。</p>
+                                    </div>
+                                </section>
+                                <div class="scratch pad15"><img src="../../images/gif/mouse.gif" alt=""></div>
+						</div>
+						
+						</div>
+                    
+				<!-- Sidebar -->
+					<div id="sidebar" class="sbgcolor11">
+						<div class="inner">
+
+							
+							<!-- Menu -->
+								<nav id="menu">
+									<header>
+                                        <img class="full50" src="../../images/logo/mlogo_idea.svg" alt="">										
+									</header>
+                                    <h2 class="major bbrown strongX sbgcolorF">移動元素</h2>
+									<ul>
+                                        <li class="home"><a href="../../index.html">🏠回首頁</a></li>
+                                        <li>
+                                            <span class="opener">💡其它概念知識</span>
+											<ul>
+												<li><a href="../Idea_Argument/Blocks.html">積木參數</a></li>
+                                                <li><a href="../Idea_Shapes/Hat_Blocks.html">積木形狀</a></li>
+                                                <li><a href="../Idea_Sprite_Stage/Sprite.html">角色舞臺</a></li>
+                                                <li><a href="../Idea_Interface/Green_Flag.html">介面環境</a></li>
+                                                <li><a href="../Idea_Program/Import_Export.html">程序編程</a></li>
+                                                <li><a href="../Idea_Effects/Graphic_Effect.html">圖像效果</a></li>
+                                                <li><a href="../Idea_Sound/Sound.html">聲音元素</a></li>
+                                                <li><a href="../Idea_Pen_Music/Pen.html">畫筆音樂</a></li>
+                                                <li><a href="../Idea_Contral/Mouse-pointer.html">執行控制</a></li>
+												<li><a href="../Idea_Variables/Variables.html">變數函式</a></li>
+                                                <li><a href="../Idea_Programming/Seven_Elements.html">程式元素</a></li>
+											</ul>
+                                        </li>                                        
+										<li><a href="Coordinate_System.html">座標系</a></li>
+								        <li><a href="X_Y_Position.html">角色的座標值</a></li>
+										<li class="active"><a href="#">方向</a></li>
+										<li><a href="Glide.html">滑行</a></li>
+                                        <li><a href="Rotation.html">迴轉</a></li>
+                                        <li><a href="Bounce.html">反彈</a></li>                                                                     
+                                        <li><a href="Drag.html">拖曳</a></li>
+                                        <li><a href="Scrolling.html">滾動</a></li>
+                                        <li><a href="Relative_Motion.html">相對運動</a></li>
+                                    </ul>
+								</nav>
+
+							
+
+							<!-- Footer -->
+								<footer id="footer">
+                                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="創用 CC 授權條款" style="border-width:0;  margin-bottom:  -10px;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+									<p class="copyright">&copy; 2023 &copy; | Design By Shiau Sir. From <a href="https://ddes.tc.edu.tw" target="_blank">DDES</a>, Taichung City, Taiwan.</p>
+								</footer>
+
+						</div>
+					
+                </div>
+			</div>
+			<div style="display: none;" id="go-to-top">
+      			<div style="opacity:0;display: block;" class="level-2"></div>
+      				<div class="level-3"></div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../js/jquery.min.js"></script>
+			<script src="../../js/browser.min.js"></script>
+			<script src="../../js/breakpoints.min.js"></script>
+			<script src="../../js/util.js"></script>
+			<script src="../../js/main.js"></script>
+		<script>
+		$(document).ready(function(){
+    	if ( window.screen.width <= 480) {
+			scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,                // 顯示大小
+            // Repeat `style` and `languages` options here.
+			});
+       } else{
+		    scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,                // 顯示大小
+                // Repeat `style` and `languages` options here.
+			});
+	   	}
+		});
+		
+		</script>
+
+	</body>
+</html>

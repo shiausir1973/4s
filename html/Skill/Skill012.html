@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>〈角色間互動對話〉</title>		
+		<link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/shiau-check_list.css" />
+        <link rel="stylesheet" href="../../css/shiau-paper.css" />
+        <link rel="stylesheet" href="../../css/shiau-move_bg.css" />
+        <link rel="stylesheet" href="../../css/shiau-scratch-bg_banner.css" />
+	  	<script src="../../js/scratchblocks-v3.6.4-min.js"></script>
+		<script src="../../js/translations-all-v3.6.4.js"></script>
+	
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+                
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../../index.html" class="logo"><img src="../../images/logo/logo_skill.svg" alt=""></a>
+									
+								</header>
+                           
+                                <div class="topic large">
+									<p><img class="full125" src="../../images/topic/topicx01.svg" alt=""><span class="text">角色間互動對話</span></p>
+                                </div>
+                               
+							<!-- Section -->
+								<section><!-- 簡述提點-->
+                                    <div class="obj">
+                                        <img class="full20a20" src="../../images/topic/topicx03.svg" alt="">
+                                    </div>
+                                    <div class="bg-moveshadow1">
+                                        <div class="paper">
+										<div class="pad5 aa"></div>
+										<ul class="glt">
+                                            <li>「角色對話」是動畫中不可少的一部份。在<span class="strongX orange">Scratch</span>中，關於兩個或多個角色互相間的對話之編排方式有好幾種，每種方法都是獨一無二的。</li>
+											<li>他們主要利用〖說話積木〗來進行。</li>
+										</ul>
+										<ul class="hlt">
+											<li>使用<a href="../Blocks_Looks/Looks01.html"><code class="b">說出()持續()秒</code></a>和使用<a href="../Blocks_Looks/Looks02.html"><code class="b">說出()</code></a>的結果是不同的，前者會自動停止，但後者會持續。</li>
+                                            <li>因此大部分我們會使用<a href="../Blocks_Looks/Looks01.html"><code class="b">說出()持續()秒</code></a>來進行對話編程，只有當我們是進行<a href="Skill011.html">「逐字說話」</a>的方式時，才會使用<a href="../Blocks_Looks/Looks02.html"><code class="b">說出()</code></a>。</li> 
+											<li>至於說話等待的時間要多長，一般要看說話的內容字串有多長，愈多字就等待愈久，避免觀看者沒有看完。你可以參考使用以(字數+10)/10的值無條件進入後的值來做為說話持續的秒數。</li>
+										</ul>
+                                        </div>
+                                    </div>
+                                </section>
+								<section><!--示例腳本-->
+                                    <div class="obj">
+                                        <img class="full20a20" src="../../images/topic/topicx04.svg" alt="">
+                                    </div>
+                                    <div class="bg-moveshadow3">
+                                        <div class="paperbox">
+											<div class="pad5 aa"></div>
+                                            <ol>
+												<li><a href="#1">以「時間計秒」方式</a></li>
+												<li><a href="#2">以「廣播訊息」方式</a></li>
+												<li><a href="#3">以「廣播訊息並等待」方式</a></li>
+												<li><a href="#4">以「變數觸發」方式</a></li>
+												<li><a href="#5">以「清單」方式</a></li>
+											</ol>                                          
+                                        </div>
+                                    </div>                                     
+                                </section>
+                                <div class="pad010"><img src="../../images/gif/line2.gif" style="width: 100%; height: auto;" alt=""></div>
+                                <section><!-- 拆解 -->
+									<div class="title" id="1"><img class="full10c15" src="../../images/topic/topic01-1.svg" alt="">以「時間計秒」方式</div>
+									<div class="pad10 border-d">	
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/954046477/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">這是最為傳統的作法。主要是使用<a href="../Blocks_Looks/Looks01.html"><code class="b">說出()持續()秒</code></a>和<a href="../Blocks_Control/Control01.html"><code class="b">等待()秒</code></a>來完成。它必須要去計算角色間一問一答的秒數時間，然後再使用〖說話積木〗串接腳本。相對來說，雖然不需要什麼技巧，但就比較複雜且容易出錯。</p>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+											<p class="indent">此編程示例是「Abby」和「Avery」之間的對話</p>
+                                            <pre class="blocks ud">
+											當 @greenflag 被點擊//此腳本帶入Abby
+											說出[你放學要去哪？]持續(2)秒
+											等待(2)秒
+											說出[那你幫我買二張4開圖畫紙]持續(2)秒
+											等待(4)秒
+											說出[好，再給你錢]持續(2)秒
+											...
+											
+											當 @greenflag 被點擊//此腳本帶入Avery
+											等待(2)秒
+											說出[我要先去書局逛逛，再回家]持續(2)秒
+											等待(2)秒
+											說出[好啊！]持續(2)秒
+											說出[明天再拿到學校給你喔！]持續(2)秒
+											...
+											</pre>
+										</div>
+                                    </div>
+                                </section>
+								<div class="pad10"></div>
+								<section><!-- 拆解 -->
+									<div class="title" id="2"><img class="full10c15" src="../../images/topic/topic01-2.svg" alt="">以「廣播訊息」方式</div>
+									<div class="pad10 border-d">
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/574162825/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">用這種方式來傳遞對話，對於句數不多、文字較短的對話來說，是比較方便可行的，但如果對話句數變多，文字也較為冗長時，就會使腳本顯得雜亂無組織。它不用使用到<a href="../Idea_Variables/Variable.html">變數</a>和<a href="../Idea_Variables/Lists.html">清單</a>。</p>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+											<p class="indent">此編程示例是「Abby」和「Avery」之間的對話</p>
+											<p class="indent inner">以下腳本帶入「Abby」</p>
+                                            <pre class="blocks u">
+											當 @greenflag 被點擊
+											說出[你最近好嗎？]持續(2)秒
+											廣播訊息(Avery1 v)
+											</pre>
+											<div class="pad10"></div>
+											<p class="indent inner">以下腳本帶入「Avery」</p>
+											<pre class="blocks d">
+											當收到訊息[Avery1 v]
+											說出[還ｏｋ啦！就一般一般...]持續(2)秒
+											廣播訊息(Abby2 v)
+											</pre> 											
+										</div>
+                                    </div>
+                                 </section>
+								<div class="pad10"></div>
+								<section><!-- 拆解 -->
+									<div class="title" id="3"><img class="full10c15" src="../../images/topic/topic01-3.svg" alt="">以「廣播訊息並等待」方式</div>
+									<div class="pad10 border-d">
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/574163561/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">以此方式來傳遞對話，效率比「廣播訊息」稍微好一些，因為在第一個要說話的角色中只需要一個腳本。</p>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+											<p class="indent">此編程示例是「Abby」和「Avery」之間的對話</p>
+											<p class="indent inner">以下腳本帶入「Abby」</p>
+                                            <pre class="blocks u">
+											當 @greenflag 被點擊
+											說出[你最近好嗎？]持續(2)秒
+											廣播訊息(Avery1 v)並等待
+											說出[嗯嗯！那就好！]持續(2)秒
+											廣播訊息(Avery2 v)並等待
+											...
+											</pre>
+											<div class="pad10"></div>
+											<p class="indent inner">以下腳本帶入「Avery」</p>
+											<pre class="blocks d">
+											當收到訊息[Avery1 v]
+											說出[還ｏｋ啦！就一般一般...]持續(2)秒
+											
+											當收到訊息[Avery2 v]
+											說出[那你呢？]持續(2)秒
+											</pre> 											
+										</div>
+                                    </div>
+                                 </section>
+								<div class="pad10"></div>
+								<section><!-- 拆解 -->
+									<div class="title" id="4"><img class="full10c15" src="../../images/topic/topic01-4.svg" alt="">以「變數觸發」方式</div>
+									<div class="pad10 border-d">
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/574163561/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">以「變數觸發」，就是用一個變數來觸發另一個角色說話。一個角色說完後，會把變數改變「1」，另一個角色識別出來，然後開始說話。</p>
+										<p class="in1 w14b400">這種方式，兩角色的腳本都只有一個。</p>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+											<p class="indent">變數「talker」：用做角色觸發的一個數字。此編程示例是「Abby」和「Avery」之間的對話</p>
+											<p class="indent inner">以下腳本帶入「Abby」</p>
+                                            <pre class="blocks u">
+											當 @greenflag 被點擊
+											變數[talker v]設為(1)
+											說出[你最近好嗎？]持續(2)秒
+											變數[talker v]改變(1)
+											等待直到&lt;(talker)=(3)&gt;
+											說出[嗯嗯！那就好！]持續(2)秒
+											變數[talker v]改變(1)
+											...
+											</pre>
+											<div class="pad10"></div>
+											<p class="indent inner">以下腳本帶入「Avery」</p>
+											<pre class="blocks d">
+											當 @greenflag 被點擊
+											等待直到&lt;(talker)=(2)&gt;
+											說出[還ｏｋ啦！就一般一般...]持續(2)秒
+											變數[talker v]改變(1)
+											等待直到&lt;(talker)=(4)&gt;
+											說出[那你呢？]持續(2)秒
+											變數[talker v]改變(1)
+											...
+											</pre> 
+											<p class="out1_in2">💥這種方式最適合多角色且沒有固定說話順序的對話，雖然對話多了，腳本會有些冗長，但處理起來是比較清楚容易的。</p>
+										</div>
+                                    </div>
+                                 </section>
+								<div class="pad10"></div>
+								<section><!-- 拆解 -->
+									<div class="title" id="5"><img class="full10c15" src="../../images/topic/topic01-5.svg" alt="">以「清單」方式</div>
+									<div class="pad10 border-d">
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/574164542/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">無論對話多長時間，每個角色的「說話清單」應該要有相同的長度。這是讓大型的腳本能減少積木排列的好方法。</p>
+										<p class="in1 w14b400">在設計上，要先預設角色之順序，然後逐一依序說話，每說完就發送給下一個訊息，每完成一輪，增加項目數，依此循環。</p>
+										<p class="in1 w14b400">此方式要預先在個人的清單中依序存入相同數量的對話內容。如輪到該角色，但該角色並無說話，則該清單之項目要存入空值。</p>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+											<p class="indent">變變數[i]：表示清單中的項目編號　變數[talker]：表示說話者。此編程示例說話順序是「媽媽」、「孩子1」、「孩子2」</p>
+											<p class="indent inner">以下腳本帶入「媽媽」</p>
+                                            <pre class="blocks u">
+											當 @greenflag 被點擊
+											變數[i v]設為(1)
+											變數[talker v]設為[媽媽]
+											重複無限次
+											說出([媽媽清單 v]的第(i)項)持續(3)秒
+											變數[talker v]設為[孩子1]
+											等待直到&lt;(talker)=[媽媽]&gt;
+											end
+											</pre>
+											<div class="pad10"></div>
+											<p class="indent inner">以下腳本帶入「孩子1」</p>
+											<pre class="blocks">
+											當 @greenflag 被點擊
+											重複無限次
+											等待直到&lt;(talker)=[孩子1]&gt;
+											說出([孩子1清單 v]的第(i)項)持續(3)秒
+											變數[talker v]設為[孩子2]
+											end
+											</pre>
+											<div class="pad10"></div>
+											<p class="indent inner">以下腳本帶入「孩子2」</p>
+											<pre class="blocks d">
+											當 @greenflag 被點擊
+											重複無限次
+											等待直到&lt;(talker)=[孩子2]&gt;
+											說出([孩子2清單 v]的第(i)項)持續(3)秒
+											變數[i v]改變(1)//每一輪的最後一個結束，要將項目數增加1
+											變數[talker v]設為[媽媽]
+											end
+											</pre>
+										</div>
+                                    </div>
+                                 </section>
+                                <div class="scratch pad15"><img src="../../images/gif/mouse.gif" alt=""></div>
+						</div>
+						
+						</div>
+                    
+				<!-- Sidebar -->
+					<div id="sidebar" class="sbgcolor11">
+						<div class="inner">
+
+							
+							<!-- Menu -->
+								<nav id="menu">
+									<header>
+                                        <img class="full50" src="../../images/logo/mlogo_skill.svg" alt="">										
+									</header>
+                                    <h2 class="major bgreen strongX sbgcolorl9">鍵鼠操控</h2>
+									<ul>
+                                        <li class="home"><a href="../../index.html">🏠回首頁</a></li>										
+                                        <li><a href="Skill001.html">鍵盤方向鍵操控移動</a></li>
+										<li><a href="Skill003.html">角色跟隨鼠標</a></li>
+										<li><a href="Skill009.html">砲彈射擊</a></li>
+										<li><a href="Skill010.html">聲音暫停與再次播放</a></li>
+										<li><a href="Skill011.html">逐字說話(打字機效果)</a></li>
+										<li><a href="Skill012.html">角色的互動對話</a></li>
+										<li><a href="Skill013.html">現在的日期</a></li>
+										<li><a href="Skill014.html">時間(電子鐘形式)</a></li>
+                                    </ul>
+								</nav>
+
+							
+
+							<!-- Footer -->
+								<footer id="footer">
+                                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="創用 CC 授權條款" style="border-width:0;  margin-bottom:  -10px;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+									<p class="copyright">&copy; 2023 &copy; | Design By Shiau Sir. From <a href="https://ddes.tc.edu.tw" target="_blank">DDES</a>, Taichung City, Taiwan.</p>
+								</footer>
+
+						</div>
+					
+                </div>
+			</div>
+			<div style="display: none;" id="go-to-top">
+      			<div style="opacity:0;display: block;" class="level-2"></div>
+      				<div class="level-3"></div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../js/jquery.min.js"></script>
+			<script src="../../js/browser.min.js"></script>
+			<script src="../../js/breakpoints.min.js"></script>
+			<script src="../../js/util.js"></script>
+			<script src="../../js/main.js"></script>
+		<script>
+		$(document).ready(function(){
+    	if ( window.screen.width <= 480) {
+			scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,                // 顯示大小
+            // Repeat `style` and `languages` options here.
+			});
+       } else{
+		    scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,                // 顯示大小
+                // Repeat `style` and `languages` options here.
+			});
+	   	}
+		});
+		
+		</script>
+
+	</body>
+</html>

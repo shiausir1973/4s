@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>移動積木</title>		
+		<link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/shiau-check_list.css" />
+        <link rel="stylesheet" href="../../css/shiau-paper.css" />
+        <link rel="stylesheet" href="../../css/shiau-move_bg.css" />
+        <link rel="stylesheet" href="../../css/shiau-scratch-bg_banner.css" />
+	  	<script src="../../js/scratchblocks-v3.6.4-min.js"></script>
+		<script src="../../js/translations-all-v3.6.4.js"></script>	
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+                
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a class="logo"><img src="../../images/logo/logo_Blocks.svg" alt=""></a>
+									
+								</header>
+                           
+                                <div class="table-wrapper">
+									<table class="sbgline1">
+									    <thead>
+										    <tr>
+												<th class="a sbgcolor1"></th>
+												<th class="b">
+													<pre class="blocks">移動()點</pre>
+                                                </th>
+												<th class="c">移動</th>
+											</tr>
+										</thead>
+                                    </table>
+                                </div>								
+                                <div class="table-wrapper">
+								            <table class="alt">
+											    <tbody>
+												    <tr>
+                                                        <td class="s"></td>
+													    <td class="xa">類別</td>
+														<td class="x">動作類</td>
+														<td class="ya">形狀</td>
+                                                        <td class="y">堆疊</td>
+														<td class="za">適用</td>
+														<td class="z">角色</td>
+													</tr>
+												</tbody>
+                                            </table>
+                                        </div>
+                           
+                               <div class="scratch pad05"><img src="../../images/gif/catmouse.gif" alt=""></div>
+							<!-- Section -->
+								<section class="bg-moveshadow-down">
+								    <div class="paper">                                                                                
+                                        <p class="indent"><span class="strongX bblue">〈移動〉</span>積木是<span class="strongX">〔動作類〕〖堆疊狀〗</span>積木。</p>
+                                        <p class="indent">有一個<span class="strongX purple">數字輸入</span>類型之<span class="strongX brown">圓矩形</span>參數框。用來表示每次移動的步距。可嵌入[布林積木]。（true轉變成 1，fales轉變成 0）</p>
+                                        <p class="indent">可以使角色按照它<span class="strongX bred">當前面朝方向</span>移動指定的距離。</p>                                        
+									</div>
+                                </section>
+								<div class="pad15"></div>
+								<section class="bg-moveshadow1">
+								    <div class="paper"> 
+                                        <div class="row">
+											<div class="col-12 col-12-small">
+                                                <ul class="alt">
+													<li>在<span class="strongX orange">Scratch</span>中，角色移動的距離是以「點」為單位， 1 點（步）相當於螢幕上的 1 個像素點，也就是舞台上的 x 座標值＝ 1 ，或是 y 座標值＝ 1，因此，從舞臺最左側移動到最右側，需要移動480點，從最下面移動到最上面要360點 。</li>
+													<li>若以相對數值來說，向前10步以「移動10點」表示，那退後10步就是以「移動 –10點」來表示。</li>
+                                                </ul>
+                                                <ul class="hlt">
+													<li>此積木會使角色朝向當前的「面朝方向」來前進，因此，在過程中如果使用了<a href="../Blocks_Motion/Motion08.html">〈面朝角度〉積木</a>、<a href="../Blocks_Motion/Motion09.html">〈面朝指定對象〉積木</a>、<a href="../Blocks_Motion/Motion02.html">〈右轉〉積木</a>或<a href="../Blocks_Motion/Motion03.html">〈左轉〉積木</a>...等，而致使角色面朝方向改變的話，角色前進的方向即會跟著改變。<span class="strongX">(這是與角色使用<a href="../Blocks_Motion/Motion10.html">〈ｘ座標值改變〉積木</a>或<a href="../Blocks_Motion/Motion12.html">〈ｙ座標值改變〉積木</a>的移動相異之處)</span>
+                                                    </li>
+                                                    <li>此積木上的參數值是角色一次移動的距離。如果參數值是480，就可以使角色從舞臺最左側移動到最右側，但這是一次到位，瞬間改變位置，看不到移動過程的。如果要呈現移動過程，可將移動步距變小，然後配合<a href="../Blocks_Control/Control02.html">〈計次重複〉積木</a>來實現，或是改用<a href="../Blocks_Motion/Motion06.html">〈指定時間移動到指定對象或隨機位置〉積木</a>或<a href="../Blocks_Motion/Motion07.html">〈指定時間移動到指定座標位置〉積木</a>來達成。<span class="strongX">(這是「移動」與「滑行」相異之處)</span>
+                                                    </li>
+												</ul>
+                                            </div>
+                                        </div>                                                                              
+                                    </div>
+                                </section>
+							    <div class="pad15"></div>
+								<section>
+									<div class="title">🧩使用範例</div>
+								    <div class="bg-moveshadow2">
+								    	<div class="paper">
+											<div class="pad5 aa"></div>
+												<p class="indent">此積木可以使角色輕鬆的前進，而所謂的「前進」是指角色當前的「方向角度（面朝方向）」。</p>
+												<hr>
+												<ol>
+													<li>讓角色移動（碰到舞台邊緣會反向移動）</li>													
+												</ol>
+                                            	<pre class="blocks ud">
+												當@greenflag被點擊
+												迴轉方式設為[左-右 v]
+												重複無限次
+												移動(10)點
+												碰到邊緣就反彈
+												end
+												</pre>
+											    <ol start="2">
+													<li>讓角色一步一步的移動</li>													
+												</ol>
+                                            	<pre class="blocks ud">
+												重複(20)次
+												移動(10)點
+												end
+												</pre>
+												<ol start="3">
+													<li>讓角色一直跟隨（朝向）著鼠標移動</li>													
+												</ol>
+                                            	<pre class="blocks ud">
+												重複無限次
+												面朝(鼠標 v)向//改成其他角色，則變成跟隨（朝向）其他角色移動　
+												移動(10)點
+												end
+												</pre>
+										</div>
+									</div>
+                                </section>
+								<div class="pad15"></div>
+								<section>
+									<div class="title">🧩替代積木</div>
+								    <div class="bg-moveshadow3">
+								    	<div class="paper">
+											<div class="pad5 aa"></div>
+												<p class="indent">可以使用以下積木來替代。</p>												
+                                            	<pre class="blocks ud">
+												定位到 x:((x 座標)+(([sin v]數值(方向))*(指定數值))) y:((y 座標)+(([cos v]數值(方向))*(指定數值))
+												</pre>											    
+										</div>
+									</div>
+                                </section>
+                                 <div class="scratch pad15"><img src="../../images/gif/mouse.gif" alt=""></div>
+							
+						</div>
+						
+						</div>
+                    
+				<!-- Sidebar -->
+					<div id="sidebar" class="sbglinel1">
+						<div class="inner">
+
+							
+							<!-- Menu -->
+								<nav id="menu">
+									<header>
+                                        <img class="full50" src="../../images/logo/mlogo_Blocks.svg" alt="">										
+									</header>
+                                    <h2 class="major strongX sbglined1">動作積木</h2>
+									<ul>
+                                        <li class="home"><a href="../../index.html">🏠回首頁</a></li>
+                                        <li>
+                                            <span class="opener">📚其它類積木</span>
+											<ul>
+												<li><a href="../Blocks_Looks/Looks.html">外觀積木</a></li>
+												<li><a href="../Blocks_Sound/Sound.html">音效積木</a></li>
+												<li><a href="../Blocks_Events/Events.html">事件積木</a></li>
+												<li><a href="../Blocks_Control/Control.html">控制積木</a></li>
+                                                <li><a href="../Blocks_Sensing/Sensing.html">偵測積木</a></li>
+                                                <li><a href="../Blocks_Operators/Operators.html">運算積木</a></li>
+                                                <li><a href="../Blocks_Variables/Variables.html">變數積木</a></li>
+                                                <li><a href="../Blocks_MyBlocks/MyBlocks.html">函式積木</a></li>
+                                                <li><a href="../Blocks_Music/Music.html">音樂積木</a></li>
+                                                <li><a href="../Blocks_Pen/Pen.html">畫筆積木</a></li>
+                                                <li><a href="../Blocks_VideoSensing/VideoSensing.html">視訊偵測積木</a></li>
+                                                <li><a href="../Blocks_TextToSpeech/TextToSpeech.html">文字轉語音積木</a></li>
+                                                <li><a href="../Blocks_Translate/Translate.html">翻譯積木</a></li>
+											</ul>
+                                        </li>                                        
+										<li class="topview"><a href="Motion.html">✅動作積木</a></li>
+										<li class="active"><a href="#">移動</a></li>
+										<li><a href="Motion02.html">右轉</a></li>
+                                        <li><a href="Motion03.html">左轉</a></li>
+                                        <li><a href="Motion04.html">定位到指定對象或隨機位置</a></li>
+                                        <li><a href="Motion05.html">定位到指定座標位置</a></li>
+                                        <li><a href="Motion06.html">指定時間滑行到指定對象或隨機位置</a></li>
+                                        <li><a href="Motion07.html">指定時間滑行到指定座標位置</a></li>
+                                        <li><a href="Motion08.html">面朝角度</a></li>
+                                        <li><a href="Motion09.html">面朝指定對象</a></li>
+                                        <li><a href="Motion10.html">x座標值改變</a></li>
+                                        <li><a href="Motion11.html">設定x座標</a></li>
+                                        <li><a href="Motion12.html">y座標值改變</a></li>
+                                        <li><a href="Motion13.html">設定y座標</a></li>
+                                        <li><a href="Motion14.html">碰到邊緣反彈</a></li>
+                                        <li><a href="Motion15.html">設定迴轉方式</a></li>
+                                        <li><a href="Motion16.html">x座標值</a></li>
+                                        <li><a href="Motion17.html">y座標值</a></li>
+                                        <li><a href="Motion18.html">方向角度值</a></li>                                                                        
+                                    </ul>
+								</nav>
+
+							
+
+							<!-- Footer -->
+								<footer id="footer">
+                                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="創用 CC 授權條款" style="border-width:0;  margin-bottom:  -10px;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+									<p class="copyright">&copy; 2023 &copy; | Design By Shiau Sir. From <a href="https://ddes.tc.edu.tw" target="_blank">DDES</a>, Taichung City, Taiwan.</p>
+								</footer>
+
+						</div>
+					
+                </div>
+			</div>
+			<div style="display: none;" id="go-to-top">
+      			<div style="opacity:0;display: block;" class="level-2"></div>
+      				<div class="level-3"></div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../js/jquery.min.js"></script>
+			<script src="../../js/browser.min.js"></script>
+			<script src="../../js/breakpoints.min.js"></script>
+			<script src="../../js/util.js"></script>
+			<script src="../../js/main.js"></script>
+		
+		<script>
+		$(document).ready(function(){
+    	if ( window.screen.width <= 480) {
+			scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,                // 顯示大小
+            // Repeat `style` and `languages` options here.
+			});
+       } else{
+		    scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,                // 顯示大小
+                // Repeat `style` and `languages` options here.
+			});
+	   	}
+		});
+		
+		</script>
+
+	</body>
+</html>

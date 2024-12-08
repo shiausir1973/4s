@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>〈拆分字串〉</title>		
+		<link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/shiau-check_list.css" />
+        <link rel="stylesheet" href="../../css/shiau-paper.css" />
+        <link rel="stylesheet" href="../../css/shiau-move_bg.css" />
+        <link rel="stylesheet" href="../../css/shiau-scratch-bg_banner.css" />
+	  	<script src="../../js/scratchblocks-v3.6.4-min.js"></script>
+		<script src="../../js/translations-all-v3.6.4.js"></script>
+	
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+                
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../../index.html" class="logo"><img src="../../images/logo/logo_skill.svg" alt=""></a>
+									
+								</header>
+                           
+                                <div class="topic large">
+									<p><img class="full125" src="../../images/topic/topicx01.svg" alt=""><span class="text">拆分字串</span></p>
+                                </div>
+                               
+							<!-- Section -->
+								<section><!-- 簡述提點-->
+                                    <div class="obj">
+                                        <img class="full20a20" src="../../images/topic/topicx03.svg" alt="">
+                                    </div>
+                                    <div class="bg-moveshadow1">
+                                        <div class="paper">
+										<div class="pad5 aa"></div>
+										<ul class="glt">
+                                            <li>字串的「拆分」就是將字串依指定的方式拆分成數個部分。</li>
+											<li>而不論指定的方式為何，其做法都是以「逐字拆分」為基礎，因此一定要熟悉「逐字拆分」的編程，才能活用其各種不同的狀況。</li>
+										</ul>
+										<ul class="hlt">											                                             
+											<li>在「拆分」的編程裡，主要是以「變數」、〖重複積木〗來執行，透過〖選擇積木〗來對指定的方式做判斷，再將結果以<a href="../Blocks_Operators/Operators12.html"><code class="b">(字串組合()())</code></a>積木來串接，拆分好的部分就存入清單中。</li>
+										</ul>
+                                        </div>
+                                    </div>
+                                </section>
+								<section><!--示例腳本-->
+                                    <div class="obj">
+                                        <img class="full20a20" src="../../images/topic/topicx04.svg" alt="">
+                                    </div>
+                                    <div class="bg-moveshadow3">
+                                        <div class="paperbox">
+											<div class="pad5 aa"></div>
+                                            <ol>
+												<li><a href="#1">逐字拆分</a></li>
+												<li><a href="#2">依第？個字位置拆分成二字串</a></li>
+												<li><a href="#3">依指定符號拆分成數個子字串</a></li>
+												<li><a href="#4">依指定字數分成數個子字串（重複）</a></li>
+												<li><a href="#5">依指定字數分成數個子字串（不重複）</a></li>
+												<li><a href="#6">依指定字串拆分成數個子字串</a></li>												
+											</ol>                                          
+                                        </div>
+                                    </div>                                     
+                                </section>
+                                <div class="pad010"><img src="../../images/gif/line2.gif" style="width: 100%; height: auto;" alt=""></div>
+                                <section><!-- 拆解 -->
+									<div class="title" id="1"><img class="full10c15" src="../../images/topic/topic01-1.svg" alt="">逐字拆分</div>
+									<div class="pad10 border-d">
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/577876109/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">「逐字拆分」主要使用的積木：<code class="b">重複()次</code>、<code class="b">(字串()的長度)</code>、<code class="b">(字串()的第()字)</code>，以及〖變數〗相關積木。</p>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+											<p class="indent">以下腳本需先建立一個「結果清單」，並使用到下列變數：</p>
+											<ul class="ilt">
+												<li><code class="b">(字串)</code>用來被拆分的字串</li>
+												<li><code class="b">(i)</code>用來遍歷字串的變數</li>
+												<li><code class="b">(字)</code>暫存每次拆分出來的字之變數</li>
+											</ul>
+                                            <pre class="blocks ud">
+											當@greenflag被點擊
+											刪除[結果清單 v]的所有項目
+											變數[字串 v]設為(...鍵入用來被拆分的字串...::grey)
+											變數[i v]設為(1)
+											變數[字 v]設為()
+											重複(字串(字串)的長度)次
+											變數[字 v]設為(字串(字串)的第(i)字)
+											添加(字)到[結果清單 v]
+											變數[i v]改變(1)
+											end
+											</pre>
+										</div>
+                                    </div>
+                                </section>
+								<div class="pad10"></div>
+								<section><!-- 拆解 -->
+									<div class="title" id="2"><img class="full10c15" src="../../images/topic/topic01-2.svg" alt="">依第？個字位置拆分成二字串</div>
+									<div class="pad10 border-d">
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/577877080/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">「拆分成二字串」除了使用到「逐字拆分」所使用的積木外，因為要再將取出的字組合起來，因此會用到<code class="b">(字串組合()())</code>積木。</p>
+										<p class="in1 w14b400">在進行拆分前，要先行判斷「指定位置」是否小於「字串長度」，如果是才能拆分，否則全部字串都是第一部分，第二部分則為空。</p>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+											<p class="indent">以下腳本會使用到下列變數：</p>
+											<ul class="ilt">
+												<li><code class="b">(字串)</code>用來被拆分的字串</li>
+												<li><code class="b">(i)</code>用來遍歷字串的變數</li>
+												<li><code class="b">(指定位置)</code>指定從第？個字位置拆分</li>
+												<li><code class="b">(第1部分)</code>存放第1部份字串的變數</li>
+												<li><code class="b">(第2部分)</code>存放第2部份字串的變數</li>
+											</ul>
+                                            <pre class="blocks ud">
+											當@greenflag被點擊
+											變數[字串 v]設為(...鍵入用來被拆分的字串...::grey)
+											變數[指定位置 v]設為(...鍵入指定第？個字位置...::grey)
+											變數[i v]設為(1)
+											變數[第1部分 v]設為()
+											變數[第2部分 v]設為()
+											如果&lt;&lt;(指定位置)&lt;(字串(字串)的長度)&gt;不成立&gt;那麼
+											變數[第1部分 v]設為(字串)
+											變數[第2部分 v]設為()
+											否則
+											重複((指定位置)-(1))次
+											變數[第1部分 v]設為(字串組合(第1部分)(字串(字串)的第(i)字)
+											變數[i v]改變(1)
+											end
+											重複(((字串(字串)的長度)-(指定位置))+(1))次
+											變數[第2部分 v]設為(字串組合(第2部分)(字串(字串)的第(i)字)
+											變數[i v]改變(1)
+											end
+											</pre>
+										</div>
+                                    </div>
+                                 </section>
+								<div class="pad10"></div>
+								<section><!-- 拆解 -->
+									<div class="title" id="3"><img class="full10c15" src="../../images/topic/topic01-3.svg" alt="">依指定符號拆分成數個子字串</div>
+									<div class="pad10 border-d">
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/577879471/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">此例是要將字串以「指定符號」為依據來拆分字串，拆分後該「指定符號」捨棄。</p>
+										<p class="in1 w14b400">同樣採「逐字拆分」方式進行，只是在拆分時要使用〖條件判斷〗比對的方式，比對拆分取出的字是不是「指定符號」，如果不是，則將拆分的字累次組合，繼續下一次拆分；如果是，就以此位置為一個分界，之前已經累次組合的字串就存入清單中。下一次拆分時，字串要重新累次組合。</p>
+										<p class="in1 w14b400">此方式的拆分有一個地方要留意，<span class="red">當拆分到字串最後一個字時，如果最後一個字不是「指定符號」，則需要將上一個已經累次組合的字串存入清單中，否則就會少一個項目了。</span></p>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+											<p class="indent">以下腳本需先建立一個「結果清單」，並使用到下列變數：</p>
+											<ul class="ilt">
+												<li><code class="b">(字串)</code>用來被拆分的字串</li>
+												<li><code class="b">(i)</code>用來遍歷字串的變數</li>
+												<li><code class="b">(指定符號)</code>作為拆分依據的符號</li>
+												<li><code class="b">(組合字串)</code>存放字串累次組合之變數</li>
+											</ul>
+                                            <pre class="blocks ud">
+											當@greenflag被點擊
+											刪除[結果清單 v]的所有項目
+											變數[字串 v]設為(...鍵入用來被拆分的字串...::grey)
+											變數[指定符號 v]設為(...鍵入指定拆分的符號...::grey)
+											變數[i v]設為(1)
+											變數[組合字串 v]設為()
+											重複(字串(字串)的長度)次
+											如果&lt;&lt;(字串(字串)的第(i)字)=(指定符號)&gt;不成立&gt;那麼
+											變數[組合字串 v]設為(字串組合(組合字串)(字串(字串)的第(i)字)
+											否則
+											添加(組合字串)到[結果清單 v]
+											變數[組合字串 v]設為()//每一次重新組字都要清空
+											end
+											變數[i v]改變(1)
+											end
+											如果&lt;&lt;(組合字串)=()&gt;不成立&gt;那麼//若最後一個字不是指定符號時
+											添加(組合字串)到[結果清單 v]
+											end
+											</pre>
+										</div>
+                                    </div>
+                                 </section>
+								<div class="pad10"></div>
+								<section><!-- 拆解 -->
+									<div class="title" id="4"><img class="full10c15" src="../../images/topic/topic01-3.svg" alt="">依指定字數分成數個子字串（重複）</div>
+									<div class="pad10 border-d">
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/577877638/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">此例是將字串依指定的字數每幾個分一組，而且是「重複」分組。例如12345678的字串，每3個重複分組，就形成123、234、345、456、567、678，最後一組的最末字是字串的最後一個字就不再分組，所以總計是(字串長度-指定字數+1)組</p>
+										<p class="in1 w14b400">在進行時可看到，第1組就是字串的第1個字開始，第2組就是字串的第2個字開始...，以此類推。</p>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+											<p class="indent">以下腳本需先建立一個「結果清單」，並使用到下列變數：</p>
+											<ul class="ilt">
+												<li><code class="b">(字串)</code>用來被拆分的字串</li>
+												<li><code class="b">(指定字數)</code>指定要多少個字一組</li>
+												<li><code class="b">(i)</code>用來遍歷字串的變數</li>
+												<li><code class="b">(J)</code>用於子字串計次的變數</li>												
+												<li><code class="b">(組合字串)</code>存放子字串累次組合結果之變數</li>
+											</ul>
+                                            <pre class="blocks ud">
+											當@greenflag被點擊
+											刪除[結果清單 v]的所有項目
+											變數[字串 v]設為(...鍵入用來被拆分的字串...::grey)
+											變數[指定字數 v]設為(...鍵入？個字分一組...::grey)
+											變數[i v]設為(0)
+											變數[J v]設為(0)
+											重複(((字串(字串)的長度)-(指定字數))+(1))次
+											變數[組合字串 v]設為()//每一次重新組字都要清空
+											變數[i v]改變(1)
+											變數[J v]設為(i)//第幾組就是由字串的第幾個字開始
+											重複(指定字數)次
+											變數[組合字串 v]設為(字串組合(組合字串)(字串(字串)的第(j)字)
+											變數[j v]改變(1)
+											end
+											添加(組合字串)到[結果清單 v]
+											end
+											</pre>
+										</div>
+                                    </div>
+                                 </section>
+								<div class="pad10"></div>
+								<section><!-- 拆解 -->
+									<div class="title" id="5"><img class="full10c15" src="../../images/topic/topic01-3.svg" alt="">依指定字數分成數個子字串（不重複）</div>
+									<div class="pad10 border-d">
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/577878253/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">此例是將字串依指定的字數每幾個分一組，而且是「不重複」分組。例如12345678的字串，每3個重複分組，就形成123、456、78，當最後一組的最末字是字串的最後一個字就不再分組，所以總計是[(字串長度/指定字數)的值無條件進位]組。</p>
+										<p class="in1 w14b400">在進行時可看到，當1組分完後，下一組就由下一字開始而不重複。</p>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+											<p class="indent">以下腳本需先建立一個「結果清單」，並使用到下列變數：</p>
+											<ul class="ilt">
+												<li><code class="b">(字串)</code>用來被拆分的字串</li>
+												<li><code class="b">(指定字數)</code>指定要多少個字一組</li>
+												<li><code class="b">(i)</code>用來遍歷字串的變數</li>
+												<li><code class="b">(組合字串)</code>存放子字串累次組合結果之變數</li>
+											</ul>
+                                            <pre class="blocks ud">
+											當@greenflag被點擊
+											刪除[結果清單 v]的所有項目
+											變數[字串 v]設為(...鍵入用來被拆分的字串...::grey)
+											變數[指定字數 v]設為(...鍵入？個字分一組...::grey)
+											變數[i v]設為(0)
+											重複([無條件進位 v]數值((字串(字串)的長度)/(指定字數)))次
+											變數[組合字串 v]設為()//每一次重新組字都要清空
+											重複(指定字數)次
+											變數[組合字串 v]設為(字串組合(組合字串)(字串(字串)的第(i)字)
+											變數[i v]改變(1)
+											end
+											添加(組合字串)到[結果清單 v]
+											end
+											</pre>
+										</div>
+                                    </div>
+                                 </section>
+								<div class="pad10"></div>
+								<section><!-- 拆解 -->
+									<div class="title" id="6"><img class="full10c15" src="../../images/topic/topic01-3.svg" alt="">依指定字串拆分成數個子字串</div>
+									<div class="pad10 border-d">
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/577878877/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">此例是將字串中有包含指定字串的部分分出來。在進行時要依序把有包含的字串跟沒包含的字串都分出來，就如同切甘蔗一樣，一節一節的。</p>
+										<p class="in1 w14b400">在進行時同樣採「逐字比對」的方式，對象是「指定字串」的第1個字，因為只有第1字符合，接下來的字才有可能與「指定字串」的其他字符合。</p>
+										<p class="in1 w14b400">當比對符合「指定字串」的第1個字時，就跳出原有循環，進到另一個與「指定字串」比對的循環。</p>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+											<p class="indent">以下腳本需先建立一個「結果清單」，並使用到下列變數：</p>
+											<ul class="ilt">
+												<li><code class="b">(字串)</code>用來被拆分的字串</li>
+												<li><code class="b">(指定字串)</code>指定要拆分的字串</li>
+												<li><code class="b">(字)</code>逐字比對「字」的變數</li>
+												<li><code class="b">(i)</code>用來遍歷字串的變數</li>
+												<li><code class="b">(j)</code>用於「字」符合時，創建「符合組合字串」計次的變數</li>
+												<li><code class="b">(符合組合字串)</code>存放符合指定字串累次組合結果之變數</li>
+												<li><code class="b">(不符合組合字串)</code>存放不符合指定字串累次組合結果之變數</li>
+											</ul>
+                                            <pre class="blocks ud">
+											當@greenflag被點擊
+											刪除[結果清單 v]的所有項目
+											變數[字串 v]設為(...鍵入用來被拆分的字串...::grey)
+											變數[指定字串 v]設為(...鍵入要拆分的字串...::grey)
+											變數[i v]設為(1)
+											變數[字 v]設為()
+											變數[不符合組合字串 v]設為()
+											重複(字串(字串)的長度)次
+											變數[字 v]設為(字串(字串)的第(i)字)
+											如果&lt;&lt;(字)=(字串(指定字串)的第(1)字)&gt;不成立&gt;那麼
+											變數[不符合組合字串 v]設為(字串組合(不符合組合字串)(字))
+											變數[i v]改變(1)
+											否則
+											變數[符合組合字串 v]設為()
+											變數[j v]設為(i)
+											重複(字串(指定字串)的長度)次
+											變數[符合組合字串 v]設為(字串組合(符合組合字串)(字串(字串)的第(j)字))
+											變數[j v]改變(1)
+											end
+											如果&lt;(指定字串)=(符合組合字串)&gt;那麼
+											添加(不符合組合字串)到[結果清單 v]
+											添加(符合組合字串)到[結果清單 v]
+											變數[不符合組合字串 v]設為()
+											變數[i v]改變(字串(指定字串)的長度)
+											否則
+											變數[不符合組合字串 v]設為(字串組合(不符合組合字串)(字))
+											變數[i v]改變(1)
+											end
+											end
+											end
+											如果&lt;&lt;(不符合組合字串)=()&gt;不成立&gt;那麼
+											添加(不符合組合字串)到[結果清單 v]
+											end
+											</pre>
+										</div>
+                                    </div>
+                                 </section>
+                                <div class="scratch pad15"><img src="../../images/gif/mouse.gif" alt=""></div>
+						</div>
+						
+						</div>
+                    
+				<!-- Sidebar -->
+					<div id="sidebar" class="sbgcolor11">
+						<div class="inner">
+
+							
+							<!-- Menu -->
+								<nav id="menu">
+									<header>
+                                        <img class="full50" src="../../images/logo/mlogo_skill.svg" alt="">										
+									</header>
+                                    <h2 class="major bgreen strongX sbgcolorl9">鍵鼠操控</h2>
+									<ul>
+                                        <li class="home"><a href="../../index.html">🏠回首頁</a></li>										
+                                        <li><a href="Skill001.html">鍵盤方向鍵操控移動</a></li>
+										<li><a href="Skill003.html">角色跟隨鼠標</a></li>
+										<li><a href="Skill009.html">砲彈射擊</a></li>
+										<li><a href="Skill010.html">聲音暫停與再次播放</a></li>
+										<li><a href="Skill011.html">逐字說話(打字機效果)</a></li>
+										<li><a href="Skill012.html">角色的互動對話</a></li>
+										<li><a href="Skill013.html">現在的日期</a></li>
+										<li><a href="Skill014.html">時間(電子鐘形式)</a></li>
+										<li><a href="Skill015.html">時間(時鐘形式)</a></li>
+										<li><a href="Skill023.html">拆分字串</a></li>
+                                    </ul>
+								</nav>
+
+							
+
+							<!-- Footer -->
+								<footer id="footer">
+                                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="創用 CC 授權條款" style="border-width:0;  margin-bottom:  -10px;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+									<p class="copyright">&copy; 2023 &copy; | Design By Shiau Sir. From <a href="https://ddes.tc.edu.tw" target="_blank">DDES</a>, Taichung City, Taiwan.</p>
+								</footer>
+
+						</div>
+					
+                </div>
+			</div>
+			<div style="display: none;" id="go-to-top">
+      			<div style="opacity:0;display: block;" class="level-2"></div>
+      				<div class="level-3"></div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../js/jquery.min.js"></script>
+			<script src="../../js/browser.min.js"></script>
+			<script src="../../js/breakpoints.min.js"></script>
+			<script src="../../js/util.js"></script>
+			<script src="../../js/main.js"></script>
+			
+		<script>
+		$(document).ready(function(){
+    	if ( window.screen.width <= 480) {
+			scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,                // 顯示大小
+            // Repeat `style` and `languages` options here.
+			});
+       } else{
+		    scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,                // 顯示大小
+                // Repeat `style` and `languages` options here.
+			});
+	   	}
+		});
+		
+		</script>
+
+	</body>
+</html>

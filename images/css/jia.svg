@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 182 34">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_未命名漸層_3);
+      }
+
+      .cls-2 {
+        fill: #52998d;
+      }
+
+      .cls-3 {
+        fill: #c5e5e1;
+        stroke: #1f685b;
+        stroke-miterlimit: 10;
+        stroke-width: .5px;
+      }
+    </style>
+    <radialGradient id="_未命名漸層_3" data-name="未命名漸層 3" cx="13.41" cy="825.74" fx="13.41" fy="825.74" r="3.72" gradientTransform="translate(0 858.95) scale(1 -1.02)" gradientUnits="userSpaceOnUse">
+      <stop offset=".04" stop-color="#1d7394"/>
+      <stop offset=".89" stop-color="#1699ac"/>
+    </radialGradient>
+  </defs>
+  <rect class="cls-2" width="182" height="33"/>
+  <rect class="cls-3" x="7.31" y="10.13" width="12.13" height="12.38" rx="2.19" ry="2.19"/>
+  <path class="cls-1" d="M12.95,12.87s.15-.07,.39-.07h.14c.25,0,.39,.02,.4,.06,.02,.93,.03,1.88,.02,2.84-.02,.39,.15,.55,.51,.47h2.18c.25,0,.39,.02,.4,.06,.02,.16,.03,.33,.02,.52,0,.26-.02,.4-.05,.42-.05,.02-.19,.04-.43,.04-.81,0-1.63,0-2.44,.02-.18,.07-.25,.25-.2,.52v2.4c0,.27-.02,.4-.05,.41-.04,.02-.19,.04-.45,.04-.28,0-.43-.02-.45-.05-.02-.05-.04-.19-.04-.44v-2.73c-.1-.16-.26-.22-.5-.18h-2.18c-.24,0-.38-.01-.4-.04-.03-.04-.05-.18-.05-.42v-.12c0-.25,.01-.39,.04-.41,.04-.03,.18-.05,.41-.05h2.38c.12,0,.21-.06,.27-.17l.05-3.13h.03Z"/>
+</svg>

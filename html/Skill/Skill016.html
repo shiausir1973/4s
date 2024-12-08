@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>〈刪除字串中的字〉</title>		
+		<link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/shiau-check_list.css" />
+        <link rel="stylesheet" href="../../css/shiau-paper.css" />
+        <link rel="stylesheet" href="../../css/shiau-move_bg.css" />
+        <link rel="stylesheet" href="../../css/shiau-scratch-bg_banner.css" />
+	  	<script src="../../js/scratchblocks-v3.6.4-min.js"></script>
+		<script src="../../js/translations-all-v3.6.4.js"></script>
+	
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+                
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../../index.html" class="logo"><img src="../../images/logo/logo_skill.svg" alt=""></a>
+									
+								</header>
+                           
+                                <div class="topic large">
+									<p><img class="full125" src="../../images/topic/topicx01.svg" alt=""><span class="text sbbgF">刪除字串中的字</span></p>
+                                </div>
+                               
+							<!-- Section -->
+								<section><!-- 簡述提點-->
+                                    <div class="obj">
+                                        <img class="full20a20" src="../../images/topic/topicx03.svg" alt="">
+                                    </div>
+                                    <div class="bg-moveshadow1">
+                                        <div class="paper">
+										<div class="pad5 aa"></div>
+										<ul class="glt">
+                                            <li>在<span class="strongX orange">Scratch</span>中，並沒有可以直接刪除字串中某個字的積木，只有在〖清單〗相關的積木中有刪除指定項數據的積木<code class="b">刪除[我的清單 v] 的第()項</code>。我們可以藉由「清單」來進行這個編程。</li>
+											<li>首先要將字串逐字拆分，再逐項存入清單中，然後查找有包含指定字的項目，把這項目刪除，最後再利用<code class="b">(清單值::list)</code>積木，呈現新字串。</li>
+											<li>而在這裡我們將示例「刪除字串中指定位置的字」及「刪除字串中的指定字」二種編程。</li>
+										</ul>
+                                        </div>
+                                    </div>
+                                </section>
+								<section><!--示例腳本-->
+                                    <div class="obj">
+                                        <img class="full20a20" src="../../images/topic/topicx04.svg" alt="">
+                                    </div>
+                                    <div class="bg-moveshadow3">
+                                        <div class="paperbox">
+											<div class="pad5 aa"></div>
+                                            <ol>
+												<li><a href="#1">刪除字串中的指定字</a></li>
+												<li><a href="#2">刪除字串中指定位置的字</a></li>
+											</ol>                                          
+                                        </div>
+                                    </div>                                     
+                                </section>
+                                <div class="pad010"><img src="../../images/gif/line2.gif" style="width: 100%; height: auto;" alt=""></div>
+                                <section><!-- 拆解 -->
+									<div class="title" id="1"><img class="full10c15" src="../../images/topic/topic01-1.svg" alt="">刪除字串中的指定字</div>
+									<div class="pad10 border-d">
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/577883226/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">由於我們並不能直接確定字串中是否只包含一個要被刪除的指定字，因此在編程時，我們要重複進行查找、刪除，直到沒有為止。</p>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+											<p class="indent">以下腳本需先建立一個「暫存清單」，並使用到下列變數：</p>
+											<ul class="ilt">
+												<li><code class="b">(字串)</code>用來被拆分的字串</li>
+												<li><code class="b">(i)</code>用來遍歷字串的變數</li>												
+												<li><code class="b">(指定字)</code>指定要被刪除的字</li>
+												<li><code class="b">(新字串)</code>用來表示新字串的變數</li>
+											</ul>
+                                            <pre class="blocks ud">
+											當@greenflag 被點擊
+											刪除[暫存清單 v]的所有項目
+											變數[字串 v]設為(...鍵入字串的內容...::grey)
+											變數[指定字 v]設為(...鍵入指定字...::grey)
+											變數[新字串 v]設為()
+											變數[i v]設為(1)
+											重複(字串(字串)的長度)次
+											添加(字串(字串)的第(i)字)到[暫存清單 v]
+											變數[i v]改變(1)
+											end
+											重複直到&lt;&lt;清單[暫存清單 v]包含(指定字)？&gt;不成立&gt;
+											刪除[暫存清單 v]的第((指定字)在[暫存清單 v]裡的項目編號)項
+											end
+											變數[新字串 v]設為(暫存清單::list)
+
+											</pre>
+											<p class="out1_in2">💥因為清單中的各項都是我們將字串一字一字拆分後存入的，因此每項都只有一個字，我們就可以直接利用<code class="b">(清單值::list)</code>積木來表示新字串。</p>
+										</div>
+                                    </div>
+                                </section>
+								<div class="pad10"></div>
+								<section><!-- 拆解 -->
+									<div class="title" id="2"><img class="full10c15" src="../../images/topic/topic01-2.svg" alt="">以特定符號串接清單數據</div>
+									<div class="pad10 border-d">
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/954833814/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">此方式主要是重複累次的讀取各項值與該符號組合的方式來串接。會使用到<a href="../Blocks_Operators/Operators12.html"><code class="b">字串組合()()</code></a>積木。</p>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+											<p class="indent">以下腳本會使用到下列變數：</p>
+											<ul class="ilt">
+												<li><code class="b">(新字串)</code>用來存放累次組合結果的字串</li>
+												<li><code class="b">(i)</code>用來遍歷清單項目的變數</li>
+												<li><code class="b">(串接符號)</code>指定要串接的符號</li>
+											</ul>
+                                            <pre class="blocks ud">
+											變數[i v]設為(0)
+											變數[串接符號 v]設為(....請鍵入要串接的符號..::grey)
+											變數[新字串 v]設為()
+											重複(清單[清單 v]的長度)次
+											變數[i v]改變(1)
+											如果&tl;(i)=(清單[清單 v]的長度)&gt;那麼
+											變數[新字串 v]設為(字串組合(新字串)([清單 v]的第(i)項))//最後一項不加串接符號
+											否則
+											變數[新字串 v]設為(字串組合(字串組合(新字串)([清單 v]的第(i)項))(串接符號))
+											end
+											</pre>
+										</div>
+                                    </div>
+                                 </section>
+								
+                                <div class="scratch pad15"><img src="../../images/gif/mouse.gif" alt=""></div>
+						</div>
+						
+						</div>
+                    
+				<!-- Sidebar -->
+					<div id="sidebar" class="sbgcolor11">
+						<div class="inner">
+
+							
+							<!-- Menu -->
+								<nav id="menu">
+									<header>
+                                        <img class="full50" src="../../images/logo/mlogo_skill.svg" alt="">										
+									</header>
+                                    <h2 class="major bgreen strongX sbgcolorl9">鍵鼠操控</h2>
+									<ul>
+                                        <li class="home"><a href="../../index.html">🏠回首頁</a></li>										
+                                        <li><a href="Skill001.html">鍵盤方向鍵操控移動</a></li>
+										<li><a href="Skill003.html">角色跟隨鼠標</a></li>
+										<li><a href="Skill009.html">砲彈射擊</a></li>
+										<li><a href="Skill010.html">聲音暫停與再次播放</a></li>
+										<li><a href="Skill011.html">逐字說話(打字機效果)</a></li>
+										<li><a href="Skill012.html">角色的互動對話</a></li>
+										<li><a href="Skill013.html">現在的日期</a></li>
+										<li><a href="Skill014.html">時間(電子鐘形式)</a></li>
+										<li><a href="Skill015.html">時間(時鐘形式)</a></li>
+                                    </ul>
+								</nav>
+
+							
+
+							<!-- Footer -->
+								<footer id="footer">
+                                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="創用 CC 授權條款" style="border-width:0;  margin-bottom:  -10px;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+									<p class="copyright">&copy; 2023 &copy; | Design By Shiau Sir. From <a href="https://ddes.tc.edu.tw" target="_blank">DDES</a>, Taichung City, Taiwan.</p>
+								</footer>
+
+						</div>
+					
+                </div>
+			</div>
+			<div style="display: none;" id="go-to-top">
+      			<div style="opacity:0;display: block;" class="level-2"></div>
+      				<div class="level-3"></div>
+			</div>			
+
+		<!-- Scripts -->
+			<script src="../../js/jquery.min.js"></script>
+			<script src="../../js/browser.min.js"></script>
+			<script src="../../js/breakpoints.min.js"></script>
+			<script src="../../js/util.js"></script>
+			<script src="../../js/main.js"></script>
+			
+		<script>
+		$(document).ready(function(){
+    	if ( window.screen.width <= 480) {
+			scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,                // 顯示大小
+            // Repeat `style` and `languages` options here.
+			});
+       } else{
+		    scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,                // 顯示大小
+                // Repeat `style` and `languages` options here.
+			});
+	   	}
+		});
+		
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,313 @@
+@charset "utf-8";
+/* CSS Document */
+/*滑鼠移過背景動(影子)bg-moveshadow*/
+.bg-moveshadow-down {
+	background:#f0f0f0;
+	padding: 8px;
+	border-radius:0;
+	margin:0 auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.bg-moveshadow-down:hover {
+	background:#F1FAFB;
+	box-shadow: 1px 1px 6px #99AA9B;
+}
+
+.bg-moveshadow1 {
+	background:#F1FAFB;
+	padding: 0px;
+	border-radius:0;
+	margin:0 auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.bg-moveshadow1:hover {
+	background:#FCFAEF;
+	box-shadow: 1px 1px 6px #BAB1BA;
+}
+
+.bg-moveshadow2 {
+	background:#FCFAEF;
+	padding: 0px;
+	border-radius:0;
+	margin:0 auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.bg-moveshadow2:hover {
+	background:#FBF8FB;
+	box-shadow: 1px 1px 6px #BAB1BA;
+}
+
+.bg-moveshadow3 {
+	background:#FDFAF8;
+	padding: 0px;
+	border-radius:0;
+	margin:0 auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.bg-moveshadow3:hover {
+	background:#EEFAF0;
+	box-shadow: 1px 1px 6px #BAB1BA;
+}
+
+.bg-moveshadow4 {
+	background:#EEFAF0;
+	padding: 0px;
+	border-radius:0;
+	margin:0 auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.bg-moveshadow4:hover {
+	background:#F8FCF9;
+	box-shadow: 1px 1px 6px #BAB1BA;
+}
+
+.bg-moveshadow5 {
+	background:#FAFBF7;
+	padding: 0px;
+	border-radius:0;
+	margin:0 auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.bg-moveshadow5:hover {
+	background:#F3F8F9; 
+	box-shadow: 1px 1px 6px #BAB1BA;
+}
+.bg-moveshadow6 {
+	background:#FBF8F8;
+	padding: 0px;
+	border-radius:0;
+	margin:0 auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.bg-moveshadow6:hover {
+	background:#FDFDFE; 
+	box-shadow: 1px 1px 6px #BAB1BA;
+}
+.bg-moveshadow-r {
+	background:transparent;
+	padding: 0px;
+	border-radius:0;
+	margin:0 auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.bg-moveshadow-r:hover {
+	background:#FBEFEF;
+	box-shadow: 1px 1px 6px #BAB1BA;
+}
+.bg-moveshadow-o {
+	background:transparent;
+	padding: 0px;
+	border-radius:0;
+	margin:0 auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.bg-moveshadow-o:hover {
+	background:#FDF5F1;
+	box-shadow: 1px 1px 6px #BAB1BA;
+}
+.bg-moveshadow-y {
+	background:transparent;
+	padding: 0px;
+	border-radius:0;
+	margin:0 auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.bg-moveshadow-y:hover {
+	background:#FCFBF5;
+	box-shadow: 1px 1px 6px #BAB1BA;
+}
+.bg-moveshadow-g {
+	background:transparent;
+	padding: 0px;
+	border-radius:0;
+	margin:0 auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.bg-moveshadow-g:hover {
+	background:#EDF9EE;
+	box-shadow: 1px 1px 6px #BAB1BA;
+}
+.bg-moveshadow-b {
+	background:transparent;
+	padding: 0px;
+	border-radius:0;
+	margin:0 auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.bg-moveshadow-b:hover {
+	background:#F1F3FC;
+	box-shadow: 1px 1px 6px #BAB1BA;
+}
+.bg-moveshadow-s {
+	background:transparent;
+	padding: 0px;
+	border-radius:0;
+	margin:0 auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.bg-moveshadow-s:hover {
+	background:#EFFAFA;
+	box-shadow: 1px 1px 6px #BAB1BA;
+}
+.bg-moveshadow-p {
+	background:transparent;
+	padding: 0px;
+	border-radius:0;
+	margin:0 auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.bg-moveshadow-p:hover {
+	background:#FAF4FD;
+	box-shadow: 1px 1px 6px #BAB1BA;
+}
+.bg-moveshadow-w {
+	background:transparent;
+	padding: 0px;
+	border-radius:0;
+	margin:0 auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.bg-moveshadow-w:hover {
+	background:#FCFAEF;
+	box-shadow: 1px 1px 6px #BAB1BA;
+}
+
+.bg-moveshadow-red {
+	background:#ab535f;
+	padding: 8px;
+	border-radius:0;
+	margin:0 auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.bg-moveshadow-red:hover {
+	background:#af3141;
+	box-shadow: 1px 1px 6px #777474;
+}
+
+.bg-moveshadow-blue {
+	background:#1F5078;
+	padding: 8px;
+	border-radius:0;
+	margin:0 auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	color:#F5F6FF;}
+	
+.bg-moveshadow-blue:hover {
+	background:#4682B4;
+	box-shadow: 1px 1px 6px #777474;
+	color:#FFD700;}
+
+.bg-moveshadow-rtob {
+	background:#AD1426;
+	padding: 8px;
+	border-radius:0;
+	margin:0 auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.bg-moveshadow-rtob:hover {
+	background-color:#13457F; 
+	box-shadow: 1px 1px 6px #BAB1BA;
+	color:#F4B328;
+}
+
+/* 有邊框 */
+
+.bg-moveshadow-outline1 {
+	background:transparent;
+	padding: 10px;
+	border-radius:0;
+	margin:0 auto;
+	border: 1px solid transparent;
+	border-width: 6px;
+	border-image: linear-gradient(to right, rgb(113, 78, 176) 0%, rgb(249, 145, 189) 100%);
+	border-image-slice: 1;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.bg-moveshadow-outline2 {
+	background:transparent;
+	padding: 0;
+	margin:0 auto;
+	border-image: linear-gradient(to right, rgb(113, 78, 176) 0%, rgb(249, 145, 189) 100%) 6; 
+	mask: linear-gradient(black, black);
+	border-width: 0 6px 6px 6px;
+	border-radius: 12px;
+	border-style: solid;
+	box-shadow:0px -3px 5px 1px rgba(0,0,0,0.4) inset; 
+}

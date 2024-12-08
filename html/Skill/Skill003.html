@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>〈使角色跟隨鼠標〉</title>		
+		<link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/shiau-check_list.css" />
+        <link rel="stylesheet" href="../../css/shiau-paper.css" />
+        <link rel="stylesheet" href="../../css/shiau-move_bg.css" />
+        <link rel="stylesheet" href="../../css/shiau-scratch-bg_banner.css" />
+	  	<script src="../../js/scratchblocks-v3.6.4-min.js"></script>
+		<script src="../../js/translations-all-v3.6.4.js"></script>
+	
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+                
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../../index.html" class="logo"><img src="../../images/logo/logo_skill.svg" alt=""></a>
+									
+								</header>
+                           
+                                <div class="topic large">
+									<p><img class="full125" src="../../images/topic/topicx01.svg" alt=""><span class="text">使角色跟隨鼠標</span></p>
+                                </div>
+                               
+							<!-- Section -->
+								<section><!-- 簡述提點-->
+                                    <div class="obj">
+                                        <img class="full20a20" src="../../images/topic/topicx03.svg" alt="">
+                                    </div>
+                                    <div class="bg-moveshadow1">
+                                        <div class="paper">
+										<div class="pad5 aa"></div>
+										<ul class="glt">
+                                            <li>本技巧將拆解角色跟隨鼠標的各種態樣，透過不同的跟隨方式，能讓遊戲添增更多的變化。</li>
+											<li>這些腳本示例，也可以將跟隨的目標「鼠標」換成其它的角色，呈現出追逐的效果。</li>
+										</ul>
+										<ul class="hlt">
+											<li>在「跟隨」鼠標狀態下，角色的面朝向通常要朝著鼠標。</li>
+                                            <li>一般使用<a href="../Blocks_Motion/Motion09.html"><code class="b">面朝(鼠標 v)向</code></a>+<a href="../Blocks_Motion/Motion01.html"><code class="b">移動()點</code></a>來呈現「跟隨」較合適。</li> 
+											<li>如使只使用〖滑行積木〗來跟隨時，角色的面朝方向是沒有改變的。</li> 	
+										</ul>
+                                        </div>
+                                    </div>
+                                </section>
+								<section><!--示例腳本-->
+                                    <div class="obj">
+                                        <img class="full20a20" src="../../images/topic/topicx04.svg" alt="">
+                                    </div>
+                                    <div class="bg-moveshadow3">
+                                        <div class="paperbox">
+											<div class="pad5 aa"></div>
+                                            <ol>
+												<li><a href="#1">總是緊黏著</a></li>
+												<li><a href="#2">一直跟隨在後</a></li>
+												<li><a href="#3">滿足條件才跟隨</a></li>
+												<li><a href="#4">相距夠近才跟隨</a></li>
+												<li><a href="#5">遠距跟隨，不碰觸</a></li>
+												<li><a href="#6">變速度跟隨</a></li>
+											</ol>                                          
+                                        </div>
+                                    </div>                                     
+                                </section>
+                                <div class="pad010"><img src="../../images/gif/line2.gif" style="width: 100%; height: auto;" alt=""></div>
+                                <section><!-- 拆解 -->
+									<div class="title" id="1"><img class="full10c15" src="../../images/topic/topic01-1.svg" alt="">總是緊黏著</div>
+									<div class="pad10 border-d">
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/578318376/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">這種情況就如同將角色的x、y座標和鼠標的x、y座標疊合在一起。</p>
+										<p class="in1 w14b400">可使用<a href="../Blocks_Motion/Motion04.html"><code class="b">定位到(隨機 v)位置</code></a>或<a href="../Blocks_Motion/Motion05.html"><code class="b">定位到 x:() y:()</code></a>來編程。</p>
+										<p class="in1 w14b400">呈現出的效果就像使用滑鼠拖曳角色一樣。</p>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+											<p class="indent">角色始終在鼠標的位置。</p>
+                                            <pre class="blocks u">
+											當@greenflag 被點擊
+											重複無限次
+											定位到(鼠標 v)位置
+											end
+											</pre>
+											<p class="indent inner">或者，可使用以下腳本：</p>
+											<pre class="blocks d">
+											當@greenflag 被點擊
+											重複無限次
+											定位到 x:(鼠標的 x) y:(鼠標的 y)
+											end
+											</pre>
+                                            <div class="pad10"></div>
+                                            <p class="w16b600 purple">📍偏移緊黏著</p>
+											<p class="indent">此腳本允許角色始終以相同的偏移距離緊黏滑鼠。</p>
+                                            <pre class="blocks ud">
+											當@greenflag 被點擊
+											重複無限次
+											定位到 x:(鼠標的 x) y:((鼠標的 y)+(30))//始終偏移在鼠標上方30點位置
+											end
+											
+											當@greenflag 被點擊
+											重複無限次
+											定位到 x:((鼠標的 x)-(40)) y:(鼠標的 y)//始終偏移在鼠標左方40點位置
+											end
+											</pre> 
+										</div>
+                                    </div>
+                                </section>
+                                <div class="pad10"></div>
+								<section><!-- 拆解 -->
+									<div class="title" id="2"><img class="full10c15" src="../../images/topic/topic01-2.svg" alt="">一直跟隨在後</div>
+									<div class="pad10 border-d">
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/578318670/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">此腳本可以使角色始終跟隨鼠標。當鼠標移動位置，角色就會以固定速度跟隨。</p>
+										<p class="in1 w14b400">此方式可以看到角色跟隨移動的過程。</p>
+										<p class="in1 w14b400">但有個小麻煩，就是當鼠標停止移動時，角色仍會持續移動，造成角色會有顫動的現象。</p>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+                                            <pre class="blocks u">
+											當@greenflag 被點擊
+											重複無限次
+											面朝(鼠標 v)向
+											移動(10)點
+											end
+											</pre>
+											<p class="indent inner">或者，可使用以下腳本：</p>
+											<pre class="blocks">
+											當@greenflag 被點擊
+											重複無限次
+											面朝(鼠標 v)向//如果沒有此積木，可能角色不會面朝鼠標
+											滑行(0.1)秒到 (鼠標 v)位置//更改秒數可以改變跟隨速度
+											end
+											</pre>
+											<p class="indent inner">或者，可使用以下腳本：</p>
+											<pre class="blocks d">
+											當@greenflag 被點擊
+											重複無限次
+											滑行(0.1)秒到 x:(鼠標的 x) y:(鼠標的 y)
+											end
+											</pre>                                            		
+										</div>
+                                    </div>
+                                 </section>
+								 <div class="pad10"></div>
+								 <section><!-- 拆解 -->
+									 <div class="title" id="3"><img class="full10c15" src="../../images/topic/topic01-3.svg" alt="">滿足條件才跟隨</div>
+									 <div class="pad10 border-d">
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/953665141/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">當積木中的<a href="../Idea_Shapes/Boolean_Blocks.html">〖布林積木〗</a>返回值是True時，角色就會跟隨鼠標。</p>
+										<p class="in1 w14b400">此方式可以改善角色在跟隨時，因鼠標停止移動，而造成顫動的情形。</p>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+                                            <pre class="blocks ud">
+											當@greenflag 被點擊
+											重複無限次
+											如果&lt; ...::grey &gt;那麼//布林值為true
+											面朝(鼠標 v)向
+											移動(10)點
+											end
+											</pre> 
+										</div>
+                                    </div>
+                                 </section>
+								 <div class="pad10"></div>
+								 <section><!-- 拆解 -->
+									 <div class="title" id="4"><img class="full10c15" src="../../images/topic/topic01-4.svg" alt="">相距夠近才跟隨</div>
+									 <div class="pad10 border-d">
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/578319227/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">此腳本是指角色與鼠標的相距在一定的範圍內時，角色將面向鼠標，跟隨移動。</p>
+										<p class="in1 w14b400">此方式仍會出現角色因鼠標停止移動，而造成顫動的現象。具體改善方式，可以再加入大於指定距離時跟隨，以形成雙條件的滿足，來避免角色顫動。</p>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+											<p class="indent">以下腳本為改善後之腳本。</p>
+                                            <pre class="blocks ud">
+											當@greenflag 被點擊
+											重複無限次
+											如果&lt;&lt;(與(鼠標 v)的間距)&lt;(100)&gt;且&lt;(與(鼠標 v)的間距)&gt;(10)&gt;&gt;那麼//距離夠近，但又要大於一指定距離
+											面朝(鼠標 v)向
+											移動(10)點
+											end
+											</pre> 
+										</div>
+                                    </div>
+                                 </section>
+								 <div class="pad10"></div>
+								 <section><!-- 拆解 -->
+									 <div class="title" id="5"><img class="full10c15" src="../../images/topic/topic01-5.svg" alt="">遠距跟隨，不碰觸</div>
+									 <div class="pad10 border-d">
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/578319452/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">此腳本將使角色持續跟隨鼠標移動，但永遠不會碰到到鼠標。</p>
+										<p class="in1 w14b400">當距離太遠時，移動靠近；當距離太近時，移動遠離。</p>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+                                            <pre class="blocks ud">
+											當@greenflag 被點擊
+											重複無限次
+											面朝(鼠標 v)向
+											如果&lt;(與(鼠標 v)的間距)&lt;(50) &gt;那麼//太近就後退
+											移動(-10)點
+											end
+											如果&lt;(與(鼠標 v)的間距)&gt;(80) &gt;那麼//太遠就靠近
+											移動(10)點
+											end
+											end
+											</pre> 
+										</div>
+                                    </div>
+                                 </section>
+								 <div class="pad10"></div>
+								 <section><!-- 拆解 -->
+									 <div class="title" id="6"><img class="full10c15" src="../../images/topic/topic01-6.svg" alt="">變速度跟隨</div>
+									 <div class="pad10 border-d">
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/578331103/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">角色跟隨滑鼠的速度會隨著它們之間距離的增加而增加，相反的，距離愈短，速度就愈慢。</p>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+                                            <pre class="blocks ud">
+											當@greenflag 被點擊
+											重複無限次
+											面朝(鼠標 v)向
+											移動((與(鼠標 v)的間距)/(12))點//改變12數值，可以改變跟隨速度。
+											end
+											</pre> 
+										</div>
+                                    </div>
+                                 </section>
+                                <div class="scratch pad15"><img src="../../images/gif/mouse.gif" alt=""></div>
+						</div>
+						
+						</div>
+                    
+				<!-- Sidebar -->
+					<div id="sidebar" class="sbgcolor11">
+						<div class="inner">
+
+							
+							<!-- Menu -->
+								<nav id="menu">
+									<header>
+                                        <img class="full50" src="../../images/logo/mlogo_skill.svg" alt="">										
+									</header>
+                                    <h2 class="major bgreen strongX sbgcolorl9">鍵鼠操控</h2>
+									<ul>
+                                        <li class="home"><a href="../../index.html">🏠回首頁</a></li>										
+                                        <li><a href="Skill001.html">鍵盤方向鍵操控移動</a></li>
+										<li><a href="Skill003.html">角色跟隨鼠標</a></li>
+										<li><a href="Skill009.html">砲彈射擊</a></li>
+										<li><a href="Skill010.html">聲音暫停與再次播放</a></li>
+										<li><a href="Skill011.html">逐字說話(打字機效果)</a></li>
+										<li><a href="Skill012.html">角色的互動對話</a></li>
+										<li><a href="Skill013.html">現在的日期</a></li>
+										<li><a href="Skill014.html">時間(電子鐘形式)</a></li>
+                                    </ul>
+								</nav>
+
+							
+
+							<!-- Footer -->
+								<footer id="footer">
+                                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="創用 CC 授權條款" style="border-width:0;  margin-bottom:  -10px;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+									<p class="copyright">&copy; 2023 &copy; | Design By Shiau Sir. From <a href="https://ddes.tc.edu.tw" target="_blank">DDES</a>, Taichung City, Taiwan.</p>
+								</footer>
+
+						</div>
+					
+                </div>
+			</div>
+			<div style="display: none;" id="go-to-top">
+      			<div style="opacity:0;display: block;" class="level-2"></div>
+      				<div class="level-3"></div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../js/jquery.min.js"></script>
+			<script src="../../js/browser.min.js"></script>
+			<script src="../../js/breakpoints.min.js"></script>
+			<script src="../../js/util.js"></script>
+			<script src="../../js/main.js"></script>
+		<script>
+		$(document).ready(function(){
+    	if ( window.screen.width <= 480) {
+			scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,                // 顯示大小
+            // Repeat `style` and `languages` options here.
+			});
+       } else{
+		    scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,                // 顯示大小
+                // Repeat `style` and `languages` options here.
+			});
+	   	}
+		});
+		
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>〈鍵盤操控轉動〉</title>		
+		<link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/shiau-check_list.css" />
+        <link rel="stylesheet" href="../../css/shiau-paper.css" />
+        <link rel="stylesheet" href="../../css/shiau-move_bg.css" />
+        <link rel="stylesheet" href="../../css/shiau-scratch-bg_banner.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+                
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../../index.html" class="logo"><img src="../../images/logo/logo_skill.svg" alt=""></a>
+									
+								</header>
+                           
+                                <div class="topic large">
+									<p><img class="full125" src="../../images/topic/topicx01.svg" alt=""><span class="text">鍵盤操控轉動</span></p>
+                                </div>
+                               
+							<!-- Section -->
+								<section><!-- 簡述提點-->
+                                    <div class="obj">
+                                        <img class="full20a20" src="../../images/topic/topicx03.svg" alt="">
+                                    </div>
+                                    <div class="bg-moveshadow1">
+                                        <div class="paper">
+                                            <p class="pad10 indent">在射擊遊戲中，如果要調整射擊角度，使用鍵盤按鍵操控會較使用滑鼠操控還來的精確。</p>
+                                            <p class="indent">「原地轉動」是屬於「改變轉向」，可使用<a href="../Blocks_Motion/Motion02.html"><code class="b">右轉@turnright()度</code></a>或<a href="../Blocks_Motion/Motion03.html"><code class="b">左轉@turnleft()度</code></a>來操作。</p>
+                                            <p class="indent">以下示例以鍵盤向左、向右按鍵來操控。</p>
+                                            <p class="pad010 indent">【按下鍵盤方向鍵】事件啟動「轉動」。</p>
+                                        </div>
+                                    </div>
+                                </section>                                
+                                <div class="pad010"><img src="../../images/gif/line2.gif" style="width: 100%; height: auto;" alt=""></div>
+                                <section><!-- 拆解 -->
+                                    <div class="title">
+                                        <img class="full10c15" src="../../images/topic/topic01-1.svg" alt="">直接轉向法
+                                    </div>
+                                    <div class="bg-moveshadow-w">
+                                        <div class="paper">
+                                            <p class="pad10 indent">這是最簡單的方式，是以<a href="../Blocks_Events/Events02.html"><code class="b">當[空白 v]鍵被按下</code></a>來啟動事件，串接<a href="../Blocks_Motion/Motion02.html"><code class="b">右轉@turnright()度</code></a>或<a href="../Blocks_Motion/Motion03.html"><code class="b">左轉@turnleft()度</code></a>來實現。</p>    
+                                            <div class="block">                                                
+                                                <img src="../../images/pic/skill/S_Play_A02/b01.svg" alt="">
+                                            </div>
+                                            <p class="indent">💥當按下左、右方向鍵後，角色就會朝指定方向轉動，也就是角色的「方向」改變了。</p>
+                                            <p class="pad010 indent">💥這種方式有一個限制，當要以按住按鍵不放開來使角色進行連續轉向時，一開始會有約0.5的停頓。</p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="pad10"></div>
+                                <section><!-- 拆解 -->
+                                    <div class="title">
+                                        <img class="full10c15" src="../../images/topic/topic01-1.svg" alt="">直接轉向，但有限制
+                                    </div>
+                                    <div class="bg-moveshadow-w">
+                                        <div class="paper">
+                                            <p class="pad10 indent">這就像轉動人頭一樣，有角度的限制。</p>    
+                                            <div class="block">                                                
+                                                <img src="../../images/pic/skill/S_Play_A02/b02.svg" alt="">
+                                            </div>                                            
+                                            <p class="pad010 indent">💥這種方式有一個限制，當要以按住按鍵不放開來使角色進行連續轉向時，一開始會有約0.5的停頓。</p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="pad10"></div>
+                                <section><!-- 拆解 -->
+                                    <div class="title">
+                                        <img class="full10c15" src="../../images/topic/topic01-1.svg" alt="">循環轉向法
+                                    </div>
+                                    <div class="bg-moveshadow-w">
+                                        <div class="paper">
+                                            <p class="pad10 indent">不以<a href="../Idea_Shapes/Hat_Blocks.html">〖帽子積木〗</a>來啟動，改以<a href="../Idea_Shapes/Boolean_Blocks.html">〖布林積木〗</a>重複偵測的條件判斷方式，可使連續轉向無停頓。</p>    
+                                            <div class="block">                                                
+                                                <img src="../../images/pic/skill/S_Play_A02/b03.svg" alt="">
+                                            </div>
+                                            <p class="pad010 indent">💥如果同時按住左、右方向鍵，角色將不會轉動，因為重複無限次的偵測是同時對所有按鍵進行的。</p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="pad10"></div>
+                                <section><!-- 拆解 -->
+                                    <div class="title">
+                                        <img class="full10c15" src="../../images/topic/topic01-1.svg" alt="">循環轉向，但有限制
+                                    </div>
+                                    <div class="bg-moveshadow-w">
+                                        <div class="paper">
+                                            <p class="pad10 indent">除了進行按鍵偵測外，同時偵測角色的方向是否還在可轉向的範圍內，二個條件同時滿足才能轉向。</p>    
+                                            <div class="block">                                                
+                                                <img src="../../images/pic/skill/S_Play_A02/b04.svg" alt="">
+                                            </div>
+                                            <p class="indent">也可以使用相嵌的方式做多重條件的判斷。</p>
+                                            <div class="block">                                                
+                                                <img src="../../images/pic/skill/S_Play_A02/b05.svg" alt="">
+                                            </div>
+                                            <div class="pad10"></div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="pad10"></div>
+                                <section><!-- 延伸思考-->
+                                    <div class="obj">
+                                        <img src="../../images/topic/topic10.png" alt="">
+                                    </div>
+                                    <div class="bg-moveshadow4">
+                                        <div class="paper">								            
+                                            <p class="pad10 pad010 indent">要使鍵盤按鍵可以同時操控角色的「移動」和「轉動」時，要如何做呢？</p>
+                                        </div>  
+                                    </div> 
+                                </section>
+                                
+                                <div class="scratch pad15"><img src="../../images/gif/mouse.gif" alt=""></div>
+						</div>
+						
+						</div>
+                    
+				<!-- Sidebar -->
+					<div id="sidebar" class="sbgcolor11">
+						<div class="inner">
+
+							
+							<!-- Menu -->
+								<nav id="menu">
+									<header>
+                                        <img class="full50" src="../../images/logo/mlogo_skill.svg" alt="">										
+									</header>
+                                    <h2 class="major bgreen strongX sbgcolorl9">鍵鼠操控</h2>
+									<ul>
+                                        <li class="home"><a href="../../index.html">🏠回首頁</a></li>
+                                        <li>
+                                            <span class="opener ot">🔹其它技巧拆解</span>
+											<ul>
+                                                <li><a href="../Skill_Program/S01A/S01A1.html">程序流程</a></li>
+												<li><a href="../Skill_Idea/S02A/S02A1.html">概念知識</a></li>
+                                                <li><a href="../Skill_Control/S03A/S03A1.html">編程控制</a></li>
+                                                <li><a href="../Skill_Random/S05A/S05A1.html">隨機方位</a></li>
+												<li><a href="../Skill_Action/S06A/S06A1.html">移動動作</a></li>
+                                                <li><a href="../Skill_Molding/S07A/S07A1.html">造型音效</a></li>
+												<li><a href="../Skill_Clone/S08A/S08A1.html">分身排列</a></li>
+                                                <li><a href="../Skill_Each/S09A/S09A1.html">互動關係</a></li>
+												<li><a href="../Skill_Math/S10A/S10A1.html">數學運算</a></li>
+                                                <li><a href="../Skill_Nature/S11A/S11A1.html">自然物理</a></li>
+												<li><a href="../Skill_String/S12A/S12A1.html">字串讀取</a></li>
+                                                <li><a href="../Skill_Variables/S13A/S13A1.html">變數清單</a></li>
+												<li><a href="../Skill_Pen/S14A/S14A1.html">畫筆幾何</a></li>
+                                                <li><a href="../Skill_Animation/S15A/S15A1.html">動畫設計</a></li>
+												<li><a href="../Skill_Copy/S16A/S16A1.html">模擬仿似</a></li>                                                
+											</ul>
+                                        </li>
+                                        <li>
+                                            <span class="opener active">⌨️鍵盤操控</span>
+										    <ul>
+                                                <li><a href="S_Play_A01.html">上下左右移動</a></li>
+								                <li class="active"><a href="#">轉動</a></li>
+										        <li><a href="S_Play_A03.html">限定座標間切換位</a></li>
+										        <li><a href="S_Play_A04.html">上下左右移動(速度法)</a></li>
+                                            </ul>    
+                                        </li>
+                                        <li>
+                                            <span class="opener">🖱️滑鼠操控</span>
+											<ul>
+                                                <li><a href="S_Play_B01.html">上下或左右移動</a></li>
+                                                <li><a href="S_Play_B02.html">轉動</a></li>
+                                                <li><a href="S_Play_B03.html">點擊事件</a></li>
+                                                <li><a href="S_Play_B04.html">鼠標懸停事件</a></li>
+                                                <li><a href="S_Play_B05.html">拖曳移動</a></li>
+                                                <li><a href="S_Play_B06.html">角色跟隨鼠標</a></li>
+											</ul>
+                                        </li>
+                                        <li>
+                                            <span class="opener">🤾‍♂️移動與跳躍</span>
+											<ul>
+                                                <li><a href="S_Play_C01.html">〈移動〉積木 </a></li>
+                                                <li><a href="S_Play_C02.html">〈滑行〉積木 </a></li>
+                                                <li><a href="S_Play_C03.html">〈X、Y座標值改變〉積木</a></li>
+                                                <li><a href="S_Play_C04.html">「變數」控制移動 </a></li>
+                                                <li><a href="S_Play_C05.html">相對移動</a></li>
+                                                <li><a href="S_Play_C06.html">跳躍</a></li>
+                                                <li><a href="S_Play_C07.html">平台移動樣態</a></li>
+											</ul>
+                                        </li>                                                                
+                                    </ul>
+								</nav>
+
+							
+
+							<!-- Footer -->
+								<footer id="footer">
+                                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="創用 CC 授權條款" style="border-width:0;  margin-bottom:  -10px;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+									<p class="copyright">&copy; 2023 &copy; | Design By Shiau Sir. From <a href="https://ddes.tc.edu.tw" target="_blank">DDES</a>, Taichung City, Taiwan.</p>
+								</footer>
+
+						</div>
+					
+                </div>
+			</div>
+			<div style="display: none;" id="go-to-top">
+      			<div style="opacity:0;display: block;" class="level-2"></div>
+      				<div class="level-3"></div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../js/jquery.min.js"></script>
+			<script src="../../js/browser.min.js"></script>
+			<script src="../../js/breakpoints.min.js"></script>
+			<script src="../../js/util.js"></script>
+			<script src="../../js/main.js"></script>
+
+	</body>
+</html>

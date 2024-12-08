@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>SCRATCH 偵測類積木</title>		
+		<link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/shiau-check_list.css" />
+        <link rel="stylesheet" href="../../css/shiau-paper.css" />
+        <link rel="stylesheet" href="../../css/shiau-move_bg.css" />
+        <link rel="stylesheet" href="../../css/shiau-scratch-bg_banner.css" />
+	  	<script src="../../js/scratchblocks-v3.6.4-min.js"></script>
+		<script src="../../js/translations-all-v3.6.4.js"></script>	
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+                
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a class="logo"><img src="../../images/logo/logo_Blocks.svg" alt=""></a>
+									
+								</header>
+                           
+                                <div class="table-wrapper">
+									<table class="sbgline6">
+									    <thead>
+										    <tr>
+												<th class="a sbgcolor6"></th>
+												<th class="d">偵測類積木</th>												
+											</tr>
+										</thead>
+                                    </table>
+                                </div>								                                                       
+                               <div class="scratch pad05"><img src="../../images/gif/catmouse.gif" alt=""></div>
+							<!-- Section -->
+								<section class="bg-moveshadow2">
+								    <div class="paper">                                                                                
+                                        <p class="indent"><span class="strongX bblue">《偵測積木》</span>是九大類別之一，積木的顏色是青藍色。</p>
+                                        <p class="indent">如果說『控制』類別積木是專案運行中每一個條件判斷式的執行者，那麼『偵測』類別積木就是提供數據給它們作為判斷依據的數據收集家。</p>
+                                        <p class="indent">它們會不斷的去取得鍵盤或滑鼠每一次作用的資訊，以及去判別角色、舞臺和系統間是否發生某些特定狀況，如碰撞事件...等，還有去讀取日期或使用者資料，然後將所獲得的數據及判別的結果提供給『控制』類別積木進行程序流程的控制，或藉由『運算』類別積木中的《邏輯運算子》積木來加以整合出更進一步的數據。</p>
+                                        <p class="indent">此類別積木共有18個，其中有10個回報積木、5個布林積木和3個堆疊積木，而由於『舞臺』的不可移動性，因此扣除拖曳和位置偵測相關積木後，『舞臺』有13個可使用。各積木的功能作用如下表：(可點按積木查看更詳細說明)</p>
+                                    </div>
+                                </section>
+                            <div class="pad10"></div>
+                                <section class="bg-moveshadow4">
+                                    <div class="table-wrapper">
+										<table class="aa alt">
+										    <thead>
+											    <tr>
+												    <th class="a">序</th>
+													<th class="m">積木</th>
+													<th class="n">積木名稱</th>
+                                                    <th class="o">功能作用</th>
+												</tr>
+								            </thead>
+											<tbody>
+											 	<tr>
+													<td class="a">1</td>
+													<td class="m">
+                                                        <div class="photo">
+										                    <a href="Sensing01.html"><code class="b">&lt;碰到(鼠標 v)？&gt;</code></a>
+                                                        </div>
+                                                    </td>
+													<td class="n">是否碰到指定對象</td>
+                                                    <td class="o">檢查角色碰到鼠標、舞台邊緣或指定的角色的條件是否成立</td>
+												</tr>
+                                                <tr>
+													<td class="a">2</td>
+													<td class="m">
+                                                        <div class="photo">
+										                    <a href="Sensing02.html"><code class="b">&lt;碰到顏色 [#410d1c]？&gt;</code></a>
+                                                        </div>
+                                                    </td>
+													<td class="n">是否碰到指定顏色</td>
+                                                    <td class="o">檢查角色碰到指定顏色的條件是否成立</td>
+												</tr>
+                                                <tr>
+													<td class="a">3</td>
+													<td class="m">
+                                                        <div class="photo">
+										                    <a href="Sensing03.html"><code class="b">&lt;顏色[#f60e8a]碰到 顏色[#d2944b]？&gt;</code></a>
+                                                        </div>
+                                                    </td>
+													<td class="n">是否顏色一碰到顏色二</td>
+                                                    <td class="o">檢查角色中的選定顏色碰觸到另一個指定顏色的條件是否成立</td>
+												</tr>
+                                                <tr>
+													<td class="a">4</td>
+													<td class="m">
+                                                        <div class="photo">
+										                    <a href="Sensing04.html"><code class="b">與(鼠標 v)的間距</code></a>
+                                                        </div>
+                                                    </td>
+													<td class="n">與指定對象的距離</td>
+                                                    <td class="o">獲取角色與鼠標或其他指定角色的距離</td>
+												</tr>
+                                                <tr>
+													<td class="a">5</td>
+													<td class="m">
+                                                        <div class="photo">
+										                    <a href="Sensing05.html"><code class="b">詢問()並等待</code></a> 
+                                                        </div>
+                                                    </td>
+													<td class="n">詢問並等待</td>
+                                                    <td class="o">顯示要詢問的文字並等待用戶（使用者）回覆輸入</td>
+												</tr>
+                                                <tr>
+													<td class="a">6</td>
+													<td class="m">
+                                                        <div class="photo">
+										                    <a href="Sensing06.html"><code class="b">(詢問的答案)</code></a>
+                                                        </div>
+                                                    </td>
+													<td class="n">答案</td>
+                                                    <td class="o">獲取用戶（使用者）回覆輸入的數據</td>
+												</tr>
+                                                <tr>
+													<td class="a">7</td>
+													<td class="m">
+                                                        <div class="photo">
+										                    <a href="Sensing07.html"><code class="b">&lt;(空白 v)鍵被按下？&gt;</code></a>
+                                                        </div>
+                                                    </td>
+													<td class="n">是否按下指定鍵</td>
+                                                    <td class="o">檢查指定鍵盤按鍵被按下的條件是否成立</td>
+												</tr>
+                                                <tr>
+													<td class="a">8</td>
+													<td class="m">
+                                                        <div class="photo">
+										                    <a href="Sensing08.html"><code class="b">&lt; 滑鼠鍵被按下？&gt;</code></a>
+                                                        </div>
+                                                    </td>
+													<td class="n">是否按下滑鼠</td>
+                                                    <td class="o">檢查滑鼠鍵被按下的條件是否成立</td>
+												</tr>
+                                                <tr>
+													<td class="a">9</td>
+													<td class="m">
+                                                        <div class="photo">
+										                    <a href="Sensing09.html"><code class="b">(鼠標的 x)</code></a>
+                                                        </div>
+                                                    </td>
+													<td class="n">鼠標的ｘ座標值</td>
+                                                    <td class="o">獲取鼠標位置的 x 座標值</td>
+												</tr>
+                                                <tr>
+													<td class="a">10</td>
+													<td class="m">
+                                                        <div class="photo">
+										                    <a href="Sensing10.html"><code class="b">(鼠標的 y)</code></a>
+                                                        </div>
+                                                    </td>
+													<td class="n">鼠標的ｙ座標值</td>
+                                                    <td class="o">獲取鼠標位置的 ｙ 座標值</td>
+												</tr>
+                                                <tr>
+													<td class="a">11</td>
+													<td class="m">
+                                                        <div class="photo">
+										                    <a href="Sensing11.html"><code class="b">拖曳方式設為[可拖曳 v]</code></a>
+                                                        </div>
+                                                    </td>
+													<td class="n">設定拖曳方式</td>
+                                                    <td class="o">設定角色在程序運行間可否使用滑鼠來拖曳</td>
+												</tr>
+                                                <tr>
+													<td class="a">12</td>
+													<td class="m">
+                                                        <div class="photo">
+										                    <a href="Sensing12.html"><code class="b">(聲音響度)</code></a>
+                                                        </div>
+                                                    </td>
+													<td class="n">聲音大小值</td>
+                                                    <td class="o">獲取電腦麥克風所接收到的聲音大小值</td>
+												</tr>
+                                                <tr>
+													<td class="a">13</td>
+													<td class="m">
+                                                        <div class="photo">
+										                    <a href="Sensing13.html"><code class="b">(計時器)</code></a>
+                                                        </div>
+                                                    </td>
+													<td class="n">計時器秒數</td>
+                                                    <td class="o">獲取計時器的當前值</td>
+												</tr>
+                                                <tr>
+													<td class="a">14</td>
+													<td class="m">
+                                                        <div class="photo">
+										                    <a href="Sensing14.html"><code class="b">計時器重置</code></a>
+                                                        </div>
+                                                    </td>
+													<td class="n">計時器重置</td>
+                                                    <td class="o">使計時器歸零重置</td>
+												</tr>
+                                                <tr>
+													<td class="a">15</td>
+													<td class="m">
+                                                        <div class="photo">
+										                    <a href="Sensing15.html"><code class="b">((舞臺 v)的[背景編號 v])</code></a>
+                                                        </div>
+                                                    </td>
+													<td class="n">指定對象的指定項目值</td>
+                                                    <td class="o">獲取舞台或指定角色的指定項目或變數值</td>
+												</tr>
+                                                <tr>
+													<td class="a">16</td>
+													<td class="m">
+                                                        <div class="photo">
+										                    <a href="Sensing16.html"><code class="b">(目前時間的[年 v])</code></a>
+                                                        </div>
+                                                    </td>
+													<td class="n">日期時間值</td>
+                                                    <td class="o">獲取當前時間的指定單位值</td>
+												</tr>
+                                                <tr>
+													<td class="a">17</td>
+													<td class="m">
+                                                        <div class="photo">
+										                    <a href="Sensing17.html"><code class="b">2000年迄今日數</code></a>
+                                                        </div>
+                                                    </td>
+													<td class="n">2000年迄今的日數</td>
+                                                    <td class="o">獲取2000年1月1日到今日的天數</td>
+												</tr>
+                                                <tr>
+													<td class="a">18</td>
+													<td class="m">
+                                                        <div class="photo">
+										                    <a href="Sensing18.html"><code class="b">用戶名稱</code></a> 
+                                                        </div>
+                                                    </td>
+													<td class="n">用戶名稱</td>
+                                                    <td class="o">獲取用戶（使用者）的名稱</td>
+												</tr>
+                                                
+								            </tbody>
+                                        </table>
+                                        <table class="bb alt" style="width: 100%">
+                                            <thead>
+                                                <tr>
+                                                    <th class="p">序</th>
+                                                    <th class="q">積木及名稱</th>
+                                                    <th class="r">功能作用</th>
+                                                </tr>
+                                            </thead>
+											<tbody>
+                                                <tr>
+                                                    <td class="p">1</td>
+                                                    <td class="q">
+										                <a href="Sensing01.html"><code class="b">&lt;碰到(鼠標 v)？&gt;</code></a>
+                                                        <p class="nounder">是否碰到指定對象</p>
+                                                    </td>
+                                                    <td class="r">檢查角色碰到鼠標、舞台邊緣或指定的角色的條件是否成立</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">2</td>
+                                                    <td class="q">                                                        
+										                <a href="Sensing02.html"><code class="b">&lt;碰到顏色 [#410d1c]？&gt;</code></a> 
+                                                        <p class="nounder">是否碰到指定顏色</p>
+                                                    </td>
+                                                    <td class="r">檢查角色碰到指定顏色的條件是否成立</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">3</td>
+                                                    <td class="q">
+										                <a href="Sensing03.html"><code class="b">&lt;顏色[#f60e8a]碰到 顏色[#d2944b]？&gt;</code></a> 
+                                                        <p class="nounder">是否顏色一碰到顏色二</p>
+                                                    </td>
+                                                    <td class="r">檢查角色中的選定顏色碰觸到另一個指定顏色的條件是否成立</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">4</td>
+                                                    <td class="q">
+										                <a href="Sensing04.html"><code class="b">與(鼠標 v)的間距</code></a>
+                                                        <p class="nounder">與指定對象的距離</p>
+                                                    </td>
+                                                    <td class="r">獲取角色與鼠標或其他指定角色的距離</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">5</td>
+                                                    <td class="q">
+										                <a href="Sensing05.html"><code class="b">詢問()並等待</code></a>
+                                                        <p class="nounder">詢問並等待</p>
+                                                    </td>
+                                                    <td class="r">顯示要詢問的文字並等待用戶（使用者）回覆輸入</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">6</td>
+                                                    <td class="q">
+										                <a href="Sensing06.html"><code class="b">(詢問的答案)</code></a>
+                                                        <p class="nounder">答案</p>
+                                                    </td>
+                                                    <td class="r">獲取用戶（使用者）回覆輸入的數據</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">7</td>
+                                                    <td class="q">
+										                <a href="Sensing07.html"><code class="b">&lt;(空白 v)鍵被按下？&gt;</code></a>
+                                                        <p class="nounder">是否按下指定鍵</p>
+                                                    </td>
+                                                    <td class="r">檢查指定鍵盤按鍵被按下的條件是否成立</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">8</td>
+                                                    <td class="q">
+										                <a href="Sensing08.html"><code class="b">&lt; 滑鼠鍵被按下？&gt;</code></a> 
+                                                        <p class="nounder">是否按下滑鼠</p>
+                                                    </td>
+                                                    <td class="r">檢查滑鼠鍵被按下的條件是否成立</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">9</td>
+                                                    <td class="q">
+										                <a href="Sensing09.html"><code class="b">(鼠標的 x)</code></a> 
+                                                        <p class="nounder">鼠標的ｘ座標值</p>
+                                                    </td>
+                                                    <td class="r">獲取鼠標位置的 x 座標值</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">10</td>
+                                                    <td class="q">
+										                <a href="Sensing10.html"><code class="b">(鼠標的 y)</code></a>
+                                                        <p class="nounder">鼠標的ｙ座標值</p>
+                                                    </td>
+                                                    <td class="r">獲取鼠標位置的 ｙ 座標值</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">11</td>
+                                                    <td class="q">
+										                <a href="Sensing11.html"><code class="b">拖曳方式設為[可拖曳 v]</code></a>
+                                                        <p class="nounder">設定拖曳方式</p>
+                                                    </td>
+                                                    <td class="r">設定角色在程序運行間可否使用滑鼠來拖曳</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">12</td>
+                                                    <td class="q">
+										                <a href="Sensing12.html"><code class="b">(聲音響度)</code></a>
+                                                        <p class="nounder">聲音大小值</p>
+                                                    </td>
+                                                    <td class="r">獲取電腦麥克風所接收到的聲音大小值</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">13</td>
+                                                    <td class="q">
+										                <a href="Sensing13.html"><code class="b">(計時器)</code></a>
+                                                        <p class="nounder">計時器秒數</p>
+                                                    </td>
+                                                    <td class="r">獲取計時器的當前值</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">14</td>
+                                                    <td class="q">
+										                <a href="Sensing14.html"><code class="b">計時器重置</code></a>
+                                                        <p class="nounder">計時器重置</p>
+                                                    </td>
+                                                    <td class="r">使計時器歸零重置</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">15</td>
+                                                    <td class="q">
+										                <a href="Sensing15.html"><code class="b">((舞臺 v)的[背景編號 v])</code></a>
+                                                        <p class="nounder">指定對象的指定項目值</p>
+                                                    </td>
+                                                    <td class="r">獲取舞台或指定角色的指定項目或變數值</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">16</td>
+                                                    <td class="q">
+										                <a href="Sensing16.html"><code class="b">(目前時間的[年 v])</code></a> 
+                                                        <p class="nounder">日期時間值</p>
+                                                    </td>
+                                                    <td class="r">獲取當前時間的指定單位值</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">17</td>
+                                                    <td class="q">
+										                <a href="Sensing17.html"><code class="b">2000年迄今日數</code></a>
+                                                        <p class="nounder">2000年迄今的日數</p>
+                                                    </td>
+                                                    <td class="r">獲取2000年1月1日到今日的天數</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p">18</td>
+                                                    <td class="q">
+										                <a href="Sensing18.html"><code class="b">用戶名稱</code></a>
+                                                        <p class="nounder">用戶名稱</p>
+                                                    </td>
+                                                    <td class="r">獲取用戶（使用者）的名稱</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </section>    
+                                 <div class="scratch pad15"><img src="../../images/gif/mouse.gif" alt=""></div>
+							    
+						</div>
+						
+						</div>
+                    
+				<!-- Sidebar -->
+					<div id="sidebar" class="sbglinel6">
+						<div class="inner">
+
+							
+							<!-- Menu -->
+								<nav id="menu">
+									<header>
+                                        <img class="full50" src="../../images/logo/mlogo_Blocks.svg" alt="">										
+									</header>
+                                    <h2 class="major strongX sbglined6">偵測積木</h2>
+									<ul>
+                                        <li class="home"><a href="../../index.html">🏠回首頁</a></li>
+                                        <li>
+                                            <span class="opener">📚其它類積木</span>
+											<ul>
+												<li><a href="../Blocks_Motion/Motion.html">動作積木</a></li>
+												<li><a href="../Blocks_Looks/Looks.html">外觀積木</a></li>
+												<li><a href="../Blocks_Sound/Sound.html">音效積木</a></li>
+												<li><a href="../Blocks_Events/Events.html">事件積木</a></li>
+                                                <li><a href="../Blocks_Control/Control.html">控制積木</a></li>
+                                                <li><a href="../Blocks_Operators/Operators.html">運算積木</a></li>
+                                                <li><a href="../Blocks_Variables/Variables.html">變數積木</a></li>
+                                                <li><a href="../Blocks_MyBlocks/MyBlocks.html">函式積木</a></li>
+                                                <li><a href="../Blocks_Music/Music.html">音樂積木</a></li>
+                                                <li><a href="../Blocks_Pen/Pen.html">畫筆積木</a></li>
+                                                <li><a href="../Blocks_VideoSensing/VideoSensing.html">視訊偵測積木</a></li>
+                                                <li><a href="../Blocks_TextToSpeech/TextToSpeech.html">文字轉語音積木</a></li>
+                                                <li><a href="../Blocks_Translate/Translate.html">翻譯積木</a></li>
+											</ul>
+                                        </li>
+										<li class="active"><a href="#">✅偵測積木</a></li>
+										<li><a href="Sensing01.html">是否碰到指定對象</a></li>
+										<li><a href="Sensing02.html">是否碰到指定顏色</a></li>
+                                        <li><a href="Sensing03.html">是否顏色一碰到顏色二</a></li>
+                                        <li><a href="Sensing04.html">與指定對象的距離</a></li>
+                                        <li><a href="Sensing05.html">詢問並等待</a></li>
+                                        <li><a href="Sensing06.html">答案</a></li>
+                                        <li><a href="Sensing07.html">是否按下指定鍵</a></li>
+                                        <li><a href="Sensing08.html">是否按下滑鼠</a></li>
+                                        <li><a href="Sensing09.html">鼠標的ｘ座標值</a></li>
+                                        <li><a href="Sensing10.html">鼠標的ｙ座標值</a></li>
+                                        <li><a href="Sensing11.html">設定拖曳方式</a></li>
+                                        <li><a href="Sensing12.html">聲音大小值</a></li>
+                                        <li><a href="Sensing13.html">計時器秒數</a></li>
+                                        <li><a href="Sensing14.html">計時器重置</a></li>
+                                        <li><a href="Sensing15.html">指定對象的指定項目值</a></li>
+                                        <li><a href="Sensing16.html">日期時間值</a></li>
+                                        <li><a href="Sensing17.html">2000年迄今的日數</a></li>
+                                        <li><a href="Sensing18.html">用戶名稱</a></li>                                         
+                                    </ul>
+								</nav>
+
+							
+
+							<!-- Footer -->
+								<footer id="footer">
+                                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="創用 CC 授權條款" style="border-width:0;  margin-bottom:  -10px;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+									<p class="copyright">&copy; 2023 &copy; | Design By Shiau Sir. From <a href="https://ddes.tc.edu.tw" target="_blank">DDES</a>, Taichung City, Taiwan.</p>
+								</footer>
+
+						</div>
+					
+                </div>
+			</div>
+			<div style="display: none;" id="go-to-top">
+      			<div style="opacity:0;display: block;" class="level-2"></div>
+      				<div class="level-3"></div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../js/jquery.min.js"></script>
+			<script src="../../js/browser.min.js"></script>
+			<script src="../../js/breakpoints.min.js"></script>
+			<script src="../../js/util.js"></script>
+			<script src="../../js/main.js"></script>
+		<script>
+		$(document).ready(function(){
+    	if ( window.screen.width <= 480) {
+			scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,                // 顯示大小
+            // Repeat `style` and `languages` options here.
+			});
+       } else{
+		    scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,                // 顯示大小
+                // Repeat `style` and `languages` options here.
+			});
+	   	}
+		});
+		
+		</script>
+
+	</body>
+</html>

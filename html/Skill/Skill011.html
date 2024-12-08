@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>〈逐字說話(打字機效果)〉</title>		
+		<link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/shiau-check_list.css" />
+        <link rel="stylesheet" href="../../css/shiau-paper.css" />
+        <link rel="stylesheet" href="../../css/shiau-move_bg.css" />
+        <link rel="stylesheet" href="../../css/shiau-scratch-bg_banner.css" />
+	  	<script src="../../js/scratchblocks-v3.6.4-min.js"></script>
+		<script src="../../js/translations-all-v3.6.4.js"></script>
+	
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+                
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../../index.html" class="logo"><img src="../../images/logo/logo_skill.svg" alt=""></a>
+									
+								</header>
+                           
+                                <div class="topic large">
+									<p><img class="full125" src="../../images/topic/topicx01.svg" alt=""><span class="text">逐字說話(打字機效果)</span></p>
+                                </div>
+                               
+							<!-- Section -->
+								<section><!-- 簡述提點-->
+                                    <div class="obj">
+                                        <img class="full20a20" src="../../images/topic/topicx03.svg" alt="">
+                                    </div>
+                                    <div class="bg-moveshadow1">
+                                        <div class="paper">
+										<div class="pad5 aa"></div>
+										<ul class="glt">
+                                            <li>「逐字說話」是一種「文字渲染」的表現方式，它會快速的將在〖說話積木〗中的文字，以逐字累加的方式來呈現，類似打字機的風格。</li>
+											<li>在製作動畫時，可同時使說話角色脣形同步，就更顯逼真。</li>
+										</ul>
+										<ul class="hlt">
+											<li>使用<a href="../Blocks_Operators/Operators13.html"><code class="b">字串()的第()字</code>木</a>來將說話的內容逐字取出，然後再用<a href="../Blocks_Operators/Operators12.html"><code class="b">字串組合()()</code></a>來將取出的字一個字一個字依序組合起來，每一次組合後角色都會使用<a href="../Blocks_Looks/Looks02.html"><code class="b">說出()</code></a>來將組合後的文字呈現。</li>
+                                            <li>使用<a href="../Blocks_Operators/Operators14.html"><code class="b">字串()的長度</code></a>來計算說話內容的文字數量，以確定上述編程要重複多少次。</li> 
+											<li>在動畫設計中，一個角色可能需要在不同的時間點說話，就可將每次要說的內容文字，逐項存於清單中，然後將「逐字說話」的腳本自定義一個<a href="../Blocks_MyBlocks/MyBlocks.html">《函式積木》</a>，形成一個副程式，等到角色要說話時，就可以這個副程式，來將要說的內容文字從清單中取出執行。</li>
+										</ul>
+                                        </div>
+                                    </div>
+                                </section>
+								<section><!--示例腳本-->
+                                    <div class="obj">
+                                        <img class="full20a20" src="../../images/topic/topicx04.svg" alt="">
+                                    </div>
+                                    <div class="bg-moveshadow3">
+                                        <div class="paperbox">
+											<div class="pad5 aa"></div>
+                                            <ol>
+												<li><a href="#1">逐字說話</a></li>
+												<li><a href="#2">在動畫中使用，與清單結合</a></li>
+											</ol>                                          
+                                        </div>
+                                    </div>                                     
+                                </section>
+                                <div class="pad010"><img src="../../images/gif/line2.gif" style="width: 100%; height: auto;" alt=""></div>
+                                <section><!-- 拆解 -->
+									<div class="title" id="1"><img class="full10c15" src="../../images/topic/topic01-1.svg" alt="">逐字說話</div>
+									<div class="pad10 border-d">	
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/674868462/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+											<p class="indent">此腳本需用到三個變數，分別是「完整內容文字」、「第？個字」和「逐次說的內容」</p>
+                                            <pre class="blocks ud">
+											當@greenflag被點擊
+											變數[完整內容文字 v]設為(...請輸入要顯現的完整內容..::)
+											變數[第？個字 v]設為(0)
+											變數[逐次說的內容 v]設為( )//初始化要說的內容
+											重複(字串(完整內容文字) 的長度)次//重複的次數就是完整內容的字數
+											變數[第？個字 v]改變(1)
+											變數[逐次說的內容 v]設為(字串組合(逐次說的內容)(字串(完整內容文字 )的第(第？個字)字))//將新取出的字與之前的字串組合
+											說出(逐字說的內容)
+											等待(0.2)秒
+											end
+											等待(1)秒
+											說出()//清空說話氣泡
+											</pre>
+										</div>
+                                    </div>
+                                </section>
+								<div class="pad10"></div>
+								<section><!-- 拆解 -->
+									<div class="title" id="2"><img class="full10c15" src="../../images/topic/topic01-2.svg" alt="">在動畫中使用，與清單結合</div>
+									<div class="pad10 border-d">
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/953944928/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">與清單結合，是因為在動畫中，一個角色可能會在不同的時間點說話，為了簡化編程，把每次要說的話內容，依序存至清單中，也不用重複寫好幾次的「逐字說話」腳本，只要將該腳本自定義成一個函式積木，就可以方便呼叫來使用。</p>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+                                        	<p class="w16b600 purple">📍添加清單內容</p>
+											<p class="indent">新增一個「說話清單」，然後在初始時，將內容文字依照說話的順序加入。</p>
+                                            <pre class="blocks ud">
+											當@greenflag被點擊
+											刪除[說話清單 v]的所有項目
+											添加(..內容文字..::grey)到[說話清單 v]//要依序加入
+											添加(..內容文字..::grey)到[說話清單 v]
+											添加(..內容文字..::grey)到[說話清單 v]
+											添加(..內容文字..::grey)到[說話清單 v]
+											添加(..內容文字..::grey)到[說話清單 v]
+											...
+											</pre>
+											<div class="pad10"></div>
+                                            <p class="w16b600 purple">📍定義函式積木</p>
+											<p class="indent">以下為自定義函式積木的腳本，與上述腳本都一樣，只是成了自定義積木</p>
+                                            <pre class="blocks ud">
+											定義 逐字說話(項次)
+											變數[完整內容文字 v]設為([說話清單 v]的第(項次)項)
+											變數[第？個字 v]設為(0)
+											變數[逐次說的內容 v]設為( )//初始化要說的內容
+											重複(字串(完整內容文字) 的長度)次//重複的次數就是完整內容的字數
+											變數[第？個字 v]改變(1)
+											變數[逐次說的內容 v]設為(字串組合(逐次說的內容)(字串(完整內容文字 )的第(第？個字)字
+											說出(逐字說的內容)
+											等待(0.2)秒
+											end
+											等待(1)秒
+											說出()//清空說話氣泡
+											</pre> 
+											<p class="out1_in2">💥不要勾選「執行完畢再更新畫面」，否則將導致立即顯示全部文本，而不是可看到的打字機效果。</p> 
+											<p class="out1_in2">💥使用時，只要更改「項次」即可。</p>
+										</div>
+                                    </div>
+                                 </section>
+                                <div class="scratch pad15"><img src="../../images/gif/mouse.gif" alt=""></div>
+						</div>
+						
+						</div>
+                    
+				<!-- Sidebar -->
+					<div id="sidebar" class="sbgcolor11">
+						<div class="inner">
+
+							
+							<!-- Menu -->
+								<nav id="menu">
+									<header>
+                                        <img class="full50" src="../../images/logo/mlogo_skill.svg" alt="">										
+									</header>
+                                    <h2 class="major bgreen strongX sbgcolorl9">鍵鼠操控</h2>
+									<ul>
+                                        <li class="home"><a href="../../index.html">🏠回首頁</a></li>										
+                                        <li><a href="Skill001.html">鍵盤方向鍵操控移動</a></li>
+										<li><a href="Skill003.html">角色跟隨鼠標</a></li>
+										<li><a href="Skill009.html">砲彈射擊</a></li>
+										<li><a href="Skill010.html">聲音暫停與再次播放</a></li>
+										<li><a href="Skill011.html">逐字說話(打字機效果)</a></li>
+										<li><a href="Skill012.html">角色的互動對話</a></li>
+										<li><a href="Skill013.html">現在的日期</a></li>
+										<li><a href="Skill014.html">時間(電子鐘形式)</a></li>
+                                    </ul>
+								</nav>
+
+							
+
+							<!-- Footer -->
+								<footer id="footer">
+                                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="創用 CC 授權條款" style="border-width:0;  margin-bottom:  -10px;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+									<p class="copyright">&copy; 2023 &copy; | Design By Shiau Sir. From <a href="https://ddes.tc.edu.tw" target="_blank">DDES</a>, Taichung City, Taiwan.</p>
+								</footer>
+
+						</div>
+					
+                </div>
+			</div>
+			<div style="display: none;" id="go-to-top">
+      			<div style="opacity:0;display: block;" class="level-2"></div>
+      				<div class="level-3"></div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../js/jquery.min.js"></script>
+			<script src="../../js/browser.min.js"></script>
+			<script src="../../js/breakpoints.min.js"></script>
+			<script src="../../js/util.js"></script>
+			<script src="../../js/main.js"></script>
+		<script>
+		$(document).ready(function(){
+    	if ( window.screen.width <= 480) {
+			scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,                // 顯示大小
+            // Repeat `style` and `languages` options here.
+			});
+       } else{
+		    scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,                // 顯示大小
+                // Repeat `style` and `languages` options here.
+			});
+	   	}
+		});
+		
+		</script>
+
+	</body>
+</html>

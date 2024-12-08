@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>〈角色的定位技巧〉</title>		
+		<link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/shiau-check_list.css" />
+        <link rel="stylesheet" href="../../css/shiau-paper.css" />
+        <link rel="stylesheet" href="../../css/shiau-move_bg.css" />
+        <link rel="stylesheet" href="../../css/shiau-scratch-bg_banner.css" />
+	  	<script src="../../js/scratchblocks-v3.6.4-min.js"></script>
+		<script src="../../js/translations-all-v3.6.4.js"></script>
+	
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+                
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../../index.html" class="logo"><img src="../../images/logo/logo_skill.svg" alt=""></a>
+									
+								</header>
+                           
+                                <div class="toptitle sbbg1200x160-1">
+									<span class="blue_cg_red text">🪅 角色的定位</span>
+                                </div>
+                               
+							<!-- Section -->
+								<section>
+                                    <div class="bg-moveshadow6">
+                                        <div class="paper">
+										<div class="pad5 aa"></div>
+										<ul class="glt">
+                                            <li>在<span class="strongX orange">Scratch</span>程式編程的過程中，「角色的定位」是一件很重要的事，它不僅只是角色的初始定位而已，也包含了角色在編程中每個階段出現的位置可以讓每個角色知道自己在舞台上的位置時能從容的就定位每個角色在登上舞台時都一定得做「角色定位」這件事，雖然它可能就只是用一個積木就可以完成的事，但如果定位的不夠恰當，就可能使後續編程難度增加，因此不可輕視之。</li>
+                                            <div class="center">
+                                                <img src="../../images/pic/skill/001.png" style="width: 50%;height: auto;" alt="">
+                                            </div>
+                                            <li>方向鍵上下左右分別指向0°、180°、-90°及90°。</li>
+                                            <li>以【按下鍵盤方向鍵】事件啟動「移動」。</li>
+										</ul>
+										<ul class="hlt">
+											<li>與【按下鍵盤方向鍵】有關的積木有二個，分別是<a href="../Blocks_Events/Events02.html"><code class="b">當[空白 v]鍵被按下</code></a>及<a href="../Blocks_Sensing/Sensing07.html"><code class="b">&lt;(空白 v)鍵被按下？&gt;</code></a>，前者是<a href="../Idea_Shapes/Hat_Blocks.html">帽子積木</a>，得置於腳本最上方，是啟動積木；後者是<a href="../Idea_Shapes/Boolean_Blocks.html">布林值積木</a>，須嵌入〖選擇積木〗中使用。</li>
+                                            <li>「移動」部份，可用<a href="../Blocks_Motion/Motion01.html"><code class="b">移動()點</code></a>或<a href="../Blocks_Motion/Motion10.html"><code class="b">x 改變()</code></a>、<a href="../Blocks_Motion/Motion12.html"><code class="b">y 改變()</code></a>來處理，前者要先給定方向，後二者以正、負值來判定方向。</li> 
+										</ul>
+                                        </div>
+                                    </div>
+                                </section>                                
+								<section><!--示例腳本-->
+                                    <div class="obj">
+                                        <img class="full20a20" src="../../images/topic/topicx04.svg" alt="">
+                                    </div>
+                                    <div class="bg-moveshadow3">
+                                        <div class="paperbox">
+											<div class="pad5 aa"></div>
+                                            <ol>
+												<li><a href="#1">ＸＹ法</a></li>
+												<li><a href="#2">步進法</a></li>
+												<li><a href="#3">循環ＸＹ法</a></li>
+												<li><a href="#4">循環步進法</a></li>
+												<li><a href="#5">速度法(變數)-進階</a></li>
+											</ol>                                          
+                                        </div>
+                                    </div>                                     
+                                </section>
+                                <div class="pad010"><img src="../../images/gif/line2.gif" style="width: 100%; height: auto;" alt=""></div>
+                                <section><!-- 拆解 -->
+                                    <div class="title" id="1">
+                                        <img class="full10c15" src="../../images/topic/topic01-1.svg" alt="">ＸＹ法
+                                    </div>
+                                    <div class="bg-moveshadow-w">
+                                        <div class="paper">
+											<div class="pad5 aa"></div>
+                                            <p class="indent">這是最簡單的方式，是以<a href="../Blocks_Events/Events02.html"><code class="b">當[空白 v]鍵被按下</code></a>來啟動事件，串接<a href="../Blocks_Motion/Motion10.html"><code class="b">x 改變()</code></a>或<a href="../Blocks_Motion/Motion12.html"><code class="b">y 改變()</code></a>來實現。</p>    
+                                            <pre class="blocks ud">
+											當 [向右 v] 鍵被按下										
+											x 改變(10)
+											
+											當 [向左 v] 鍵被按下										
+											x 改變(-10)
+											
+											當 [向上 v] 鍵被按下										
+											y 改變(10)
+											
+											當 [向下 v] 鍵被按下										
+											y 改變(-10)
+											</pre>
+                                            <p class="out1_in2">💥當按下方向鍵後，角色就會朝指定方向移動，但角色面朝角度是沒有改變的，也就是角色並沒有轉向。</p>
+                                            <p class="out1_in2">💥這種方式有一個限制，當要以按住按鍵不放開來使角色進行連續移動時，一開始會有約0.5的停頓。</p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="pad10"></div>
+                                <section><!-- 拆解 -->
+                                    <div class="title" id="2">
+                                        <img class="full10c15" src="../../images/topic/topic01-2.svg" alt="">步進法
+                                    </div>
+                                    <div class="bg-moveshadow-w">
+                                        <div class="paper">
+											<div class="pad5 aa"></div>
+                                            <p class="indent">這也是以事件啟動的方式。以這種腳本來執行時，角色會同時改變面朝角度。</p>    
+                                            <pre class="blocks ud">                                                
+                                            當 [向右 v] 鍵被按下										
+											面朝(90)度
+											移動(10)點
+											
+											當 [向左 v] 鍵被按下										
+											面朝(-90)度
+											移動(10)點
+											
+											當 [向上 v] 鍵被按下										
+											面朝(0)度
+											移動(10)點
+											
+											當 [向下 v] 鍵被按下										
+											面朝(180)度
+											移動(10)點    
+                                            </pre>
+                                            <p class="out1_in2">💥<a href="../Blocks_Motion/Motion01.html"><code class="b">移動()點</code></a>會受角色的面朝角度影響而改變其移動的方向。</p>
+                                            <p class="out1_in2">💥這種方式有一個限制，當要以按住按鍵不放開來使角色進行連續移動時，一開始會有約0.5的停頓。</p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="pad10"></div>
+                                <section><!-- 拆解 -->
+                                    <div class="title" id="3">
+                                        <img class="full10c15" src="../../images/topic/topic01-3.svg" alt="">循環ＸＹ法
+                                    </div>
+                                    <div class="bg-moveshadow-w">
+                                        <div class="paper">
+											<div class="pad5 aa"></div>
+                                            <p class="indent">這是將上述以事件啟動的ＸＹ法改成重複偵測的條件判斷方式，可使連續移動無停頓。</p>    
+                                            <pre class="blocks ud">                                                
+                                            當 @greenflag 被點擊
+											重複無限次
+											如果&lt; (向右 v)鍵被按下？&gt;那麼
+											x 改變(10)
+											end
+											如果&lt; (向左 v)鍵被按下？&gt;那麼
+											x 改變(-10)
+											end
+											如果&lt; (向上 v)鍵被按下？&gt;那麼
+											y 改變(10)
+											end
+											如果&lt; (向下 v)鍵被按下？&gt;那麼
+											y 改變(-10)
+											end
+											end
+                                            </pre>
+                                            <p class="out1_in2">💥這種方式也允許角色對角線移動，因為重複無限次的偵測是同時對所有按鍵進行的。</p>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="pad10"></div>
+                                <section><!-- 拆解 -->
+                                    <div class="title" id="4">
+                                        <img class="full10c15" src="../../images/topic/topic01-4.svg" alt="">循環步進法
+                                    </div>
+                                    <div class="bg-moveshadow-w">
+                                        <div class="paper">
+											<div class="pad5 aa"></div>
+                                            <p class="indent">這是將上述以事件啟動的步進法改成重複偵測的條件判斷方式，可使連續移動無停頓。</p>    
+                                            <pre class="blocks ud">                                                
+                                            當 @greenflag 被點擊
+											重複無限次
+											如果&lt; (向右 v)鍵被按下？&gt;那麼
+											面朝(90)度
+											移動(10)點
+											end
+											如果&lt; (向左 v)鍵被按下？&gt;那麼
+											面朝(-90)度
+											移動(10)點
+											end
+											如果&lt; (向上 v)鍵被按下？&gt;那麼
+											面朝(0)度
+											移動(10)點
+											end
+											如果&lt; (向下 v)鍵被按下？&gt;那麼
+											面朝(180)度
+											移動(10)點
+											end
+											end
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="pad10"></div>
+                                <section><!-- 拆解 -->
+                                    <div class="title" id="5">
+                                        <img class="full10c15" src="../../images/topic/topic01-5.svg" alt="">速度法(變數)-進階
+                                    </div>
+                                    <div class="bg-moveshadow-w">
+                                        <div class="paper">
+											<div class="pad5 aa"></div>
+                                            <p class="indent">這是一種能使角色移動得更流暢的方法，需要二個變數來賦值，分別是用來表示 x速度的 xv 和 y速度的 yv。</p>    
+                                            <pre class="blocks ud">                                                
+                                            當@greenflag被點擊
+											變數[xv v]設為(0)
+											變數[yv v]設為(0)
+											重複無限次
+											如果&lt; (向右 v)鍵被按下？&gt;那麼
+											變數[xv v]改變(1)
+											end
+											如果&lt; (向左 v)鍵被按下？&gt;那麼
+											變數[xv v]改變(-1)
+											end
+											如果&lt; (向上 v)鍵被按下？&gt;那麼
+											變數[yv v]改變(1)
+											end
+											如果&lt; (向下 v)鍵被按下？&gt;那麼
+											變數[yv v]改變(-1)
+											end
+											變數[xv v]設為((xv)*(0.9))//滑動慢慢停止
+											變數[yv v]設為((yv)*(0.9))//滑動慢慢停止
+											x 改變(xv)
+											y 改變(yv)
+											end
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </section>
+                                
+                                <div class="scratch pad15"><img src="../../images/gif/mouse.gif" alt=""></div>
+						</div>
+						
+						</div>
+                    
+				<!-- Sidebar -->
+					<div id="sidebar" class="sbgcolor11">
+						<div class="inner">
+
+							
+							<!-- Menu -->
+								<nav id="menu">
+									<header>
+                                        <img class="full50" src="../../images/logo/mlogo_skill.svg" alt="">										
+									</header>
+                                    <h2 class="major bgreen strongX sbgcolorl9">鍵鼠操控</h2>
+									<ul>
+                                        <li class="home"><a href="../../index.html">🏠回首頁</a></li>										
+                                        <li><a href="Skill001.html">鍵盤方向鍵操控移動</a></li>
+										<li><a href="Skill003.html">角色跟隨鼠標</a></li>
+										<li><a href="Skill009.html">砲彈射擊</a></li>
+										<li><a href="Skill010.html">聲音暫停與再次播放</a></li>
+										<li><a href="Skill011.html">逐字說話(打字機效果)</a></li>
+										<li><a href="Skill012.html">角色的互動對話</a></li>
+										<li><a href="Skill013.html">現在的日期</a></li>
+										<li><a href="Skill014.html">時間(電子鐘形式)</a></li>
+                                    </ul>
+								</nav>
+
+							
+
+							<!-- Footer -->
+								<footer id="footer">
+                                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="創用 CC 授權條款" style="border-width:0;  margin-bottom:  -10px;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+									<p class="copyright">&copy; 2023 &copy; | Design By Shiau Sir. From <a href="https://ddes.tc.edu.tw" target="_blank">DDES</a>, Taichung City, Taiwan.</p>
+								</footer>
+
+						</div>
+					
+                </div>
+			</div>
+			<div style="display: none;" id="go-to-top">
+      			<div style="opacity:0;display: block;" class="level-2"></div>
+      				<div class="level-3"></div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../js/jquery.min.js"></script>
+			<script src="../../js/browser.min.js"></script>
+			<script src="../../js/breakpoints.min.js"></script>
+			<script src="../../js/util.js"></script>
+			<script src="../../js/main.js"></script>
+		<script>
+		$(document).ready(function(){
+    	if ( window.screen.width <= 480) {
+			scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,                // 顯示大小
+            // Repeat `style` and `languages` options here.
+			});
+       } else{
+		    scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,                // 顯示大小
+                // Repeat `style` and `languages` options here.
+			});
+	   	}
+		});
+		
+		</script>
+
+	</body>
+</html>

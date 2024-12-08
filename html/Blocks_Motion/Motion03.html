@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>左轉積木</title>		
+		<link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/shiau-check_list.css" />
+        <link rel="stylesheet" href="../../css/shiau-paper.css" />
+        <link rel="stylesheet" href="../../css/shiau-move_bg.css" />
+        <link rel="stylesheet" href="../../css/shiau-scratch-bg_banner.css" />
+	  	<script src="../../js/scratchblocks-v3.6.4-min.js"></script>
+		<script src="../../js/translations-all-v3.6.4.js"></script>	
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+                
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a class="logo"><img src="../../images/logo/logo_Blocks.svg" alt=""></a>
+									
+								</header>
+                           
+                                <div class="table-wrapper">
+									<table class="sbgline1">
+									    <thead>
+										    <tr>
+												<th class="a sbgcolor1"></th>
+												<th class="b">
+													<pre class="blocks">左轉@turnleft()度</pre>
+                                                </th>
+												<th class="c">左轉（逆時針轉）</th>
+											</tr>
+										</thead>
+                                    </table>
+                                </div>								
+                                <div class="table-wrapper">
+								            <table class="alt">
+											    <tbody>
+												    <tr>
+                                                        <td class="s"></td>
+													    <td class="xa">類別</td>
+														<td class="x">動作類</td>
+														<td class="ya">形狀</td>
+                                                        <td class="y">堆疊</td>
+														<td class="za">適用</td>
+														<td class="z">角色</td>
+													</tr>
+												</tbody>
+                                            </table>
+                                        </div>
+                           
+                               <div class="scratch pad05"><img src="../../images/gif/catmouse.gif" alt=""></div>
+							<!-- Section -->
+								<section class="bg-moveshadow-down">
+								    <div class="paper">
+                                                                                
+                                        <p class="indent"><span class="strongX bblue">〈左轉〉</span>積木是<span class="strongX">〔動作類〕〖堆疊狀〗</span>積木。</p>
+                                        <p class="indent">有一個<span class="strongX purple">數字輸入</span>類型之<span class="strongX brown">圓矩形</span>參數框。用來表示每次旋轉的度數。可嵌入[布林積木]。（true轉變成 1，fales轉變成 0）</p>
+                                        <p class="indent">可以使角色從當前方向向左轉動（逆時針旋轉）指定的角度值。</p>
+                                        <hr>
+                                        <div class="row">
+											<div class="col-12 col-12-small">
+                                                <ul class="alt">
+                                                    <li>左轉積木是相對動作積木，因此，參數值如果是「正值」，角色就會依照積木指示的方向轉動，反之，參數值如果是「負值」，角色就會向著積木指示的相反方向轉動。</li>
+													<li>角色的轉動，會改變角色面朝的方向。</li>
+													<li>轉動時，會從角色當前的面朝方向開始轉起。</li>
+                                                    <li>轉動時，是以「<span class="strongX blue">造型中心</span>」爲圓心轉動。</li>
+                                                    <li>轉動時，是以一圈 360 度作為單位，超過部分則從 0 再開始算起。</li>
+                                                </ul>
+                                                <ul class="elt">													
+                                                    <li>此積木上的參數值是角色一次轉動的度數。如果參數值是360，就等於是轉一圈，但角色在實際上運行時卻似乎沒有轉動，因為這是一次轉到位，看不到轉動過程的。如果要呈現轉動過程，可將轉動度數變小，然後配合<a href="../Blocks_Control/Control02.html">〈計次重複〉積木</a>來實現。
+                                                    </li>
+												</ul>
+                                            </div>
+                                        </div>                                                                              
+                                    </div>
+                                </section>
+								<div class="pad15"></div>
+								<section>
+									<div class="title">🧩使用範例</div>
+								    <div class="bg-moveshadow2">
+								    	<div class="paper">
+											<div class="pad5 aa"></div>
+												<p class="indent">要讓角色旋轉最簡單的方式就是使用<a href="../Blocks_Motion/Motion02.html">〈右轉〉積木</a>或〈左轉〉積木，或者是使用<a href="../Blocks_Motion/Motion08.html">〈面朝角度〉積木</a>。</p>
+												<hr>
+												<ol>
+													<li>簡單的旋轉，像是汽車的輪子</li>													
+												</ol>
+                                            	<pre class="blocks ud">
+												重複無限次
+												左轉(15)度
+												end
+												</pre>
+											    <ol start="2">
+													<li>動畫中的角色在揮揮手</li>													
+												</ol>
+                                            	<pre class="blocks ud">
+												重複(5)次
+												右轉(15)度
+												end
+												重複(5)次
+												左轉(15)度
+												end
+												</pre>
+												<ol start="3">
+													<li>當車子在移動時操控它轉彎</li>													
+												</ol>
+                                            	<pre class="blocks ud">
+												重複無限次
+												如果&lt;(向右 v)鍵被按下？&gt;那麼
+												右轉(3)度
+												end
+												如果&lt;(向左 v)鍵被按下？&gt;那麼
+												左轉(3)度
+												end
+												移動(5)點
+												end
+												</pre>
+										</div>
+									</div>
+                                </section>
+								<div class="pad15"></div>
+								<section>
+									<div class="title">🧩替代積木</div>
+								    <div class="bg-moveshadow3">
+								    	<div class="paper">
+											<div class="pad5 aa"></div>
+												<p class="indent">角色向右或向左轉動是從角色當前的面朝方向開始轉起，可透過<b>設定轉動角度值</b>的方式來表示。</p>												
+                                            	<pre class="blocks ud">
+												面朝((方向)+(轉動角度值))度//向右轉（順時針轉）
+												
+												面朝((方向)-(轉動角度值))度//向左轉（逆時針轉）
+												</pre>											    
+										</div>
+									</div>
+                                </section>
+                                 <div class="scratch pad15"><img src="../../images/gif/ball.gif" alt=""></div>
+							
+						</div>
+						
+						</div>
+                    
+				<!-- Sidebar -->
+					<div id="sidebar" class="sbglinel1">
+						<div class="inner">
+
+							
+							<!-- Menu -->
+								<nav id="menu">
+									<header>
+                                        <img class="full50" src="../../images/logo/mlogo_Blocks.svg" alt="">										
+									</header>
+                                    <h2 class="major strongX sbglined1">動作積木</h2>
+									<ul>
+                                        <li class="home"><a href="../../index.html">🏠回首頁</a></li>
+                                        <li>
+                                            <span class="opener">📚其它類積木</span>
+											<ul>
+												<li><a href="../Blocks_Looks/Looks.html">外觀積木</a></li>
+												<li><a href="../Blocks_Sound/Sound.html">音效積木</a></li>
+												<li><a href="../Blocks_Events/Events.html">事件積木</a></li>
+												<li><a href="../Blocks_Control/Control.html">控制積木</a></li>
+                                                <li><a href="../Blocks_Sensing/Sensing.html">偵測積木</a></li>
+                                                <li><a href="../Blocks_Operators/Operators.html">運算積木</a></li>
+                                                <li><a href="../Blocks_Variables/Variables.html">變數積木</a></li>
+                                                <li><a href="../Blocks_MyBlocks/MyBlocks.html">函式積木</a></li>
+                                                <li><a href="../Blocks_Music/Music.html">音樂積木</a></li>
+                                                <li><a href="../Blocks_Pen/Pen.html">畫筆積木</a></li>
+                                                <li><a href="../Blocks_VideoSensing/VideoSensing.html">視訊偵測積木</a></li>
+                                                <li><a href="../Blocks_TextToSpeech/TextToSpeech.html">文字轉語音積木</a></li>
+                                                <li><a href="../Blocks_Translate/Translate.html">翻譯積木</a></li>
+											</ul>
+                                        </li>
+                                        <li class="topview"><a href="Motion.html">✅動作積木</a></li>
+										<li><a href="Motion01.html">移動</a></li>
+										<li><a href="Motion02.html">右轉</a></li>
+                                        <li class="active"><a href="#">左轉</a></li>
+                                        <li><a href="Motion04.html">定位到指定對象或隨機位置</a></li>
+                                        <li><a href="Motion05.html">定位到指定座標位置</a></li>
+                                        <li><a href="Motion06.html">指定時間滑行到指定對象或隨機位置</a></li>
+                                        <li><a href="Motion07.html">指定時間滑行到指定座標位置</a></li>
+                                        <li><a href="Motion08.html">面朝角度</a></li>
+                                        <li><a href="Motion09.html">面朝指定對象</a></li>
+                                        <li><a href="Motion10.html">x座標值改變</a></li>
+                                        <li><a href="Motion11.html">設定x座標</a></li>
+                                        <li><a href="Motion12.html">y座標值改變</a></li>
+                                        <li><a href="Motion13.html">設定y座標</a></li>
+                                        <li><a href="Motion14.html">碰到邊緣反彈</a></li>
+                                        <li><a href="Motion15.html">設定迴轉方式</a></li>
+                                        <li><a href="Motion16.html">x座標值</a></li>
+                                        <li><a href="Motion17.html">y座標值</a></li>
+                                        <li><a href="Motion18.html">方向角度值</a></li>                                                                        
+                                    </ul>
+								</nav>
+
+							
+
+							<!-- Footer -->
+								<footer id="footer">
+                                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="創用 CC 授權條款" style="border-width:0;  margin-bottom:  -10px;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+									<p class="copyright">&copy; 2023 &copy; | Design By Shiau Sir. From <a href="https://ddes.tc.edu.tw" target="_blank">DDES</a>, Taichung City, Taiwan.</p>
+								</footer>
+
+						</div>
+					
+                </div>
+			</div>
+			<div style="display: none;" id="go-to-top">
+      			<div style="opacity:0;display: block;" class="level-2"></div>
+      				<div class="level-3"></div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../js/jquery.min.js"></script>
+			<script src="../../js/browser.min.js"></script>
+			<script src="../../js/breakpoints.min.js"></script>
+			<script src="../../js/util.js"></script>
+			<script src="../../js/main.js"></script>
+		<script>
+		$(document).ready(function(){
+    	if ( window.screen.width <= 480) {
+			scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,                // 顯示大小
+            // Repeat `style` and `languages` options here.
+			});
+       } else{
+		    scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,                // 顯示大小
+                // Repeat `style` and `languages` options here.
+			});
+	   	}
+		});
+		
+		</script>
+
+	</body>
+</html>

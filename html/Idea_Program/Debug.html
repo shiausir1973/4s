@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>[偵錯]</title>		
+		<link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/shiau-check_list.css" />
+        <link rel="stylesheet" href="../../css/shiau-paper.css" />
+        <link rel="stylesheet" href="../../css/shiau-move_bg.css" />
+        <link rel="stylesheet" href="../../css/shiau-scratch-bg_banner.css" />
+	  	<script src="../../js/scratchblocks-v3.6.4-min.js"></script>
+		<script src="../../js/translations-all-v3.6.4.js"></script>	
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+                
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a class="logo"><img src="../../images/logo/logo_idea.svg" alt=""></a>
+									
+								</header>
+                           
+                                <div class="table-wrapper">
+									<table class="sbbgM">
+									    <thead>
+										    <tr>
+												<th class="u">
+                                                    <p><span><img src="../../images/gif/gif013.gif" alt="">偵　錯<span class="inword">（Debug）</span></span></p>
+                                                </th>												
+											</tr>
+										</thead>
+                                    </table>
+                                </div>								
+                                
+                           
+                               <div class="scratch pad05"><img src="../../images/gif/catmouse.gif" alt=""></div>
+							<!-- Section -->
+                                <section class="bg-moveshadow-b">
+								    <div class="paper">                                                                                
+                                        <p class="indent">當腳本運行的不順暢，出現不如預期的狀況時，通常這都是人為的錯誤，因此就要對腳本進行修復，這就稱為「偵錯」，或稱為「調試」。</p>
+                                    </div>
+                                </section>
+                                <div class="pad10"></div>
+								<section class="bg-moveshadow-r">
+								    <div class="paper">
+                                        <p class="indent">要寫一段程式或許不難，難的是當程式出現錯誤後，要進行偵錯、排查、修復的過程。因此，會寫程式的人不算厲害，厲害的是能找出程式錯誤的人。</p>
+                                        <p class="indent">程式調試偵錯能力是一種層次較高的能力，並非是人人都能夠精通的。當面對自己寫的程式腳本出現Bug時，能掌握程式偵錯方法就顯得格外重要，好的調試策略是設計程式時的一件法寶。程式調試也是學習程式設計對思考方式鍛鍊的體現。</p>
+                                    </div>
+                                </section>
+                                <div class="pad10"></div>
+								<section class="bg-moveshadow-p">
+								    <div class="paper">
+                                        <p class="indent">檢查腳本的錯誤通常不是那麼容易的，但也只有自己從中摸索出問題，解決它，才是最有意義的。通常如果是單純的積木置放錯誤，或是數據參數有問題，這倒是都容易看出來，但如果錯誤純粹是邏輯上的，沒有什麼根據，這才是最要命的錯誤。</p>
+                                        <p class="indent">因此，在編程時，能專心，避免替腳本埋下了錯誤的根源，才能免除「偵錯」的麻煩事。以下做法可以減少編程錯誤的產生：</p>
+                                    </div>
+                                </section>
+                                <div class="pad10"></div>
+								<section class="bg-moveshadow-s">
+								    <div class="paper">
+                                        <p class="out1_in2">⑴編寫漂亮、乾淨的程式。腳本排列有序，查找時才容易。</p>
+                                        <p class="out1_in2">⑵善用「註解」，隨時標記重要切點，若程序中斷時，才能知道要從哪裡介入處理。</p>
+                                        <p class="out1_in2">⑶為常用腳本部分建立函式積木，使用參數來表示變動值。</p>
+                                        <p class="out1_in2">⑷不要盲目地從其他專案複製腳本，別人的不一定會是你想要的，要先弄懂它，否則只會淪為道德侵權者。</p>
+                                    </div>
+                                </section>
+                                <div class="pad10"></div>
+								<section class="bg-moveshadow-o">
+								    <div class="paper">
+                                        <p class="indent">那要從何下手來「偵錯」呢？一般的方式就是看積木有沒有錯置，看參數有沒有帶入錯誤，但說實在的，不容易看出來，因此就要用些小手段來測試了，測試時可參考以下的建議作法：</p>
+                                        <p class="out1_in2">⑴氣泡輸出法：顧名思義就是使用〈說出〉或〈想著〉積木來返回某個參數或是報告條件是否成立。</p>
+                                        <p class="out1_in2">⑵積木點擊法：當點擊布林值積木或回報值積木時，即可見返回值。</p>
+                                        <p class="out1_in2">⑶舞臺監視器顯示法：部分的回報值積木可以做為舞臺監視器，使它呈現在舞臺上來觀察它的值變化。</p>
+                                        <p class="out1_in2">⑷計數法：利用一個變數積木來把執行的次數計下來。</p>
+                                        <p class="out1_in2">⑸延時法：使用〈等待秒數〉積木來把每個步驟的執行放慢速度，以便觀察。</p>
+                                        <p class="out1_in2">⑹斷點法：就是將腳本分成許多部份，每執行完一部分就令其停止，縮小範圍的查找。</p>
+                                        <p class="out1_in2">⑺黑盒測試法：將數據帶入，逐步分析，這是最萬能的方法，但也是最需要耐心的。</p>
+                                        <p class="out1_in2">⑻找出發收訊息者：有時發送的訊息被不正確的角色給攔胡了。</p>
+                                    </div>
+                                </section>
+                                <div class="scratch pad15"><img src="../../images/gif/mouse.gif" alt=""></div>
+						</div>
+						
+						</div>
+                    
+				<!-- Sidebar -->
+					<div id="sidebar" class="sbgcolor11">
+						<div class="inner">
+
+							
+							<!-- Menu -->
+								<nav id="menu">
+									<header>
+                                        <img class="full50" src="../../images/logo/mlogo_idea.svg" alt="">										
+									</header>
+                                    <h2 class="major bbrown strongX sbgcolorM">程序編程</h2>
+									<ul>
+                                        <li class="home"><a href="../../index.html">🏠回首頁</a></li>
+                                        <li>
+                                            <span class="opener">💡其它概念知識</span>
+											<ul>
+												<li><a href="../Idea_Argument/Blocks.html">積木參數</a></li>
+                                                <li><a href="../Idea_Shapes/Hat_Blocks.html">積木形狀</a></li>
+                                                <li><a href="../Idea_Sprite_Stage/Sprite.html">角色舞臺</a></li>
+                                                <li><a href="../Idea_Interface/Green_Flag.html">介面環境</a></li>
+												<li><a href="../Idea_Move/Coordinate_System.html">移動元素</a></li>
+												<li><a href="../Idea_Effects/Graphic_Effect.html">圖像效果</a></li>
+                                                <li><a href="../Idea_Sound/Sound.html">聲音元素</a></li>
+                                                <li><a href="../Idea_Pen_Music/Pen.html">畫筆音樂</a></li>
+                                                <li><a href="../Idea_Contral/Mouse-pointer.html">執行控制</a></li>
+												<li><a href="../Idea_Variables/Variables.html">變數函式</a></li>
+                                                <li><a href="../Idea_Programming/Seven_Elements.html">程式元素</a></li>
+											</ul>
+                                        </li>                                        
+										<li><a href="Import_Export.html">匯入和匯出</a></li>
+								        <li><a href="Programming.html">編程</a></li>
+										<li><a href="Project.html">專案</a></li>
+										<li><a href="Script.html">腳本</a></li>
+                                        <li><a href="Platformer.html">平台遊戲</a></li>
+                                        <li><a href="Initialize.html">初始化</a></li>                                                                     
+                                        <li><a href="Concurrency.html">平行程式執行</a></li>
+                                        <li><a href="Bug.html">漏洞</a></li>                                                                     
+                                        <li class="active"><a href="#">偵錯</a></li>
+                                        <li><a href="Project_Compression.html">專案壓縮</a></li>
+                                    </ul>
+								</nav>
+
+							
+
+							<!-- Footer -->
+								<footer id="footer">
+                                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="創用 CC 授權條款" style="border-width:0;  margin-bottom:  -10px;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+									<p class="copyright">&copy; 2023 &copy; | Design By Shiau Sir. From <a href="https://ddes.tc.edu.tw" target="_blank">DDES</a>, Taichung City, Taiwan.</p>
+								</footer>
+
+						</div>
+					
+                </div>
+			</div>
+			<div style="display: none;" id="go-to-top">
+      			<div style="opacity:0;display: block;" class="level-2"></div>
+      				<div class="level-3"></div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../js/jquery.min.js"></script>
+			<script src="../../js/browser.min.js"></script>
+			<script src="../../js/breakpoints.min.js"></script>
+			<script src="../../js/util.js"></script>
+			<script src="../../js/main.js"></script>
+		<script>
+		$(document).ready(function(){
+    	if ( window.screen.width <= 480) {
+			scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,                // 顯示大小
+            // Repeat `style` and `languages` options here.
+			});
+       } else{
+		    scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,                // 顯示大小
+                // Repeat `style` and `languages` options here.
+			});
+	   	}
+		});
+		
+		</script>
+
+	</body>
+</html>

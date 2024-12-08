@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>〈現在的日期〉</title>		
+		<link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/shiau-check_list.css" />
+        <link rel="stylesheet" href="../../css/shiau-paper.css" />
+        <link rel="stylesheet" href="../../css/shiau-move_bg.css" />
+        <link rel="stylesheet" href="../../css/shiau-scratch-bg_banner.css" />
+	  	<script src="../../js/scratchblocks-v3.6.4-min.js"></script>
+		<script src="../../js/translations-all-v3.6.4.js"></script>
+	
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+                
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../../index.html" class="logo"><img src="../../images/logo/logo_skill.svg" alt=""></a>
+									
+								</header>
+                           
+                                <div class="topic large">
+									<p><img class="full125" src="../../images/topic/topicx01.svg" alt=""><span class="text">現在的日期</span></p>
+                                </div>
+                               
+							<!-- Section -->
+								<section><!-- 簡述提點-->
+                                    <div class="obj">
+                                        <img class="full20a20" src="../../images/topic/topicx03.svg" alt="">
+                                    </div>
+                                    <div class="bg-moveshadow1">
+                                        <div class="paper">
+										<div class="pad5 aa"></div>
+										<ul class="glt">
+                                            <li>使用<span class="strongX orange">Scratch3.0</span>中的<a href="../Blocks_Sensing/Sensing16.html"><code class="b">(目前時間的[年 v])</code></a>積木，會抓取使用者電腦中的日期時間來呈現現在的日期時間。如果使用者電腦中的日期時間設定錯誤時，它也會跟著顯示錯誤。</li>
+										</ul>
+										<ul class="hlt">
+											<li><a href="../Blocks_Sensing/Sensing16.html"><code class="b">(目前時間的[年 v])</code></a>積木中的「年」是以「西元」年表示，如果要以「民國」年呈現，則要將「西元」年-1911。</li>
+                                            <li><a href="../Blocks_Sensing/Sensing16.html"><code class="b">(目前時間的[週 v])</code></a>積木中的「週」是以「阿拉伯數字」1～7來表示，其中"1"是指星期日、"2"是星期一...以此類推。</li> 
+											<li>使用<a href="../Blocks_Operators/Operators12.html"><code class="b">(字串組合()())</code></a>積木將「年」、「月」、「日」、「週」串接以顯示現在的日期。</li>
+										</ul>
+                                        </div>
+                                    </div>
+                                </section>
+								<section><!--示例腳本-->
+                                    <div class="obj">
+                                        <img class="full20a20" src="../../images/topic/topicx04.svg" alt="">
+                                    </div>
+                                    <div class="bg-moveshadow3">
+                                        <div class="paperbox">
+											<div class="pad5 aa"></div>
+                                            <ol>
+												<li><a href="#1">讀取「年」、「月」、「日」</a></li>
+												<li><a href="#2">讀取「週」並轉換成中文字</a></li>
+												<li><a href="#3">現在的日期(西元年)</a></li>
+												<li><a href="#4">現在的日期(民國年)</a></li>
+											</ol>                                          
+                                        </div>
+                                    </div>                                     
+                                </section>
+                                <div class="pad010"><img src="../../images/gif/line2.gif" style="width: 100%; height: auto;" alt=""></div>
+                                <section><!-- 拆解 -->
+									<div class="title" id="1"><img class="full10c15" src="../../images/topic/topic01-1.svg" alt="">讀取「年」、「月」、「日」</div>
+									<div class="pad10 border-d">	
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/572964599/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+											<p class="indent">建立以下三個變數：</p>
+											<ul class="ilt">
+												<li><code class="b">(年)</code>用來顯示當前年的變數</li>
+												<li><code class="b">(月)</code>用來顯示當前月的變數</li>
+												<li><code class="b">(日)</code>用來顯示當前日的變數</li>
+											</ul>
+                                            <pre class="blocks ud">
+											重複無限次
+											變數[年 v]設為(目前時間的[年 v])//取出的是「西元」年
+											變數[月 v]設為(目前時間的[月 v])
+											變數[日 v]設為(目前時間的[日 v])
+											end
+											</pre>
+										</div>
+                                    </div>
+                                </section>
+								<div class="pad10"></div>
+								<section><!-- 拆解 -->
+									<div class="title" id="2"><img class="full10c15" src="../../images/topic/topic01-2.svg" alt="">讀取「週」並轉換成中文字</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+											<p class="indent">建立「星期」變數及定義「星期幾」函式積木調用：</p>
+											<ul class="ilt">
+												<li><code class="b">(星期)</code>用來顯示當前週的變數</li>
+												<li><code class="b">定義 星期幾(數字)(中文字)</code>其中<code class="b">(數字:: custom)</code>用來對應讀取到的「週」值；<code class="b">(中文字:: custom)</code>用來轉換成中文字</li>
+											</ul>
+                                            <pre class="blocks ud">
+											定義 星期幾(數字)(中文字)
+											如果&lt;(星期)=(數字)&gt;那麼
+											變數[星期 v]設為(中文字)
+											end
+											
+											重複無限次
+											變數[星期 v]設為(目前時間的[週 v])
+											星期幾(1)[日]
+											星期幾(2)[一]
+											星期幾(3)[二]
+											星期幾(4)[三]
+											星期幾(5)[四]
+											星期幾(6)[五]
+											星期幾(7)[六]
+											end
+
+											</pre>
+										</div>
+                                    </div>
+                                 </section>
+								<div class="pad10"></div>
+								<section><!-- 拆解 -->
+									<div class="title" id="3"><img class="full10c15" src="../../images/topic/topic01-3.svg" alt="">現在的日期(西元年)</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+											<pre class="blocks ud">
+											當@greenflag 被點擊
+											重複無限次
+											變數[西元日期 v]設為(字串組合(字串組合(字串組合(字串組合(字串組合(字串組合(字串組合[西元](年))[／])(月))[／])(日))(字串組合()[星期]))(星期))
+											end
+
+                                           <!-- <div class="blocks-box ud">
+												<img class="full100" src="../../images/pic/skill/013-1.png" alt="">
+											</div>-->
+											</pre>
+										</div>
+                                    </div>
+                                 </section>
+								<div class="pad10"></div>
+								<section><!-- 拆解 -->
+									<div class="title" id="4"><img class="full10c15" src="../../images/topic/topic01-4.svg" alt="">現在的日期(民國年)</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+											<pre class="blocks ud">											
+											當@greenflag 被點擊
+											重複無限次
+											變數[民國日期 v]設為(字串組合(字串組合(字串組合(字串組合(字串組合(字串組合(字串組合(字串組合[中華民國]((年)-(1911)))[年])(月))[月])(日))[日])(字串組合()[星期]))(星期))
+											end
+
+                                            <!--<div class="blocks-box ud">
+												<img class="full100" src="../../images/pic/skill/013-2.png" alt="">
+											</div>-->
+											</pre>
+										</div>
+                                    </div>
+                                 </section>
+								
+                                <div class="scratch pad15"><img src="../../images/gif/mouse.gif" alt=""></div>
+						</div>
+						
+						</div>
+                    
+				<!-- Sidebar -->
+					<div id="sidebar" class="sbgcolor11">
+						<div class="inner">
+
+							
+							<!-- Menu -->
+								<nav id="menu">
+									<header>
+                                        <img class="full50" src="../../images/logo/mlogo_skill.svg" alt="">										
+									</header>
+                                    <h2 class="major bgreen strongX sbgcolorl9">鍵鼠操控</h2>
+									<ul>
+                                        <li class="home"><a href="../../index.html">🏠回首頁</a></li>										
+                                        <li><a href="Skill001.html">鍵盤方向鍵操控移動</a></li>
+										<li><a href="Skill003.html">角色跟隨鼠標</a></li>
+										<li><a href="Skill009.html">砲彈射擊</a></li>
+										<li><a href="Skill010.html">聲音暫停與再次播放</a></li>
+										<li><a href="Skill011.html">逐字說話(打字機效果)</a></li>
+										<li><a href="Skill012.html">角色的互動對話</a></li>
+										<li><a href="Skill013.html">現在的日期</a></li>
+										<li><a href="Skill014.html">時間(電子鐘形式)</a></li>
+                                    </ul>
+								</nav>
+
+							
+
+							<!-- Footer -->
+								<footer id="footer">
+                                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="創用 CC 授權條款" style="border-width:0;  margin-bottom:  -10px;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+									<p class="copyright">&copy; 2023 &copy; | Design By Shiau Sir. From <a href="https://ddes.tc.edu.tw" target="_blank">DDES</a>, Taichung City, Taiwan.</p>
+								</footer>
+								
+						</div>
+					
+                </div>
+			</div>
+			<div style="display: none;" id="go-to-top">
+      			<div style="opacity:0;display: block;" class="level-2"></div>
+      				<div class="level-3"></div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../js/jquery.min.js"></script>
+			<script src="../../js/browser.min.js"></script>
+			<script src="../../js/breakpoints.min.js"></script>
+			<script src="../../js/util.js"></script>
+			<script src="../../js/main.js"></script>
+		<script>
+		$(document).ready(function(){
+    	if ( window.screen.width <= 480) {
+			scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,                // 顯示大小
+            // Repeat `style` and `languages` options here.
+			});
+       } else{
+		    scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,                // 顯示大小
+                // Repeat `style` and `languages` options here.
+			});
+	   	}
+		});
+		
+		</script>
+		
+			
+
+	</body>
+</html>

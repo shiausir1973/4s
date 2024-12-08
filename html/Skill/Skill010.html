@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>〈聲音暫停與再次播放〉</title>		
+		<link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/shiau-check_list.css" />
+        <link rel="stylesheet" href="../../css/shiau-paper.css" />
+        <link rel="stylesheet" href="../../css/shiau-move_bg.css" />
+        <link rel="stylesheet" href="../../css/shiau-scratch-bg_banner.css" />
+	  	<script src="../../js/scratchblocks-v3.6.4-min.js"></script>
+		<script src="../../js/translations-all-v3.6.4.js"></script>	
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+                
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../../index.html" class="logo"><img src="../../images/logo/logo_skill.svg" alt=""></a>
+									
+								</header>
+                           
+                                <div class="topic large">
+									<p><img class="full125" src="../../images/topic/topicx01.svg" alt=""><span class="text">聲音暫停與再次播放</span></p>
+                                </div>
+                               
+							<!-- Section -->
+								<section><!-- 簡述提點-->
+                                    <div class="obj">
+                                        <img class="full20a20" src="../../images/topic/topicx03.svg" alt="">
+                                    </div>
+                                    <div class="bg-moveshadow1">
+                                        <div class="paper">
+										<div class="pad5 aa"></div>
+										<ul class="glt">
+                                            <li>製作一個可以暫停與播放聲音的控制按鍵，對於具有背景音樂或特殊音效的遊戲來說是很有必要的。</li>
+											<li>要製作聲音暫停/播放按鍵，需要一個用來控制的角色，這個角色要具有可表示「聲音暫停」和「聲音播放」意義的二種造型以供切換。</li>
+										</ul>
+										<ul class="hlt">
+											<li>當使用<a href="../Blocks_Sound/Sound03.html"><code class="b">停播所有音效</code></a>要來將聲音暫停時，你會發現，它對於是使用〖重複積木〗來播放的聲音只具有瞬間的作用，短暫停止後，聲音仍會繼續播放。</li>
+											<div class="center">
+                                                <img src="../../images/pic/skill/010.png" style="width: 50%;height: auto;" alt="">
+                                            </div>
+                                            <li>當使用<a href="../Blocks_Sound/Sound08.html"><code class="b">音量設為()%</code></a>，將值設為「0」來暫停聲音播放時，是有效的，然而使用此腳本時，聲音並不會真正暫停，只是繼續以無聲方式播放。因此，當再次播放時，聲音開始處是不會與暫停時相同的位置。</li> 
+											<li>而由於<span class="strongX orange">Scratch</span>並沒有提供有關「音樂暫停」功能的積木，所以我們只能透過將<a href="../Blocks_Sound/Sound05.html"><code class="b">聲音效果[音高 v]設為()</code></a>的「音高」值設為「-Infinity」(負無限小)來將播放的速度降到最慢，再同時將<a href="../Blocks_Sound/Sound08.html"><code class="b">音量設為()%</code></a>的值設為「0」，用來模擬聲音暫停的情境，而實際上聲音還是在繼續播放，只是播放速度非常慢而已。</li>
+										</ul>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="pad010"><img src="../../images/gif/line2.gif" style="width: 100%; height: auto;" alt=""></div>
+                                <section><!-- 拆解 -->
+									<div class="title"><img class="full10c15" src="../../images/topic/topic01A.svg" alt="">聲音暫停與再次播放</div>
+									<div class="pad10 border-d">	
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/905243275/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">此腳本需有一個角色，它同時具有「播放」和「暫停」二種造型。</p>
+										<div class="table-wrapper padlr10">
+											<table class="alt">
+												<thead>
+													<tr>
+														<th>聲音正播放時顯示造型</th>
+														<th>聲音暫停時顯示造型</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr class="center">
+														<td><img src="../../images/pic/skill/010pause.svg" alt="聲音暫停"></td>
+														<td><img src="../../images/pic/skill/010play.svg" alt="聲音播放"></td>
+													</tr>
+													<tr>
+														<td>表示聲音正在播放時，可供選擇的狀態是pause</td>
+														<td>表示聲音暫停時，可供選擇的狀態是play</td>
+													</tr>
+												</tbody>
+											</table>    
+                                         </div>									
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+                                        	<p class="w16b600 purple">🎶播放聲音</p>
+											<p class="indent">使用重複積木來循環播放聲音。</p>
+                                            <pre class="blocks ud">
+											當 @greenflag 被點擊
+											造型換成(pause v)//聲音正播放時的造型狀態
+											重複無限次
+											播放音效(...::grey)直到結束//音樂是可選的
+											end
+											</pre>
+										</div>
+                                    </div>
+									<div class="pad10"></div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+                                        	<p class="w16b600 purple">🎵暫停聲音</p>
+                                            <pre class="blocks ud">
+											音量設為 (0) %
+											聲音效果 [音高 v] 設為 ((-1)/(0))//可得到「-Infinity」值(負無限小)
+											</pre>
+										</div>
+                                    </div>
+									<div class="pad10"></div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+                                        	<p class="w16b600 purple">🎵再次播放</p>
+                                            <pre class="blocks ud">
+											音量設為 (100) %
+											聲音效果 [音高 v] 設為 (0)
+											</pre>
+										</div>
+                                    </div>
+									<div class="pad10"></div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+                                        	<p class="w16b600 purple">💥將「暫停聲音」與「再次播放」結合</p>
+											<p class="indent">以<a href="../Blocks_Events/Events03.html"><code class="b">當角色被點擊</code></a>為事件啟動，並以角色當前的<a href="../Blocks_Looks/Looks18.html"><code class="b">造型[編號 v]</code></a>的值為布林值的判斷依據，來決定暫停或播放。</p>
+                                            <pre class="blocks ud">
+											當角色被點擊//啟動事件
+											如果&lt;(造型 [名稱 v])=[play]&gt;那麼
+											音量設為 (100) %
+											聲音效果 [音高 v] 設為 (0)
+											造型換成(pause v)
+											否則
+											音量設為 (0) %
+											聲音效果 [音高 v] 設為 ((-1)/(0))
+											造型換成(play v)
+											end
+											</pre>
+										</div>
+                                    </div>
+                                </section>
+                                <div class="scratch pad15"><img src="../../images/gif/mouse.gif" alt=""></div>
+						</div>
+						
+						</div>
+                    
+				<!-- Sidebar -->
+					<div id="sidebar" class="sbgcolor11">
+						<div class="inner">
+
+							
+							<!-- Menu -->
+								<nav id="menu">
+									<header>
+                                        <img class="full50" src="../../images/logo/mlogo_skill.svg" alt="">										
+									</header>
+                                    <h2 class="major bgreen strongX sbgcolorl9">鍵鼠操控</h2>
+									<ul>
+                                        <li class="home"><a href="../../index.html">🏠回首頁</a></li>										
+                                        <li><a href="Skill001.html">鍵盤方向鍵操控移動</a></li>
+										<li><a href="Skill003.html">角色跟隨鼠標</a></li>
+										<li><a href="Skill009.html">砲彈射擊</a></li>
+										<li><a href="Skill010.html">聲音暫停與再次播放</a></li>
+										<li><a href="Skill011.html">逐字說話(打字機效果)</a></li>
+										<li><a href="Skill012.html">角色的互動對話</a></li>
+										<li><a href="Skill013.html">現在的日期</a></li>
+										<li><a href="Skill014.html">時間(電子鐘形式)</a></li>
+                                    </ul>
+								</nav>
+
+							
+
+							<!-- Footer -->
+								<footer id="footer">
+                                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="創用 CC 授權條款" style="border-width:0;  margin-bottom:  -10px;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+									<p class="copyright">&copy; 2023 &copy; | Design By Shiau Sir. From <a href="https://ddes.tc.edu.tw" target="_blank">DDES</a>, Taichung City, Taiwan.</p>
+								</footer>
+
+						</div>
+					
+                </div>
+			</div>
+			<div style="display: none;" id="go-to-top">
+      			<div style="opacity:0;display: block;" class="level-2"></div>
+      				<div class="level-3"></div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../js/jquery.min.js"></script>
+			<script src="../../js/browser.min.js"></script>
+			<script src="../../js/breakpoints.min.js"></script>
+			<script src="../../js/util.js"></script>
+			<script src="../../js/main.js"></script>
+		<script>
+		$(document).ready(function(){
+    	if ( window.screen.width <= 480) {
+			scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,                // 顯示大小
+            // Repeat `style` and `languages` options here.
+			});
+       } else{
+		    scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,                // 顯示大小
+                // Repeat `style` and `languages` options here.
+			});
+	   	}
+		});
+		
+		</script>
+
+	</body>
+</html>

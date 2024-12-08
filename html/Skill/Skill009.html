@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>〈砲彈射擊〉</title>		
+		<link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/shiau-check_list.css" />
+        <link rel="stylesheet" href="../../css/shiau-paper.css" />
+        <link rel="stylesheet" href="../../css/shiau-move_bg.css" />
+        <link rel="stylesheet" href="../../css/shiau-scratch-bg_banner.css" />
+	  	<script src="../../js/scratchblocks-v3.6.4-min.js"></script>
+		<script src="../../js/translations-all-v3.6.4.js"></script>
+	
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+                
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../../index.html" class="logo"><img src="../../images/logo/logo_skill.svg" alt=""></a>
+									
+								</header>
+                           
+                                <div class="topic large">
+									<p><img class="full125" src="../../images/topic/topicx01.svg" alt=""><span class="text">砲彈射擊</span></p>
+                                </div>
+                               
+							<!-- Section -->
+								<section><!-- 簡述提點-->
+                                    <div class="obj">
+                                        <img class="full20a20" src="../../images/topic/topicx03.svg" alt="">
+                                    </div>
+                                    <div class="bg-moveshadow1">
+                                        <div class="paper">
+										<div class="pad5 aa"></div>
+										<ul class="glt">
+                                            <li>製作「射擊」遊戲，在學習<span class="strongX orange">Scratch</span>的過程中是一定會遇到的。</li>
+											<li>「射擊」動作要完成，除了要有觸發事件外，還得有二個物件，其一是如槍身、砲管...等，用來進行發射的主體，其二就是子彈、砲彈...等。</li>
+                                            <li>通常以「xxx是否被按下？」、「xxx是否被點擊？」的<a href="../Idea_Shapes/Boolean_Blocks.html">〖布林積木〗</a>來作為觸發條件。</li>
+											<li>射擊可以是單發射擊，也可以是連續射擊。當是連續射擊時，該角色將會建立分身。</li>
+										</ul>
+										<ul class="glt">
+											<li>我們以<a href="../Blocks_Sensing/Sensing07.html"><code class="b">&lt;(空白 v)鍵被按下？&gt;</code></a>指定空白鍵或<a href="../Blocks_Sensing/Sensing08.html"><code class="b">&lt; 滑鼠鍵被按下？&gt;</code></a>來做為觸發事件的條件判斷。</li>
+                                            <li>將「射擊」區分為每次發射都要啟動一次觸發器的半自動射擊（一次只能發射一顆），以及按住觸發器不放開，就可以持續發射的自動射擊。</li> 
+										</ul>
+                                        </div>
+                                    </div>
+                                </section>
+								<section><!--示例腳本-->
+                                    <div class="obj">
+                                        <img class="full20a20" src="../../images/topic/topicx04.svg" alt="">
+                                    </div>
+                                    <div class="bg-moveshadow3">
+                                        <div class="paperbox">
+											<div class="pad5 aa"></div>
+                                            <ol>
+												<li>二角色，皆不用分身</li>
+													<ol style="list-style-type: lower-alpha;">
+														<li><a href="#1">半自動射擊</a></li>
+														<li><a href="#2">自動射擊</a></li>
+													</ol>
+												<li>二角色，其中一個建分身</li>
+													<ol style="list-style-type: lower-alpha;">
+														<li><a href="#3">半自動射擊</a></li>
+														<li><a href="#4">自動射擊</a></li>
+													</ol>
+												<li>一角色，用本尊及建自己分身</li>
+													<ol style="list-style-type: lower-alpha;">
+														<li><a href="#5">半自動射擊</a></li>
+														<li><a href="#6">自動射擊</a></li>
+													</ol>												
+											</ol>                                          
+                                        </div>
+                                    </div>                                     
+                                </section>
+                                <div class="pad010"><img src="../../images/gif/line2.gif" style="width: 100%; height: auto;" alt=""></div>
+                                <section><!-- 拆解 -->
+									<div class="title"><img class="full10c15" src="../../images/topic/topic01-1.svg" alt="">二角色，皆不用分身</div>
+									<div class="pad10 border-d">
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/586240996/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">這種方式需要二個角色，一個是發射的主體，另一個是飛射出的子彈或砲彈，都不使用分身。</p>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+                                        	<p class="w16b600 purple" id="1">📍半自動射擊</p>
+											<p class="indent">此腳本要求玩家要再次射擊時，得放開按建，再次點擊才能生效。</p>
+                                            <pre class="blocks u">
+											當 @greenflag 被點擊 // 槍管角色
+											重複無限次
+											等待直到 &lt;&lt;(空白 v)鍵被按下？&gt; 或 &lt;滑鼠鍵被按下？&gt;&gt;
+											廣播訊息 (shoot v) 並等待
+											等待直到 &lt;not &lt;&lt;(空白 v)鍵被按下？&gt; 或 &lt;滑鼠鍵被按下？&gt;&gt;&gt; // 一次只能發射一顆
+											end
+											</pre>
+											<pre class="blocks d">
+											當收到訊息 [shoot v] //子彈角色
+											定位到 (槍管 v)位置 //從槍管位置發射
+											顯示
+											重複直到 &lt;&lt;碰到 (目標物 v)？&gt; 或 &lt;碰到 (邊緣 v)？&gt;&gt; //移動到會令子彈消失處為止
+											移動 (10) 點
+											end
+											隱藏
+											</pre>
+                                            <p class="out1_in2">💥一次僅能發射一顆，無法快速射擊。</p> 
+											<div class="pad10"></div>
+                                            <p class="w16b600 purple" id="2">📍自動射擊</p>
+											<p class="indent">此腳本可以使玩家只要按住按鍵就能一直發射。</p>
+                                            <pre class="blocks u">
+											當 @greenflag 被點擊 //槍管角色
+											重複無限次
+											等待直到 &lt;&lt;(空白 v)鍵被按下？&gt; 或 &lt;滑鼠鍵被按下？&gt;&gt;
+											廣播訊息 (shoot v) 並等待
+											等待 (0.1) 秒 // 不用放開按鍵，每0.1秒就廣播一次shoot訊息
+											end
+											</pre>
+											<pre class="blocks d">
+											當收到訊息 [shoot v] //子彈角色
+											定位到 (槍管 v)位置
+											顯示
+											重複直到 &lt;&lt;碰到 (目標物 v)？&gt; 或 &lt;碰到 (邊緣 v)？&gt;&gt;
+											移動 (10) 點
+											end
+											隱藏
+											</pre> 
+										</div>
+                                    </div>
+                                </section>
+                                <div class="pad10"></div>
+								<section><!-- 拆解 -->
+									<div class="title"><img class="full10c15" src="../../images/topic/topic01-2.svg" alt="">二角色，其中一個建分身</div>
+									<div class="pad10 border-d">
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/586243465/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">這種方式其中一個角色（子彈）是以分身來顯示，因此，在舞臺上是允許多顆子彈同時存在。</p>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+                                        	<p class="w16b600 purple" id="3">📍半自動射擊</p>
+											<p class="indent">此腳本要求玩家要再次射擊時，得放開按建，再次點擊才能生效。</p>
+                                            <pre class="blocks u">
+											當 @greenflag 被點擊 // 槍管角色
+											重複無限次
+											等待直到 &lt;&lt;(空白 v)鍵被按下？&gt; 或 &lt;滑鼠鍵被按下？&gt;&gt;
+											建立 (子彈 v)的分身 // 建立子彈角色的分身
+											等待直到 &lt;&lt;&lt;(空白 v)鍵被按下？&gt; 或 &lt;滑鼠鍵被按下？&gt;&gt;不成立&gt;
+											end
+											</pre>
+											<pre class="blocks d">
+											當分身產生 // 子彈角色
+											重複直到 &lt;&lt;碰到 (目標物 v)？&gt; 或 &lt;碰到 (邊緣 v)？&gt;&gt;
+											移動 (10) 點
+											end
+											分身刪除
+											</pre>                                            		
+											<div class="pad10"></div>
+                                            <p class="w16b600 purple" id="4">📍自動射擊</p>
+											<p class="indent">此腳本可以連續發射子彈。</p>
+                                            <pre class="blocks u">
+											當 @greenflag 被點擊 // 槍管角色
+											重複無限次
+											等待直到 &lt;&lt;(空白 v)鍵被按下？&gt; 或 &lt;滑鼠鍵被按下？&gt;&gt;
+											建立 (子彈 v)的分身
+											等待 (0.1) 秒 // 每次子彈發射的間隔秒數
+											end
+											</pre>
+											<pre class="blocks d">
+											當分身產生 // 子彈
+											重複直到 &lt;&lt;碰到 (目標物 v)？&gt; 或 &lt;碰到 (邊緣 v)？&gt;&gt;
+											移動 (10) 點
+											end
+											分身刪除
+											</pre> 
+										</div>
+                                    </div>
+                                 </section>
+								 <div class="pad10"></div>
+								 <section><!-- 拆解 -->
+									 <div class="title"><img class="full10c15" src="../../images/topic/topic01-3.svg" alt="">一角色，用本尊及建自己分身</div>
+									<div class="pad10 border-d">
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/586243975/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">這種方式更有效率，只要一個具有二種造型的角色。</p>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+                                        	<p class="w16b600 purple" id="5">📍半自動射擊</p>
+											<p class="indent">此腳本要求玩家要再次射擊時，得放開按建，再次點擊才能生效。</p>
+                                            <pre class="blocks u">
+											當 @greenflag 被點擊
+											造型換成 (槍管 v)
+											重複無限次
+											等待直到 &lt;&lt;(空白 v)鍵被按下？&gt; 或 &lt;滑鼠鍵被按下？&gt;&gt;
+											建立 (自己 v)的分身
+											等待直到 &lt; &lt;&lt;(空白 v)鍵被按下？&gt; 或 &lt;滑鼠鍵被按下？&gt;&gt;不成立&gt;
+											end
+											</pre>
+											<pre class="blocks d">
+											當分身產生
+											造型換成 (子彈 v) // 建立的分身造型是子彈
+											重複直到 &lt;&lt;碰到 (目標物 v)？&gt; 或 &lt;碰到 (邊緣 v)？&gt;&gt;
+											移動 (10) 點
+											end
+											分身刪除
+											</pre>                                            		
+											<div class="pad10"></div>
+                                            <p class="w16b600 purple" id="6">📍自動射擊</p>
+											<p class="indent">此腳本可以使玩家只要按住按鍵就能一直發射。</p>
+                                            <pre class="blocks u">
+											當 @greenflag 被點擊
+											造型換成 (槍管 v) 
+											重複無限次
+											等待直到 &lt;&lt;(空白 v)鍵被按下？&gt; 或 &lt;滑鼠鍵被按下？&gt;&gt;
+											建立 (自己 v)的分身
+											等待 (0.1) 秒 // 每次子彈發射的間隔秒數
+											end
+											</pre>
+											<pre class="blocks d">
+											當分身產生
+											造型換成 (子彈 v) // 建立的分身造型是子彈
+											重複直到 &lt;&lt;碰到 (目標物 v)？&gt; 或 &lt;碰到 (邊緣 v)？&gt;&gt;
+											移動 (10) 點
+											end
+											分身刪除
+											</pre> 
+										</div>
+                                    </div>
+                                 </section>
+                                <div class="scratch pad15"><img src="../../images/gif/mouse.gif" alt=""></div>
+						</div>
+						
+						</div>
+                    
+				<!-- Sidebar -->
+					<div id="sidebar" class="sbgcolor11">
+						<div class="inner">
+
+							
+							<!-- Menu -->
+								<nav id="menu">
+									<header>
+                                        <img class="full50" src="../../images/logo/mlogo_skill.svg" alt="">										
+									</header>
+                                    <h2 class="major bgreen strongX sbgcolorl9">鍵鼠操控</h2>
+									<ul>
+                                        <li class="home"><a href="../../index.html">🏠回首頁</a></li>										
+                                        <li><a href="Skill001.html">鍵盤方向鍵操控移動</a></li>
+										<li><a href="Skill003.html">角色跟隨鼠標</a></li>
+										<li><a href="Skill009.html">砲彈射擊</a></li>
+										<li><a href="Skill010.html">聲音暫停與再次播放</a></li>
+										<li><a href="Skill011.html">逐字說話(打字機效果)</a></li>
+										<li><a href="Skill012.html">角色的互動對話</a></li>
+										<li><a href="Skill013.html">現在的日期</a></li>
+										<li><a href="Skill014.html">時間(電子鐘形式)</a></li>
+                                    </ul>
+								</nav>
+
+							
+
+							<!-- Footer -->
+								<footer id="footer">
+                                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="創用 CC 授權條款" style="border-width:0;  margin-bottom:  -10px;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+									<p class="copyright">&copy; 2023 &copy; | Design By Shiau Sir. From <a href="https://ddes.tc.edu.tw" target="_blank">DDES</a>, Taichung City, Taiwan.</p>
+								</footer>
+
+						</div>
+					
+                </div>
+			</div>
+			<div style="display: none;" id="go-to-top">
+      			<div style="opacity:0;display: block;" class="level-2"></div>
+      				<div class="level-3"></div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../js/jquery.min.js"></script>
+			<script src="../../js/browser.min.js"></script>
+			<script src="../../js/breakpoints.min.js"></script>
+			<script src="../../js/util.js"></script>
+			<script src="../../js/main.js"></script>
+		<script>
+		$(document).ready(function(){
+    	if ( window.screen.width <= 480) {
+			scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,                // 顯示大小
+            // Repeat `style` and `languages` options here.
+			});
+       } else{
+		    scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,                // 顯示大小
+                // Repeat `style` and `languages` options here.
+			});
+	   	}
+		});
+		
+		</script>
+
+	</body>
+</html>

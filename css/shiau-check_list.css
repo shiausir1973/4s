@@ -1,0 +1,326 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*列表前的符號*/
+	
+    .check-list1 li {
+		padding: 0.3em 0 0.3em 45px;
+		font-size: 1em;
+		background: url("img-check_list/list1.gif")0px 0.5em no-repeat;
+	}
+
+		.check-list1 li:first-child {
+			padding-top: 0 !important;
+			border-top: 0 !important;
+			background-position: 0 0.3em;
+		}
+
+		.check-list1 li:last-child {
+			padding-bottom: 0 !important;
+			border-bottom: 0 !important;
+		}
+	.check-list2 li {
+		padding: 0.3em 0 0.3em 45px;
+		font-size: 1em;
+		background: url("img-check_list/list2.gif") 0px 0.5em no-repeat;
+	}
+
+		.check-list2 li:first-child {
+			padding-top: 0 !important;
+			border-top: 0 !important;
+			background-position: 0 0.3em;
+		}
+
+		.check-list2 li:last-child {
+			padding-bottom: 0 !important;
+			border-bottom: 0 !important;
+		}
+    .check-list3 li {
+		padding: 0.3em 0 0.3em 45px;
+		font-size: 1em;
+		background: url("img-check_list/list3.gif") 0px 0.5em no-repeat;
+	}
+
+		.check-list3 li:first-child {
+			padding-top: 0 !important;
+			border-top: 0 !important;
+			background-position: 0 0.3em;
+		}
+
+		.check-list3 li:last-child {
+			padding-bottom: 0 !important;
+			border-bottom: 0 !important;
+		}
+	.check-list4 li {
+		padding: 0.3em 0 0.3em 45px;
+		font-size: 1em;
+		background: url("img-check_list/list4.gif") 0px 0.5em no-repeat;
+	}
+
+		.check-list4 li:first-child {
+			padding-top: 0 !important;
+			border-top: 0 !important;
+			background-position: 0 0.3em;
+		}
+
+		.check-list4 li:last-child {
+			padding-bottom: 0 !important;
+			border-bottom: 0 !important;
+		}
+	.check-list5 li {
+		padding: 0.3em 0 0.3em 45px;
+		font-size: 1em;
+		background: url("img-check_list/list5.gif") 0px 0.5em no-repeat;
+	}
+
+		.check-list5 li:first-child {
+			padding-top: 0 !important;
+			border-top: 0 !important;
+			background-position: 0 0.3em;
+		}
+
+		.check-list5 li:last-child {
+			padding-bottom: 0 !important;
+			border-bottom: 0 !important;
+		}
+    .check-list6 li {
+		padding: 0.3em 0 0.3em 45px;
+		font-size: 1em;
+		background: url("img-check_list/list6.gif") 0px 0.5em no-repeat;
+	}
+
+		.check-list6 li:first-child {
+			padding-top: 0 !important;
+			border-top: 0 !important;
+			background-position: 0 0.3em;
+		}
+
+		.check-list6 li:last-child {
+			padding-bottom: 0 !important;
+			border-bottom: 0 !important;
+		}
+    .check-list7 li {
+		padding: 0.3em 0 0.3em 45px;
+		font-size: 1em;
+		background: url("img-check_list/list7.gif") 0px 0.5em no-repeat;
+	}
+
+		.check-list7 li:first-child {
+			padding-top: 0 !important;
+			border-top: 0 !important;
+			background-position: 0 0.3em;
+		}
+
+		.check-list7 li:last-child {
+			padding-bottom: 0 !important;
+			border-bottom: 0 !important;
+		}
+    .check-list8 li {
+		padding: 0.3em 0 0.3em 45px;
+		font-size: 1em;
+		background: url("img-check_list/list8.gif") 0px 0.5em no-repeat;
+	}
+
+		.check-list8 li:first-child {
+			padding-top: 0 !important;
+			border-top: 0 !important;
+			background-position: 0 0.3em;
+		}
+
+		.check-list8 li:last-child {
+			padding-bottom: 0 !important;
+			border-bottom: 0 !important;
+		}
+	.check-list9 li {
+		padding: 0.3em 0 0.3em 45px;
+		font-size: 1em;
+		background: url("img-check_list/list9.gif") 0px 0.5em no-repeat;
+	}
+
+		.check-list9 li:first-child {
+			padding-top: 0 !important;
+			border-top: 0 !important;
+			background-position: 0 0.3em;
+		}
+
+		.check-list9 li:last-child {
+			padding-bottom: 0 !important;
+			border-bottom: 0 !important;
+		}
+    .check-list10 li {
+		padding: 0.3em 0 0.3em 45px;
+		font-size: 1em;
+		background: url("img-check_list/list10.gif") 0px 0.5em no-repeat;
+	}
+
+		.check-list10 li:first-child {
+			padding-top: 0 !important;
+			border-top: 0 !important;
+			background-position: 0 0.3em;
+		}
+
+		.check-list10 li:last-child {
+			padding-bottom: 0 !important;
+			border-bottom: 0 !important;
+		}
+	.check-list11 li {
+		padding: 0.3em 0 0.3em 45px;
+		font-size: 1em;
+		background: url("img-check_list/list11.gif") 0px 0.5em no-repeat;
+	}
+
+		.check-list11 li:first-child {
+			padding-top: 0 !important;
+			border-top: 0 !important;
+			background-position: 0 0.3em;
+		}
+
+		.check-list11 li:last-child {
+			padding-bottom: 0 !important;
+			border-bottom: 0 !important;
+		}
+	.check-list12 li {
+		padding: 0.3em 0 0.3em 45px;
+		font-size: 1em;
+		background: url("img-check_list/list12.gif") 0px 0.5em no-repeat;
+	}
+
+		.check-list12 li:first-child {
+			padding-top: 0 !important;
+			border-top: 0 !important;
+			background-position: 0 0.3em;
+		}
+
+		.check-list12 li:last-child {
+			padding-bottom: 0 !important;
+			border-bottom: 0 !important;
+		}
+    .check-list13 li {
+		padding: 0.3em 0 0.3em 45px;
+		font-size: 1em;
+		background: url("img-check_list/list13.gif") 0px 0.5em no-repeat;
+	}
+
+		.check-list13 li:first-child {
+			padding-top: 0 !important;
+			border-top: 0 !important;
+			background-position: 0 0.3em;
+		}
+
+		.check-list13 li:last-child {
+			padding-bottom: 0 !important;
+			border-bottom: 0 !important;
+		}
+    .check-list14 li {
+		padding: 0.3em 0 0.3em 45px;
+		font-size: 1em;
+		background: url("img-check_list/list14.gif") 0px 0.5em no-repeat;
+	}
+
+		.check-list14 li:first-child {
+			padding-top: 0 !important;
+			border-top: 0 !important;
+			background-position: 0 0.3em;
+		}
+
+		.check-list14 li:last-child {
+			padding-bottom: 0 !important;
+			border-bottom: 0 !important;
+		}
+    .check-list15 li {
+		padding: 0.3em 0 0.3em 45px;
+		font-size: 1em;
+		background: url("img-check_list/list15.gif") 0px 0.5em no-repeat;
+	}
+
+		.check-list15 li:first-child {
+			padding-top: 0 !important;
+			border-top: 0 !important;
+			background-position: 0 0.3em;
+		}
+
+		.check-list15 li:last-child {
+			padding-bottom: 0 !important;
+			border-bottom: 0 !important;
+		}
+	.check-list16 li {
+		padding: 0.3em 0 0.3em 45px;
+		font-size: 1em;
+		background: url("img-check_list/list16.gif") 0px 0.5em no-repeat;
+	}
+
+		.check-list16 li:first-child {
+			padding-top: 0 !important;
+			border-top: 0 !important;
+			background-position: 0 0.3em;
+		}
+
+		.check-list16 li:last-child {
+			padding-bottom: 0 !important;
+			border-bottom: 0 !important;
+		}
+    .check-list20 li {
+		padding: 0.15em 0 0.15em 45px;
+		font-size: 0.9em;
+		background: url("img-check_list/list20.gif") 0px 0.5em no-repeat;
+	}
+
+		.check-list20 li:first-child {
+			padding-top: 0 !important;
+			border-top: 0 !important;
+			background-position: 0 0.3em;
+		}
+
+		.check-list20 li:last-child {
+			padding-bottom: 0 !important;
+			border-bottom: 0 !important;
+		}
+    .check-list21 li {
+		padding: 0.15em 0 0.15em 45px;
+		font-size: 0.9em;
+		background: url("img-check_list/list21.gif") 0px 0.5em no-repeat;
+	}
+
+		.check-list21 li:first-child {
+			padding-top: 0 !important;
+			border-top: 0 !important;
+			background-position: 0 0.3em;
+		}
+
+		.check-list21 li:last-child {
+			padding-bottom: 0 !important;
+			border-bottom: 0 !important;
+		}
+    .check-list22 li {
+		padding: 0.15em 0 0.15em 45px;
+		font-size: 0.9em;
+		background: url("img-check_list/list22.gif") 0px 0.5em no-repeat;
+	}
+
+		.check-list22 li:first-child {
+			padding-top: 0 !important;
+			border-top: 0 !important;
+			background-position: 0 0.3em;
+		}
+
+		.check-list22 li:last-child {
+			padding-bottom: 0 !important;
+			border-bottom: 0 !important;
+		}
+    .check-list23 li {
+		padding: 0.15em 0 0.15em 45px;
+		font-size: 0.9em;
+		background: url("img-check_list/list23.png") 0px 0.5em no-repeat;
+	}
+
+		.check-list li:first-child {
+			padding-top: 0 !important;
+			border-top: 0 !important;
+			background-position: 0 0.3em;
+		}
+
+		.check-list li:last-child {
+			padding-bottom: 0 !important;
+			border-bottom: 0 !important;
+		}
+    

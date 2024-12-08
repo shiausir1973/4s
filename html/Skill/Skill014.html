@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>〈時間(電子鐘形式)〉</title>		
+		<link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/shiau-check_list.css" />
+        <link rel="stylesheet" href="../../css/shiau-paper.css" />
+        <link rel="stylesheet" href="../../css/shiau-move_bg.css" />
+        <link rel="stylesheet" href="../../css/shiau-scratch-bg_banner.css" />
+	  	<script src="../../js/scratchblocks-v3.6.4-min.js"></script>
+		<script src="../../js/translations-all-v3.6.4.js"></script>
+	
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+                
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../../index.html" class="logo"><img src="../../images/logo/logo_skill.svg" alt=""></a>
+									
+								</header>
+                           
+                                <div class="topic large">
+									<p><img class="full125" src="../../images/topic/topicx01.svg" alt=""><span class="text">時間(電子鐘形式)</span></p>
+                                </div>
+                               
+							<!-- Section -->
+								<section><!-- 簡述提點-->
+                                    <div class="obj">
+                                        <img class="full20a20" src="../../images/topic/topicx03.svg" alt="">
+                                    </div>
+                                    <div class="bg-moveshadow1">
+                                        <div class="paper">
+										<div class="pad5 aa"></div>
+										<ul class="glt">
+                                            <li>市面上的電子時鐘樣式琳瑯滿目，但主要還是分成24小時制與12小時制二種。區別方式可從二個地方來看，⑴AM和PM：24小時制沒有AM、PM的顯示，12小時制則一定要有。⑵「時」的顯示超過12以上：只有24小時制的「時」會大於12。</li>
+											<div class="row">
+												<div class="col-6 col-12-small">
+													<img class="full60a20" src="../../images/pic/skill/014-1.png" alt="">
+												</div>
+												<div class="col-6 col-12-small">
+													<img class="full60a20" src="../../images/pic/skill/014-2.png" alt="">
+												</div>
+											</div>
+											<li>我們口中說的「半夜12點多」，以24小時制顯示是「0時」，而以12小時制顯示是「AM12時」。換句話說，24小時制的「時」會顯示值是0～23；而12小時制的「時」會顯示值AM和PM都是從12～11。</li>
+										</ul>
+										<ul class="hlt">											                                             
+											<li>例如：電子鐘上顯示的時間可能是：PM 1:05:08 或者 13:05:08 ，但如果將從<a href="../Blocks_Sensing/Sensing16.html"><code class="b">(目前時間的[年 v])</code></a>積木中讀取到的值在未經過任何處理之下直接串接，就會得到 13:5:8 ，以下說明了解決的編程方式。</li>
+										</ul>
+                                        </div>
+                                    </div>
+                                </section>
+								<section><!--示例腳本-->
+                                    <div class="obj">
+                                        <img class="full20a20" src="../../images/topic/topicx04.svg" alt="">
+                                    </div>
+                                    <div class="bg-moveshadow3">
+                                        <div class="paperbox">
+											<div class="pad5 aa"></div>
+                                            <ol>
+												<li><a href="#1">讀取「時」並轉換成12小時制</a></li>
+												<li><a href="#2">讀取「分」、「秒」並做補位處理</a></li>
+												<li><a href="#3">12小時制電子鐘完整編程</a></li>
+												<li><a href="#4">24小時制電子鐘完整編程</a></li>
+											</ol>                                          
+                                        </div>
+                                    </div>                                     
+                                </section>
+                                <div class="pad010"><img src="../../images/gif/line2.gif" style="width: 100%; height: auto;" alt=""></div>
+                                <section><!-- 拆解 -->
+									<div class="title" id="1"><img class="full10c15" src="../../images/topic/topic01-1.svg" alt="">讀取「時」並轉換成12小時制</div>
+									<div class="pad10 border-d">
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">從積木中讀取的「時」是24小時制的，範圍值是0～23，如果要編程12小時制的時間要將(大於12的值)-12，以及將"0"值轉成12。</p>
+										<p class="in1 w14b400">此外，當讀取到的值是(小於12的值)，那麼就是AM時段，否則是PM時段。</p>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+											<p class="indent">以下腳本需使用到下列變數：</p>
+											<ul class="ilt">
+												<li><code class="b">(時)</code>用來顯示當前時的變數</li>
+												<li><code class="b">(時段)</code>用來顯示當前時段的變數，有AM和PM二個值</li>
+											</ul>
+                                            <pre class="blocks ud">
+											如果 &lt;&lt;(目前時間的 [時 v]) &gt; (12)&gt; or &lt;(目前時間的 [時 v]) = [0]&gt;&gt; 那麼 //值"13~23"，及值"0"
+											變數 [時 v] 設為 ([絕對值 v] 數值 ((目前時間的 [時 v]) - (12))) //如果"時"="0"，要絕對值
+											否則
+											變數 [時 v] 設為 (目前時間的 [時 v])
+											end
+											如果 &lt;(目前時間的 [時 v]) &lt; (12)&gt; 那麼 //值"0~11"
+											變數 [時段 v] 設為 [A.M.]
+											否則
+											變數 [時段 v] 設為 [P.M.]
+											end
+											</pre>
+										</div>
+                                    </div>
+                                </section>
+								<div class="pad10"></div>
+								<section><!-- 拆解 -->
+									<div class="title" id="2"><img class="full10c15" src="../../images/topic/topic01-2.svg" alt="">讀取「分」、「秒」並做補位處理</div>
+									<div class="pad10 border-d">
+										<div class="clear pad10 bb"></div>
+										<p class="in1 w14b400">從積木中讀取的「分」和「秒」、當是小於10的值時，只有讀到一個數字，但現實中的電子鐘會以二位數字來顯示「分」和「秒」，因此需要在十位數補上「0」值。</p>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+											<p class="indent">以下腳本需使用到下列變數：</p>
+											<ul class="ilt">
+												<li><code class="b">(分)</code>用來顯示當前分的變數</li>
+												<li><code class="b">(秒)</code>用來顯示當前秒的變數</li>
+											</ul>
+                                            <pre class="blocks ud">
+											如果 &lt;(目前時間的 [分 v]) &lt; (10)&gt; 那麼 //一位數字
+											變數 [分 v] 設為 (字串組合 [0] (目前時間的 [分 v]))
+											否則
+											變數 [分 v] 設為 (目前時間的 [分 v])
+											end
+											如果 &lt;(目前時間的 [秒 v]) &lt; (10)&gt; 那麼 //一位數字
+											變數 [秒 v] 設為 (join [0] (目前時間的 [秒 v]))
+											否則
+											變數 [秒 v] 設為 (目前時間的 [秒 v])
+											end
+											</pre>
+										</div>
+                                    </div>
+                                 </section>
+								<div class="pad10"></div>
+								<section><!-- 拆解 -->
+									<div class="title" id="3"><img class="full10c15" src="../../images/topic/topic01-3.svg" alt="">12小時制電子鐘完整編程</div>
+									<div class="pad10 border-d">
+										<div class="scratchbox floatr"><iframe src="https://scratch.mit.edu/projects/572964470/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
+										<div class="clear pad10 bb"></div>
+									</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+											<p class="indent">除上述變數外另建立以下變數：</p>
+											<ul class="ilt">
+												<li><code class="b">(時間)</code>用來顯示串接後的完整時間</li>
+											</ul>
+                                            <pre class="blocks ud">
+											當 @greenflag 被點擊
+											重複無限次
+											如果 &lt;&lt;(目前時間的 [時 v]) &gt; (12)&gt; or &lt;(目前時間的 [時 v]) = [0]&gt;&gt; 那麼 //值"13~23"，及值"0"
+											變數 [時 v] 設為 ([絕對值 v] 數值 ((目前時間的 [時 v]) - (12))) //如果"時"="0"，要絕對值
+											否則
+											變數 [時 v] 設為 (目前時間的 [時 v])
+											end
+											如果 &lt;(目前時間的 [分 v]) &lt; (10)&gt; 那麼 //一位數字
+											變數 [分 v] 設為 (字串組合 [0] (目前時間的 [分 v]))
+											否則
+											變數 [分 v] 設為 (目前時間的 [分 v])
+											end
+											如果 &lt;(目前時間的 [秒 v]) &lt; (10)&gt; 那麼 //一位數字
+											變數 [秒 v] 設為 (join [0] (目前時間的 [秒 v]))
+											否則
+											變數 [秒 v] 設為 (目前時間的 [秒 v])
+											end
+											如果 &lt;(目前時間的 [時 v]) &lt; (12)&gt; 那麼 //值"0~11"
+											變數 [時段 v] 設為 [A.M.]
+											否則
+											變數 [時段 v] 設為 [P.M.]
+											end
+											變數 [時間 v] 設為 (字串組合 (字串組合 (字串組合 (字串組合 (字串組合 (字串組合 (時) [:]) (分)) [:]) (秒)) [ ]) (時段)) //最後第二格是空格
+											end
+											</pre>
+										</div>
+                                    </div>
+                                 </section>
+								<div class="pad10"></div>
+								<section><!-- 拆解 -->
+									<div class="title" id="4"><img class="full10c15" src="../../images/topic/topic01-4.svg" alt="">24小時制電子鐘完整編程</div>
+									<div class="bg-moveshadow-w">
+                                    	<div class="paper">
+										<div class="pad5 aa"></div>
+											<pre class="blocks ud">
+											當 @greenflag 被點擊
+											重複無限次
+											變數 [時 v] 設為 (目前時間的 [時 v])
+											如果 &lt;(目前時間的 [分 v]) &lt; (10)&gt; 那麼 //一位數字
+											變數 [分 v] 設為 (字串組合 [0] (目前時間的 [分 v]))
+											否則
+											變數 [分 v] 設為 (目前時間的 [分 v])
+											end
+											如果 &lt;(目前時間的 [秒 v]) &lt; (10)&gt; 那麼 //一位數字
+											變數 [秒 v] 設為 (join [0] (目前時間的 [秒 v]))
+											否則
+											變數 [秒 v] 設為 (目前時間的 [秒 v])
+											end											
+											變數 [時間 v] 設為 (字串組合 (字串組合 (字串組合 (字串組合 (時) [:]) (分)) [:]) (秒))
+											end
+											</pre>											
+										</div>
+                                    </div>
+                                 </section>
+								
+                                <div class="scratch pad15"><img src="../../images/gif/mouse.gif" alt=""></div>
+						</div>
+						
+						</div>
+                    
+				<!-- Sidebar -->
+					<div id="sidebar" class="sbgcolor11">
+						<div class="inner">
+
+							
+							<!-- Menu -->
+								<nav id="menu">
+									<header>
+                                        <img class="full50" src="../../images/logo/mlogo_skill.svg" alt="">										
+									</header>
+                                    <h2 class="major bgreen strongX sbgcolorl9">鍵鼠操控</h2>
+									<ul>
+                                        <li class="home"><a href="../../index.html">🏠回首頁</a></li>										
+                                        <li><a href="Skill001.html">鍵盤方向鍵操控移動</a></li>
+										<li><a href="Skill003.html">角色跟隨鼠標</a></li>
+										<li><a href="Skill009.html">砲彈射擊</a></li>
+										<li><a href="Skill010.html">聲音暫停與再次播放</a></li>
+										<li><a href="Skill011.html">逐字說話(打字機效果)</a></li>
+										<li><a href="Skill012.html">角色的互動對話</a></li>
+										<li><a href="Skill013.html">現在的日期</a></li>
+										<li><a href="Skill014.html">時間(電子鐘形式)</a></li>
+                                    </ul>
+								</nav>
+
+							
+
+							<!-- Footer -->
+								<footer id="footer">
+                                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="創用 CC 授權條款" style="border-width:0;  margin-bottom:  -10px;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+									<p class="copyright">&copy; 2023 &copy; | Design By Shiau Sir. From <a href="https://ddes.tc.edu.tw" target="_blank">DDES</a>, Taichung City, Taiwan.</p>
+								</footer>
+
+						</div>
+					
+                </div>
+			</div>
+			<div style="display: none;" id="go-to-top">
+      			<div style="opacity:0;display: block;" class="level-2"></div>
+      				<div class="level-3"></div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../js/jquery.min.js"></script>
+			<script src="../../js/browser.min.js"></script>
+			<script src="../../js/breakpoints.min.js"></script>
+			<script src="../../js/util.js"></script>
+			<script src="../../js/main.js"></script>
+			
+		<script>
+		$(document).ready(function(){
+    	if ( window.screen.width <= 480) {
+			scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 0.5,                // 顯示大小
+            // Repeat `style` and `languages` options here.
+			});
+       } else{
+		    scratchblocks.renderMatching('pre.blocks', {
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,
+			});
+			scratchblocks.renderMatching("code.b", {
+			inline: true,
+			style:     'scratch3',   // Optional, defaults to 'scratch2'.
+			languages: ['en', 'zh_tw'], // Optional, defaults to ['en'].
+			scale: 1,                // 顯示大小
+                // Repeat `style` and `languages` options here.
+			});
+	   	}
+		});
+		
+		</script>
+
+	</body>
+</html>
